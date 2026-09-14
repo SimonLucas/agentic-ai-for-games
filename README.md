@@ -36,7 +36,7 @@ For OpenRouter, set `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` in `.env`, then 
 - [Running and comparing model backends](docs/running_the_demo.md)
 - [Simple examples](src/simple_examples/): plain Python, MCP, and model-driven tool use
 - [Procedural content generation](src/pcg/): planned
-- [Game agents](src/game_agent/): planned
+- [Griddle](docs/griddle.md): a word game with terminal/Tkinter play and local baselines
 - [Papers and reading notes](docs/papers/)
 
 ## Repository layout
@@ -45,8 +45,9 @@ For OpenRouter, set `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` in `.env`, then 
 docs/                  Tutorial guides and reading material
 src/simple_examples/   Arithmetic and string tools, clients, and run scripts
 src/pcg/               Future procedural content generation examples
-src/game_agent/        Future game agent examples
+src/game_agent/        Griddle engine, playable interfaces, and local baselines
 tests/simple_examples/ Tests for the basic operations
+tests/game_agent/      Game rules, scoring, simulation, and optional GUI tests
 ```
 
 Dependencies are managed by the root `pyproject.toml`; all examples share the

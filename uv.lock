@@ -11,10 +11,11 @@ resolution-markers = [
 [[package]]
 name = "agentic-ai-for-games"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "mcp", extra = ["cli"] },
     { name = "openai" },
+    { name = "pydantic" },
     { name = "python-dotenv" },
 ]
 
@@ -27,6 +28,7 @@ dev = [
 requires-dist = [
     { name = "mcp", extras = ["cli"], specifier = ">=1.10,<2" },
     { name = "openai", specifier = ">=2,<3" },
+    { name = "pydantic", specifier = ">=2,<3" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8,<9" },
     { name = "python-dotenv", specifier = ">=1,<2" },
 ]
