@@ -1,0 +1,14 @@
+\begin{tikzpicture}[x=1cm,y=1cm]
+\foreach \x/\label in {0/LLM,5/Host + MCP client,10/MCP server}{
+ \node[font=\small\bfseries,text=navy] at (\x,0) {\label};
+ \draw[dashed,gray] (\x,-.3)--(\x,-4.65);
+}
+\draw[arr] (5,-.6)--node[above,font=\scriptsize]{initialize; list tools}(10,-.6);
+\draw[arr] (10,-1.2)--node[above,font=\scriptsize]{names, descriptions, input schemas}(5,-1.2);
+\draw[arr] (5,-1.8)--node[above,font=\scriptsize]{task + model-facing tool schemas}(0,-1.8);
+\draw[arr] (0,-2.4)--node[above,font=\scriptsize]{multiply(a=6, b=7)}(5,-2.4);
+\draw[arr] (5,-3)--node[above,font=\scriptsize]{call\_tool("multiply", arguments)}(10,-3);
+\draw[arr] (10,-3.6)--node[above,font=\scriptsize]{result: 42}(5,-3.6);
+\draw[arr] (5,-4.2)--node[above,font=\scriptsize]{tool result + matching call ID}(0,-4.2);
+\node[font=\scriptsize,anchor=west] at (0,-4.8) {Then: LLM returns a final answer, or requests another tool.};
+\end{tikzpicture}

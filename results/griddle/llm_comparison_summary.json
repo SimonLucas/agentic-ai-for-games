@@ -1,0 +1,94 @@
+{
+  "random": {
+    "agent": "random",
+    "games": 3,
+    "mean_score": 27.333333333333332,
+    "stdev_score": 9.451631252505218,
+    "min_score": 20,
+    "max_score": 38,
+    "mean_seconds": 0.0003901803477977713,
+    "totals": {},
+    "advised_moves": 0,
+    "recommendations_followed": 0,
+    "scores": [
+      24,
+      20,
+      38
+    ]
+  },
+  "mcs-10": {
+    "agent": "mcs-10",
+    "games": 3,
+    "mean_score": 84.66666666666667,
+    "stdev_score": 12.897028081435403,
+    "min_score": 74,
+    "max_score": 99,
+    "mean_seconds": 0.6002137226751074,
+    "totals": {},
+    "advised_moves": 0,
+    "recommendations_followed": 0,
+    "scores": [
+      74,
+      99,
+      81
+    ]
+  },
+  "gpt4o-mini-no-tools": {
+    "agent": "gpt4o-mini-no-tools",
+    "games": 3,
+    "mean_score": 25.333333333333332,
+    "stdev_score": 8.082903768654761,
+    "min_score": 18,
+    "max_score": 34,
+    "mean_seconds": 23.299956500297412,
+    "totals": {
+      "model_calls": 75.0,
+      "tool_calls": 0.0,
+      "tool_errors": 0.0,
+      "invalid_moves": 3.0,
+      "forced_moves": 3.0,
+      "simulated_rollouts": 0.0,
+      "prompt_tokens": 32706.0,
+      "completion_tokens": 375.0,
+      "usage_missing_calls": 0.0,
+      "reported_cost_usd": 0.005130900000000001,
+      "cost_missing_calls": 0.0
+    },
+    "advised_moves": 0,
+    "recommendations_followed": 0,
+    "scores": [
+      34,
+      18,
+      24
+    ]
+  },
+  "gpt4o-mini-mcp-mcs": {
+    "agent": "gpt4o-mini-mcp-mcs",
+    "games": 3,
+    "mean_score": 86.33333333333333,
+    "stdev_score": 28.5014619508076,
+    "min_score": 58,
+    "max_score": 115,
+    "mean_seconds": 57.73263854164785,
+    "totals": {
+      "model_calls": 144.0,
+      "tool_calls": 72.0,
+      "tool_errors": 17.0,
+      "invalid_moves": 0.0,
+      "forced_moves": 3.0,
+      "simulated_rollouts": 9720.0,
+      "prompt_tokens": 98085.0,
+      "completion_tokens": 2163.0,
+      "usage_missing_calls": 0.0,
+      "reported_cost_usd": 0.016010550000000002,
+      "cost_missing_calls": 0.0
+    },
+    "advised_moves": 72,
+    "recommendations_followed": 72,
+    "scores": [
+      58,
+      115,
+      86
+    ]
+  }
+}

@@ -25,3 +25,6 @@ dist/
 
 # Local logs
 *.log
+
+# Scratch benchmark runs; documented reference reports remain eligible for Git.
+results/local/

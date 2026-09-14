@@ -1,0 +1,458 @@
+{
+  "schema_version": 2,
+  "complete": true,
+  "created_at": "2026-09-14T15:44:56.130922+00:00",
+  "config": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "agents": [
+      {
+        "name": "mcs-10",
+        "kind": "mcs",
+        "params": {
+          "rollouts_per_square": 200
+        }
+      }
+    ],
+    "size": 5,
+    "agent_seed": 2026,
+    "words": null
+  },
+  "dictionary_sha256": "de9bfc930046b51b8c20d8dc931b18787ac50fd79857fe5768a14ca7493beb66",
+  "results": [
+    {
+      "agent": "mcs-10",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 200
+      },
+      "game_seed": 0,
+      "agent_seed": 2513712914935541441,
+      "score": 94,
+      "elapsed_seconds": 11.599050834076479,
+      "deal": "PCETFBMNBUNHHALEOKPENFOTK",
+      "moves": [
+        {
+          "letter": "P",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "C",
+          "action": 1,
+          "index": 2
+        },
+        {
+          "letter": "E",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "T",
+          "action": 7,
+          "index": 10
+        },
+        {
+          "letter": "F",
+          "action": 3,
+          "index": 6
+        },
+        {
+          "letter": "B",
+          "action": 15,
+          "index": 20
+        },
+        {
+          "letter": "M",
+          "action": 9,
+          "index": 14
+        },
+        {
+          "letter": "N",
+          "action": 1,
+          "index": 4
+        },
+        {
+          "letter": "B",
+          "action": 9,
+          "index": 16
+        },
+        {
+          "letter": "U",
+          "action": 8,
+          "index": 15
+        },
+        {
+          "letter": "N",
+          "action": 9,
+          "index": 18
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 3
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 5
+        },
+        {
+          "letter": "A",
+          "action": 6,
+          "index": 17
+        },
+        {
+          "letter": "L",
+          "action": 4,
+          "index": 12
+        },
+        {
+          "letter": "E",
+          "action": 5,
+          "index": 19
+        },
+        {
+          "letter": "O",
+          "action": 2,
+          "index": 9
+        },
+        {
+          "letter": "K",
+          "action": 6,
+          "index": 23
+        },
+        {
+          "letter": "P",
+          "action": 5,
+          "index": 22
+        },
+        {
+          "letter": "E",
+          "action": 2,
+          "index": 11
+        },
+        {
+          "letter": "N",
+          "action": 4,
+          "index": 24
+        },
+        {
+          "letter": "F",
+          "action": 0,
+          "index": 7
+        },
+        {
+          "letter": "O",
+          "action": 2,
+          "index": 21
+        },
+        {
+          "letter": "T",
+          "action": 0,
+          "index": 8
+        },
+        {
+          "letter": "K",
+          "action": 0,
+          "index": 13
+        }
+      ],
+      "final_grid": "PECHNHFFTOTELKMUBANEBOPKN"
+    },
+    {
+      "agent": "mcs-10",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 200
+      },
+      "game_seed": 1,
+      "agent_seed": 15541305757358130811,
+      "score": 75,
+      "elapsed_seconds": 11.90193608298432,
+      "deal": "OELOKHGPRALSWCIRNFPSURQUA",
+      "moves": [
+        {
+          "letter": "O",
+          "action": 6,
+          "index": 6
+        },
+        {
+          "letter": "E",
+          "action": 7,
+          "index": 8
+        },
+        {
+          "letter": "L",
+          "action": 6,
+          "index": 7
+        },
+        {
+          "letter": "O",
+          "action": 6,
+          "index": 9
+        },
+        {
+          "letter": "K",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "H",
+          "action": 4,
+          "index": 5
+        },
+        {
+          "letter": "G",
+          "action": 3,
+          "index": 4
+        },
+        {
+          "letter": "P",
+          "action": 13,
+          "index": 20
+        },
+        {
+          "letter": "R",
+          "action": 7,
+          "index": 14
+        },
+        {
+          "letter": "A",
+          "action": 12,
+          "index": 21
+        },
+        {
+          "letter": "L",
+          "action": 12,
+          "index": 22
+        },
+        {
+          "letter": "S",
+          "action": 12,
+          "index": 23
+        },
+        {
+          "letter": "W",
+          "action": 4,
+          "index": 11
+        },
+        {
+          "letter": "C",
+          "action": 10,
+          "index": 19
+        },
+        {
+          "letter": "I",
+          "action": 3,
+          "index": 10
+        },
+        {
+          "letter": "R",
+          "action": 2,
+          "index": 3
+        },
+        {
+          "letter": "N",
+          "action": 5,
+          "index": 16
+        },
+        {
+          "letter": "F",
+          "action": 3,
+          "index": 13
+        },
+        {
+          "letter": "P",
+          "action": 3,
+          "index": 15
+        },
+        {
+          "letter": "S",
+          "action": 4,
+          "index": 18
+        },
+        {
+          "letter": "U",
+          "action": 3,
+          "index": 17
+        },
+        {
+          "letter": "R",
+          "action": 1,
+          "index": 2
+        },
+        {
+          "letter": "Q",
+          "action": 1,
+          "index": 12
+        },
+        {
+          "letter": "U",
+          "action": 1,
+          "index": 24
+        },
+        {
+          "letter": "A",
+          "action": 0,
+          "index": 1
+        }
+      ],
+      "final_grid": "KARRGHOLEOIWQFRPNUSCPALSU"
+    },
+    {
+      "agent": "mcs-10",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 200
+      },
+      "game_seed": 2,
+      "agent_seed": 14590921937160996492,
+      "score": 112,
+      "elapsed_seconds": 12.136583834071644,
+      "deal": "EAAUINLRSIFNRMZYFITRYOSSH",
+      "moves": [
+        {
+          "letter": "E",
+          "action": 18,
+          "index": 18
+        },
+        {
+          "letter": "A",
+          "action": 8,
+          "index": 8
+        },
+        {
+          "letter": "A",
+          "action": 6,
+          "index": 6
+        },
+        {
+          "letter": "U",
+          "action": 8,
+          "index": 10
+        },
+        {
+          "letter": "I",
+          "action": 13,
+          "index": 16
+        },
+        {
+          "letter": "N",
+          "action": 13,
+          "index": 17
+        },
+        {
+          "letter": "L",
+          "action": 12,
+          "index": 15
+        },
+        {
+          "letter": "R",
+          "action": 12,
+          "index": 19
+        },
+        {
+          "letter": "S",
+          "action": 15,
+          "index": 23
+        },
+        {
+          "letter": "I",
+          "action": 9,
+          "index": 12
+        },
+        {
+          "letter": "F",
+          "action": 3,
+          "index": 3
+        },
+        {
+          "letter": "N",
+          "action": 8,
+          "index": 13
+        },
+        {
+          "letter": "R",
+          "action": 7,
+          "index": 11
+        },
+        {
+          "letter": "M",
+          "action": 5,
+          "index": 7
+        },
+        {
+          "letter": "Z",
+          "action": 10,
+          "index": 24
+        },
+        {
+          "letter": "Y",
+          "action": 5,
+          "index": 9
+        },
+        {
+          "letter": "F",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "I",
+          "action": 7,
+          "index": 22
+        },
+        {
+          "letter": "T",
+          "action": 2,
+          "index": 4
+        },
+        {
+          "letter": "R",
+          "action": 4,
+          "index": 20
+        },
+        {
+          "letter": "Y",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "O",
+          "action": 1,
+          "index": 5
+        },
+        {
+          "letter": "S",
+          "action": 1,
+          "index": 14
+        },
+        {
+          "letter": "S",
+          "action": 1,
+          "index": 21
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 2
+        }
+      ],
+      "final_grid": "FYHFTOAMAYURINSLINERRSISZ"
+    }
+  ],
+  "summary": [
+    {
+      "agent": "mcs-10",
+      "games": 3,
+      "mean_score": 93.66666666666667,
+      "stdev_score": 18.502252115170556,
+      "min_score": 75,
+      "max_score": 112,
+      "mean_seconds": 11.879190250377482
+    }
+  ]
+}

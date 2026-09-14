@@ -1,0 +1,1857 @@
+{
+  "schema_version": 1,
+  "complete": true,
+  "created_at": "2026-09-14T19:23:26.801836+00:00",
+  "config": {
+    "width": 12,
+    "height": 8,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "agents": [
+      {
+        "name": "random-25pct",
+        "kind": "random",
+        "params": {
+          "wall_probability": 0.25
+        }
+      },
+      {
+        "name": "evolution-2000",
+        "kind": "evolution",
+        "params": {
+          "iterations": 2000,
+          "expected_mutations": 5.0
+        }
+      },
+      {
+        "name": "gpt-4o-mini-one-shot",
+        "kind": "llm",
+        "params": {
+          "backend": "openrouter",
+          "model": "openai/gpt-4o-mini",
+          "temperature": 0.8,
+          "max_output_tokens": 512,
+          "timeout_seconds": 60,
+          "prompt_version": "diverse-v1",
+          "structured_output": true
+        }
+      }
+    ]
+  },
+  "results": [
+    {
+      "agent": "random-25pct",
+      "kind": "random",
+      "params": {
+        "wall_probability": 0.25
+      },
+      "seed": 0,
+      "elapsed_seconds": 7.712491787970066e-05,
+      "maze_text": "............\n............\n.#.........#\n....#..#..#.\n#...#...#...\n..........##\n...#........\n............",
+      "rows": [
+        "............",
+        "............",
+        ".#.........#",
+        "....#..#..#.",
+        "#...#...#...",
+        "..........##",
+        "...#........",
+        "............"
+      ],
+      "fitness": 18,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.11458333333333333,
+      "status": "ok"
+    },
+    {
+      "agent": "random-25pct",
+      "kind": "random",
+      "params": {
+        "wall_probability": 0.25
+      },
+      "seed": 1,
+      "elapsed_seconds": 2.629193477332592e-05,
+      "maze_text": "........##..\n.#..#..##...\n#.##..###..#\n...#..#.....\n........##..\n#..........#\n#....#.....#\n.......#....",
+      "rows": [
+        "........##..",
+        ".#..#..##...",
+        "#.##..###..#",
+        "...#..#.....",
+        "........##..",
+        "#..........#",
+        "#....#.....#",
+        ".......#...."
+      ],
+      "fitness": 18,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.23958333333333334,
+      "status": "ok"
+    },
+    {
+      "agent": "random-25pct",
+      "kind": "random",
+      "params": {
+        "wall_probability": 0.25
+      },
+      "seed": 2,
+      "elapsed_seconds": 2.2707972675561905e-05,
+      "maze_text": "..##.......#\n........##..\n....##.#...#\n.........#..\n............\n..#..#......\n.....#...#..\n.#.#..#.#...",
+      "rows": [
+        "..##.......#",
+        "........##..",
+        "....##.#...#",
+        ".........#..",
+        "............",
+        "..#..#......",
+        ".....#...#..",
+        ".#.#..#.#..."
+      ],
+      "fitness": 18,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.1875,
+      "status": "ok"
+    },
+    {
+      "agent": "random-25pct",
+      "kind": "random",
+      "params": {
+        "wall_probability": 0.25
+      },
+      "seed": 3,
+      "elapsed_seconds": 1.6790814697742462e-05,
+      "maze_text": ".....##..#..\n...#.....#..\n.#..........\n.###........\n.......#....\n.#...#..#..#\n...#.#......\n.#.##..##...",
+      "rows": [
+        ".....##..#..",
+        "...#.....#..",
+        ".#..........",
+        ".###........",
+        ".......#....",
+        ".#...#..#..#",
+        "...#.#......",
+        ".#.##..##..."
+      ],
+      "fitness": 18,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.21875,
+      "status": "ok"
+    },
+    {
+      "agent": "random-25pct",
+      "kind": "random",
+      "params": {
+        "wall_probability": 0.25
+      },
+      "seed": 4,
+      "elapsed_seconds": 2.008303999900818e-05,
+      "maze_text": ".#.##....#..\n###....#....\n.#...#.#....\n........#..#\n#......#.#..\n.....###..#.\n#.#.....#...\n.....#.#....",
+      "rows": [
+        ".#.##....#..",
+        "###....#....",
+        ".#...#.#....",
+        "........#..#",
+        "#......#.#..",
+        ".....###..#.",
+        "#.#.....#...",
+        ".....#.#...."
+      ],
+      "fitness": -1,
+      "path": [],
+      "wall_fraction": 0.2604166666666667,
+      "status": "failed",
+      "error": "maze has no route from start to goal"
+    },
+    {
+      "agent": "random-25pct",
+      "kind": "random",
+      "params": {
+        "wall_probability": 0.25
+      },
+      "seed": 5,
+      "elapsed_seconds": 1.9999919459223747e-05,
+      "maze_text": "......#....#\n.#..##...#.#\n.##.##......\n#......###..\n#........#.#\n..#...###.#.\n......#...#.\n#........##.",
+      "rows": [
+        "......#....#",
+        ".#..##...#.#",
+        ".##.##......",
+        "#......###..",
+        "#........#.#",
+        "..#...###.#.",
+        "......#...#.",
+        "#........##."
+      ],
+      "fitness": -1,
+      "path": [],
+      "wall_fraction": 0.2916666666666667,
+      "status": "failed",
+      "error": "maze has no route from start to goal"
+    },
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      },
+      "seed": 0,
+      "elapsed_seconds": 0.08409208292141557,
+      "maze_text": "...#...#.##.\n...#.#.#...#\n#.#..#.#.#.#\n#...#..#.#.#\n.#.#..#..#..\n####.#..###.\n.###...#.##.\n##.#.#....#.",
+      "rows": [
+        "...#...#.##.",
+        "...#.#.#...#",
+        "#.#..#.#.#.#",
+        "#...#..#.#.#",
+        ".#.#..#..#..",
+        "####.#..###.",
+        ".###...#.##.",
+        "##.#.#....#."
+      ],
+      "fitness": 38,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.4375,
+      "status": "ok"
+    },
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      },
+      "seed": 1,
+      "elapsed_seconds": 0.08727899985387921,
+      "maze_text": ".#.###......\n..#.#.##.#..\n.....##..##.\n...###...#..\n#.#....##..#\n..####.#..#.\n.####..##..#\n......##....",
+      "rows": [
+        ".#.###......",
+        "..#.#.##.#..",
+        ".....##..##.",
+        "...###...#..",
+        "#.#....##..#",
+        "..####.#..#.",
+        ".####..##..#",
+        "......##...."
+      ],
+      "fitness": 38,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.3854166666666667,
+      "status": "ok"
+    },
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      },
+      "seed": 2,
+      "elapsed_seconds": 0.07839208305813372,
+      "maze_text": "......#.##.#\n###..##.##..\n##..#.#.....\n#..#....###.\n..##.#.###..\n...#.#.#....\n.####...#.##\n.......#....",
+      "rows": [
+        "......#.##.#",
+        "###..##.##..",
+        "##..#.#.....",
+        "#..#....###.",
+        "..##.#.###..",
+        "...#.#.#....",
+        ".####...#.##",
+        ".......#...."
+      ],
+      "fitness": 38,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.3854166666666667,
+      "status": "ok"
+    },
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      },
+      "seed": 3,
+      "elapsed_seconds": 0.08274554181843996,
+      "maze_text": "...###.....#\n##.#....##..\n##.#....#.#.\n....#.##.#..\n.###....#..#\n..##.##.#.#.\n....#.#.#.#.\n.#......#...",
+      "rows": [
+        "...###.....#",
+        "##.#....##..",
+        "##.#....#.#.",
+        "....#.##.#..",
+        ".###....#..#",
+        "..##.##.#.#.",
+        "....#.#.#.#.",
+        ".#......#..."
+      ],
+      "fitness": 44,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.3645833333333333,
+      "status": "ok"
+    },
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      },
+      "seed": 4,
+      "elapsed_seconds": 0.08449808298610151,
+      "maze_text": "....##..##..\n###..#.....#\n#...#.#..#..\n##.####.###.\n...####..#..\n.#.#...#.#.#\n..#.##...#..\n#.........#.",
+      "rows": [
+        "....##..##..",
+        "###..#.....#",
+        "#...#.#..#..",
+        "##.####.###.",
+        "...####..#..",
+        ".#.#...#.#.#",
+        "..#.##...#..",
+        "#.........#."
+      ],
+      "fitness": 40,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.3958333333333333,
+      "status": "ok"
+    },
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      },
+      "seed": 5,
+      "elapsed_seconds": 0.07547649997286499,
+      "maze_text": "...##.#.....\n##.#.##..##.\n...#.##.#...\n.######.#.#.\n..#.....#..#\n..#.##...#.#\n#.#..##.##..\n......#.#...",
+      "rows": [
+        "...##.#.....",
+        "##.#.##..##.",
+        "...#.##.#...",
+        ".######.#.#.",
+        "..#.....#..#",
+        "..#.##...#.#",
+        "#.#..##.##..",
+        "......#.#..."
+      ],
+      "fitness": 40,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.3958333333333333,
+      "status": "ok"
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openrouter",
+        "model": "openai/gpt-4o-mini",
+        "temperature": 0.8,
+        "max_output_tokens": 512,
+        "timeout_seconds": 60,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      },
+      "seed": 0,
+      "elapsed_seconds": 2.296315500047058,
+      "status": "failed",
+      "error": "1 validation error for Maze\n  Value error, start and goal must be passages [type=value_error, input_value={'width': 12, 'height': 8...lse, True, False, True)}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "model_metrics": {
+        "model_calls": 1,
+        "elapsed_seconds": 2.2960318750701845,
+        "response_id": "gen-1789413807-Q3AZZ7WvzukAAZFtDfjN",
+        "response_model": "openai/gpt-4o-mini",
+        "finish_reason": "stop",
+        "prompt_tokens": 381,
+        "completion_tokens": 180,
+        "raw_response": "{\"rows\":[\"..........#.\",\".#########.#\",\".#.......#.#\",\".#.#.#####.#\",\".#.#.....#.#\",\".###.#####.#\",\".#.....#.#.#\",\".#######.#.#\"],\"path\":[\"0,0\",\"0,1\",\"0,2\",\"0,3\",\"0,4\",\"0,5\",\"0,6\",\"0,7\",\"1,7\",\"2,7\",\"2,6\",\"3,6\",\"4,6\",\"5,6\",\"5,5\",\"5,4\",\"5,3\",\"5,2\",\"5,1\",\"5,0\",\"6,0\",\"7,0\",\"7,1\",\"8,1\",\"8,2\",\"8,3\",\"8,4\",\"8,5\",\"8,6\",\"8,7\",\"9,7\",\"10,7\",\"11,7\"]}",
+        "prompt": "Generate maze 1 in this set.\nDimensions: 12 columns by 8 rows.\nDiversity seed: 0. Use it as inspiration for a distinct design.\nMaximise shortest-path fitness while keeping the result visibly and structurally different from the earlier mazes.\n\nNo earlier mazes have been generated in this set."
+      }
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openrouter",
+        "model": "openai/gpt-4o-mini",
+        "temperature": 0.8,
+        "max_output_tokens": 512,
+        "timeout_seconds": 60,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      },
+      "seed": 1,
+      "elapsed_seconds": 2.1935418751090765,
+      "status": "failed",
+      "error": "path must begin at start and end at goal",
+      "model_metrics": {
+        "model_calls": 1,
+        "elapsed_seconds": 2.1929912089835852,
+        "response_id": "gen-1789413809-PXHcsbfL1w68oZbZ8McV",
+        "response_model": "openai/gpt-4o-mini",
+        "finish_reason": "stop",
+        "prompt_tokens": 381,
+        "completion_tokens": 218,
+        "raw_response": "{\"rows\":[\"...........#\",\"#####.#####.\",\"#.....#...#.\",\"#.#####.#.#.\",\"#.#.....#.#.\",\"#.#.#####.#.\",\"#.#.......#.\",\"###########.\"],\"path\":[\"0,0\",\"0,1\",\"0,2\",\"0,3\",\"0,4\",\"0,5\",\"0,6\",\"0,7\",\"1,7\",\"2,7\",\"2,6\",\"3,6\",\"4,6\",\"4,5\",\"4,4\",\"5,4\",\"6,4\",\"6,3\",\"7,3\",\"7,2\",\"7,1\",\"7,0\",\"6,0\",\"5,0\",\"5,1\",\"5,2\",\"5,3\",\"5,4\",\"6,5\",\"6,6\",\"6,7\",\"7,7\",\"8,7\",\"9,7\",\"10,7\",\"11,7\",\"11,6\",\"11,5\",\"11,4\",\"11,3\",\"11,2\",\"11,1\",\"11,0\"]}",
+        "prompt": "Generate maze 1 in this set.\nDimensions: 12 columns by 8 rows.\nDiversity seed: 1. Use it as inspiration for a distinct design.\nMaximise shortest-path fitness while keeping the result visibly and structurally different from the earlier mazes.\n\nNo earlier mazes have been generated in this set."
+      }
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openrouter",
+        "model": "openai/gpt-4o-mini",
+        "temperature": 0.8,
+        "max_output_tokens": 512,
+        "timeout_seconds": 60,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      },
+      "seed": 2,
+      "elapsed_seconds": 1.7364057919476181,
+      "status": "failed",
+      "error": "path must begin at start and end at goal",
+      "model_metrics": {
+        "model_calls": 1,
+        "elapsed_seconds": 1.7358998330309987,
+        "response_id": "gen-1789413811-uvW105Fi4Q0fqc8dA9sf",
+        "response_model": "openai/gpt-4o-mini",
+        "finish_reason": "stop",
+        "prompt_tokens": 381,
+        "completion_tokens": 186,
+        "raw_response": "{\"rows\":[\"..#########.\",\"#.........#.\",\"#.#######.#.\",\"#.#.....#.#.\",\"#.#.#####.#.\",\"#.#.......#.\",\"###.#####.#.\",\"#.........#.\"],\"path\":[\"0,0\",\"0,1\",\"1,1\",\"1,2\",\"1,3\",\"1,4\",\"2,4\",\"3,4\",\"4,4\",\"4,5\",\"4,6\",\"5,6\",\"6,6\",\"7,6\",\"7,5\",\"7,4\",\"7,3\",\"7,2\",\"7,1\",\"7,0\",\"6,0\",\"5,0\",\"4,0\",\"3,0\",\"2,0\",\"1,0\",\"1,9\",\"2,9\",\"3,9\",\"4,9\",\"4,10\",\"5,10\",\"6,10\",\"7,10\",\"7,11\"]}",
+        "prompt": "Generate maze 1 in this set.\nDimensions: 12 columns by 8 rows.\nDiversity seed: 2. Use it as inspiration for a distinct design.\nMaximise shortest-path fitness while keeping the result visibly and structurally different from the earlier mazes.\n\nNo earlier mazes have been generated in this set."
+      }
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openrouter",
+        "model": "openai/gpt-4o-mini",
+        "temperature": 0.8,
+        "max_output_tokens": 512,
+        "timeout_seconds": 60,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      },
+      "seed": 3,
+      "elapsed_seconds": 1.5685221669264138,
+      "status": "failed",
+      "error": "1 validation error for Maze\n  Value error, start and goal must be passages [type=value_error, input_value={'width': 12, 'height': 8...se, False, False, True)}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "model_metrics": {
+        "model_calls": 1,
+        "elapsed_seconds": 1.5681114171165973,
+        "response_id": "gen-1789413813-obbgaMvDrWFym5ZsnzaP",
+        "response_model": "openai/gpt-4o-mini",
+        "finish_reason": "stop",
+        "prompt_tokens": 381,
+        "completion_tokens": 161,
+        "raw_response": "{\"rows\":[\"..#########.\",\"#.........#.\",\"#.#######.#.\",\"#.#.......#.\",\"#.#.#####.#.\",\"#.#.#.....#.\",\"#.#.#.#####.\",\"#...#......#\"],\"path\":[\"0,0\",\"0,1\",\"1,1\",\"1,2\",\"1,3\",\"1,4\",\"1,5\",\"1,6\",\"1,7\",\"2,7\",\"3,7\",\"4,7\",\"5,7\",\"5,6\",\"6,6\",\"6,5\",\"7,5\",\"7,4\",\"7,3\",\"7,2\",\"7,1\",\"7,0\",\"6,0\",\"5,0\",\"4,0\",\"3,0\",\"2,0\",\"1,0\"]}",
+        "prompt": "Generate maze 1 in this set.\nDimensions: 12 columns by 8 rows.\nDiversity seed: 3. Use it as inspiration for a distinct design.\nMaximise shortest-path fitness while keeping the result visibly and structurally different from the earlier mazes.\n\nNo earlier mazes have been generated in this set."
+      }
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openrouter",
+        "model": "openai/gpt-4o-mini",
+        "temperature": 0.8,
+        "max_output_tokens": 512,
+        "timeout_seconds": 60,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      },
+      "seed": 4,
+      "elapsed_seconds": 1.3176393331959844,
+      "status": "failed",
+      "error": "path must begin at start and end at goal",
+      "model_metrics": {
+        "model_calls": 1,
+        "elapsed_seconds": 1.317337874788791,
+        "response_id": "gen-1789413815-IuxmrEGB88LWfRaCFfPx",
+        "response_model": "openai/gpt-4o-mini",
+        "finish_reason": "stop",
+        "prompt_tokens": 381,
+        "completion_tokens": 111,
+        "raw_response": "{\"rows\":[\"..#########.\",\"#.........#.\",\"#.#.#####.#.\",\"#.#...#.#.#.\",\"#.#.#.#.#.#.\",\"#...#...#.#.\",\"###.#####.#.\",\"#.........#.\"],\"path\":[\"0,0\",\"0,1\",\"1,1\",\"1,2\",\"1,3\",\"2,3\",\"3,3\",\"4,3\",\"4,4\",\"5,4\",\"5,5\",\"5,6\",\"5,7\",\"6,7\",\"7,7\"]}",
+        "prompt": "Generate maze 1 in this set.\nDimensions: 12 columns by 8 rows.\nDiversity seed: 4. Use it as inspiration for a distinct design.\nMaximise shortest-path fitness while keeping the result visibly and structurally different from the earlier mazes.\n\nNo earlier mazes have been generated in this set."
+      }
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openrouter",
+        "model": "openai/gpt-4o-mini",
+        "temperature": 0.8,
+        "max_output_tokens": 512,
+        "timeout_seconds": 60,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      },
+      "seed": 5,
+      "elapsed_seconds": 1.8133033749181777,
+      "status": "failed",
+      "error": "path must begin at start and end at goal",
+      "model_metrics": {
+        "model_calls": 1,
+        "elapsed_seconds": 1.8129868749529123,
+        "response_id": "gen-1789413816-MPTVz6OPTl7Oo77MyuPl",
+        "response_model": "openai/gpt-4o-mini",
+        "finish_reason": "stop",
+        "prompt_tokens": 381,
+        "completion_tokens": 183,
+        "raw_response": "{\"rows\":[\"..#########.\",\".#.........#\",\".#.#######.#\",\".#.#.......#\",\".#.#.#####.#\",\".#.#.....#.#\",\"#####.###.#.\",\"#.........#.\"],\"path\":[\"0,0\",\"0,1\",\"1,1\",\"1,2\",\"1,3\",\"1,4\",\"1,5\",\"1,6\",\"1,7\",\"2,7\",\"3,7\",\"4,7\",\"4,6\",\"4,5\",\"4,4\",\"4,3\",\"5,3\",\"6,3\",\"7,3\",\"7,4\",\"7,5\",\"7,6\",\"7,7\",\"7,8\",\"7,9\",\"6,9\",\"5,9\",\"4,9\",\"3,9\",\"2,9\",\"1,9\",\"1,10\",\"0,10\",\"0,11\"]}",
+        "prompt": "Generate maze 1 in this set.\nDimensions: 12 columns by 8 rows.\nDiversity seed: 5. Use it as inspiration for a distinct design.\nMaximise shortest-path fitness while keeping the result visibly and structurally different from the earlier mazes.\n\nNo earlier mazes have been generated in this set."
+      }
+    }
+  ],
+  "summary": [
+    {
+      "agent": "random-25pct",
+      "kind": "random",
+      "attempted": 6,
+      "failed": 2,
+      "mean_fitness": 18,
+      "max_fitness": 18,
+      "mean_wall_fraction": 0.19010416666666666,
+      "mean_seconds": 3.049976658076048e-05,
+      "valid_maze_count": 4,
+      "unique_maze_count": 4,
+      "gzip_bytes": 117,
+      "uncompressed_bytes": 418,
+      "gzip_ratio": 0.2799043062200957,
+      "mean_pairwise_hamming": 0.3038194444444444
+    },
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "attempted": 6,
+      "failed": 0,
+      "mean_fitness": 39.666666666666664,
+      "max_fitness": 44,
+      "mean_wall_fraction": 0.3940972222222222,
+      "mean_seconds": 0.08208054843513916,
+      "valid_maze_count": 6,
+      "unique_maze_count": 6,
+      "gzip_bytes": 186,
+      "uncompressed_bytes": 628,
+      "gzip_ratio": 0.2961783439490446,
+      "mean_pairwise_hamming": 0.46319444444444446
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "attempted": 6,
+      "failed": 6,
+      "mean_fitness": null,
+      "max_fitness": null,
+      "mean_wall_fraction": null,
+      "mean_seconds": 1.8209546736907214,
+      "valid_maze_count": 0,
+      "unique_maze_count": 0,
+      "gzip_bytes": 0,
+      "uncompressed_bytes": 0,
+      "gzip_ratio": null,
+      "mean_pairwise_hamming": null,
+      "total_model_calls": 6,
+      "total_prompt_tokens": 2286,
+      "total_completion_tokens": 1039
+    }
+  ],
+  "diversity_note": "gzip measures the valid mazes in fixed seed order; compare bytes only between sets with equal dimensions, encoding and valid counts"
+}

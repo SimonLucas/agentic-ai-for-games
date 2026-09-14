@@ -1,0 +1,11 @@
+[
+  {
+    "agent": "mcs-10",
+    "games": 3,
+    "mean_score": 93.66666666666667,
+    "stdev_score": 18.502252115170556,
+    "min_score": 75,
+    "max_score": 112,
+    "mean_seconds": 11.879190250377482
+  }
+]

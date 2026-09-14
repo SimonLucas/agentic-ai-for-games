@@ -1,0 +1,34 @@
+[
+  {
+    "agent": "gpt4o-mini-no-tools",
+    "games": 3,
+    "mean_score": 24.666666666666668,
+    "stdev_score": 4.509249752822894,
+    "min_score": 20,
+    "max_score": 29,
+    "mean_seconds": 34.91875502765955,
+    "total_model_calls": 88,
+    "total_tool_calls": 0,
+    "total_tool_errors": 0,
+    "total_invalid_moves": 16,
+    "total_prompt_tokens": 40191,
+    "total_completion_tokens": 530,
+    "total_reported_cost_usd": 0.084622
+  },
+  {
+    "agent": "gpt4o-mini-mcp-mcs",
+    "games": 3,
+    "mean_score": 67.66666666666667,
+    "stdev_score": 10.598742063723098,
+    "min_score": 58,
+    "max_score": 79,
+    "mean_seconds": 54.603742972676024,
+    "total_model_calls": 139,
+    "total_tool_calls": 67,
+    "total_tool_errors": 0,
+    "total_invalid_moves": 0,
+    "total_prompt_tokens": 93094,
+    "total_completion_tokens": 1777,
+    "total_reported_cost_usd": 0.200404
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "size": 5,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "agent_seed": 2026,
+  "agents": [
+    {
+      "name": "gpt4o-mini-no-tools",
+      "kind": "llm",
+      "params": {
+        "backend": "openrouter",
+        "model": "openai/gpt-5.6-sol",
+        "temperature": null,
+        "tools": [],
+        "prompt_version": "rules-v1",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 8192,
+        "timeout_seconds": 180
+      }
+    },
+    {
+      "name": "gpt4o-mini-mcp-mcs",
+      "kind": "llm",
+      "params": {
+        "backend": "openrouter",
+        "model": "openai/gpt-5.6-sol",
+        "temperature": null,
+        "tools": [
+          "mcs_advice"
+        ],
+        "max_rollouts_per_call": 10,
+        "max_tool_calls_per_move": 1,
+        "prompt_version": "rules-v1",
+        "reasoning_effort": "medium",
+        "max_output_tokens": 8192,
+        "timeout_seconds": 180
+      }
+    }
+  ]
+}

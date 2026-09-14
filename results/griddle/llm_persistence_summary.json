@@ -1,0 +1,38 @@
+{
+  "same_deals_and_moves": true,
+  "before_seconds_per_game": 57.73263854164785,
+  "after_seconds_per_game": 44.4868268329883,
+  "speedup_percent": 22.943367986038147,
+  "mean_component_seconds": {
+    "client_setup_seconds": 0.07674523602084567,
+    "mcp_startup_seconds": 0.45614759736539173,
+    "mcp_position_seconds": 0.08022212411742657,
+    "api_seconds": 42.68400884644749,
+    "tool_rpc_seconds": 1.0801277212255325,
+    "search_seconds": 1.0203386686431866,
+    "resource_close_seconds": 0.08300306970098366
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "score": 58,
+      "before_seconds": 55.74702004203573,
+      "after_seconds": 45.427182666026056,
+      "same_moves": true
+    },
+    {
+      "seed": 1,
+      "score": 115,
+      "before_seconds": 58.415388124994934,
+      "after_seconds": 43.78874133294448,
+      "same_moves": true
+    },
+    {
+      "seed": 2,
+      "score": 86,
+      "before_seconds": 59.0355074579129,
+      "after_seconds": 44.24455649999436,
+      "same_moves": true
+    }
+  ]
+}

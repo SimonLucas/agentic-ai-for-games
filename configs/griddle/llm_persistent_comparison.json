@@ -1,0 +1,26 @@
+{
+  "size": 5,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "agent_seed": 2026,
+  "agents": [
+    {
+      "name": "gpt4o-mini-mcp-mcs",
+      "kind": "llm",
+      "params": {
+        "backend": "openrouter",
+        "model": "openai/gpt-4o-mini",
+        "temperature": 0,
+        "tools": [
+          "mcs_advice"
+        ],
+        "max_rollouts_per_call": 10,
+        "max_tool_calls_per_move": 1,
+        "prompt_version": "rules-v1"
+      }
+    }
+  ]
+}

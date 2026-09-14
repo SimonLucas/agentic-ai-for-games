@@ -1,0 +1,11 @@
+\begin{tikzpicture}[node distance=13mm and 15mm]
+\node[box] (game) {Real game\\deck + grid + score};
+\node[box,right=of game] (host) {Agent host\\legal moves + budgets};
+\node[box,right=of host] (llm) {LLM\\choose placement};
+\node[box,below=of host] (search) {Persistent MCP server\\MCS / rollout + dictionary};
+\draw[arr] (game.north east) to[bend left=18] node[above,font=\scriptsize]{observed state}(host.north west);
+\draw[arr] (host.south west) to[bend left=18] node[below,font=\scriptsize]{validated move}(game.south east);
+\draw[<->,thick,draw=navy] (host)--node[above,font=\scriptsize]{model API}(llm);
+\draw[arr] (host.south) to[bend right=12] node[left,font=\scriptsize]{snapshot + query}(search.north);
+\draw[arr] (search.north east) to[bend right=15] node[right,font=\scriptsize]{estimated scores}(host.south east);
+\end{tikzpicture}

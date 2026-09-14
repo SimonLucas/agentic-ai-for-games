@@ -1,0 +1,2159 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-14T13:37:41.664475+00:00",
+  "config": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "agents": [
+      {
+        "name": "random",
+        "kind": "random",
+        "params": {}
+      },
+      {
+        "name": "mcs-10",
+        "kind": "mcs",
+        "params": {
+          "rollouts_per_square": 10
+        }
+      },
+      {
+        "name": "mcs-100",
+        "kind": "mcs",
+        "params": {
+          "rollouts_per_square": 100
+        }
+      }
+    ],
+    "size": 5,
+    "agent_seed": 2026,
+    "words": null
+  },
+  "dictionary_sha256": "de9bfc930046b51b8c20d8dc931b18787ac50fd79857fe5768a14ca7493beb66",
+  "results": [
+    {
+      "agent": "random",
+      "kind": "random",
+      "params": {},
+      "game_seed": 0,
+      "agent_seed": 10472663786405149805,
+      "score": 24,
+      "elapsed_seconds": 0.00046070804819464684,
+      "deal": "PCETFBMNBUNHHALEOKPENFOTK",
+      "moves": [
+        {
+          "letter": "P",
+          "action": 2,
+          "index": 2
+        },
+        {
+          "letter": "C",
+          "action": 20,
+          "index": 21
+        },
+        {
+          "letter": "E",
+          "action": 15,
+          "index": 16
+        },
+        {
+          "letter": "T",
+          "action": 10,
+          "index": 11
+        },
+        {
+          "letter": "F",
+          "action": 19,
+          "index": 23
+        },
+        {
+          "letter": "B",
+          "action": 7,
+          "index": 8
+        },
+        {
+          "letter": "M",
+          "action": 17,
+          "index": 22
+        },
+        {
+          "letter": "N",
+          "action": 4,
+          "index": 5
+        },
+        {
+          "letter": "B",
+          "action": 12,
+          "index": 17
+        },
+        {
+          "letter": "U",
+          "action": 12,
+          "index": 18
+        },
+        {
+          "letter": "N",
+          "action": 12,
+          "index": 19
+        },
+        {
+          "letter": "H",
+          "action": 4,
+          "index": 6
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "A",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "L",
+          "action": 6,
+          "index": 13
+        },
+        {
+          "letter": "E",
+          "action": 2,
+          "index": 7
+        },
+        {
+          "letter": "O",
+          "action": 7,
+          "index": 20
+        },
+        {
+          "letter": "K",
+          "action": 5,
+          "index": 14
+        },
+        {
+          "letter": "P",
+          "action": 4,
+          "index": 12
+        },
+        {
+          "letter": "E",
+          "action": 0,
+          "index": 3
+        },
+        {
+          "letter": "N",
+          "action": 3,
+          "index": 15
+        },
+        {
+          "letter": "F",
+          "action": 2,
+          "index": 10
+        },
+        {
+          "letter": "O",
+          "action": 1,
+          "index": 9
+        },
+        {
+          "letter": "T",
+          "action": 1,
+          "index": 24
+        },
+        {
+          "letter": "K",
+          "action": 0,
+          "index": 4
+        }
+      ],
+      "final_grid": "HAPEKNHEBOFTPLKNEBUNOCMFT"
+    },
+    {
+      "agent": "mcs-10",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 10
+      },
+      "game_seed": 0,
+      "agent_seed": 2513712914935541441,
+      "score": 74,
+      "elapsed_seconds": 0.6001436250517145,
+      "deal": "PCETFBMNBUNHHALEOKPENFOTK",
+      "moves": [
+        {
+          "letter": "P",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "C",
+          "action": 3,
+          "index": 4
+        },
+        {
+          "letter": "E",
+          "action": 7,
+          "index": 9
+        },
+        {
+          "letter": "T",
+          "action": 20,
+          "index": 23
+        },
+        {
+          "letter": "F",
+          "action": 17,
+          "index": 20
+        },
+        {
+          "letter": "B",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "M",
+          "action": 5,
+          "index": 8
+        },
+        {
+          "letter": "N",
+          "action": 16,
+          "index": 22
+        },
+        {
+          "letter": "B",
+          "action": 16,
+          "index": 24
+        },
+        {
+          "letter": "U",
+          "action": 8,
+          "index": 13
+        },
+        {
+          "letter": "N",
+          "action": 8,
+          "index": 14
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 2
+        },
+        {
+          "letter": "H",
+          "action": 6,
+          "index": 12
+        },
+        {
+          "letter": "A",
+          "action": 3,
+          "index": 7
+        },
+        {
+          "letter": "L",
+          "action": 2,
+          "index": 6
+        },
+        {
+          "letter": "E",
+          "action": 3,
+          "index": 11
+        },
+        {
+          "letter": "O",
+          "action": 8,
+          "index": 21
+        },
+        {
+          "letter": "K",
+          "action": 0,
+          "index": 3
+        },
+        {
+          "letter": "P",
+          "action": 1,
+          "index": 10
+        },
+        {
+          "letter": "E",
+          "action": 0,
+          "index": 5
+        },
+        {
+          "letter": "N",
+          "action": 1,
+          "index": 16
+        },
+        {
+          "letter": "F",
+          "action": 3,
+          "index": 19
+        },
+        {
+          "letter": "O",
+          "action": 0,
+          "index": 15
+        },
+        {
+          "letter": "T",
+          "action": 1,
+          "index": 18
+        },
+        {
+          "letter": "K",
+          "action": 0,
+          "index": 17
+        }
+      ],
+      "final_grid": "PBHKCELAMEPEHUNONKTFFONTB"
+    },
+    {
+      "agent": "mcs-100",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 100
+      },
+      "game_seed": 0,
+      "agent_seed": 1436787874442515352,
+      "score": 73,
+      "elapsed_seconds": 6.003104708041064,
+      "deal": "PCETFBMNBUNHHALEOKPENFOTK",
+      "moves": [
+        {
+          "letter": "P",
+          "action": 10,
+          "index": 10
+        },
+        {
+          "letter": "C",
+          "action": 19,
+          "index": 20
+        },
+        {
+          "letter": "E",
+          "action": 14,
+          "index": 15
+        },
+        {
+          "letter": "T",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "F",
+          "action": 3,
+          "index": 4
+        },
+        {
+          "letter": "B",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "M",
+          "action": 9,
+          "index": 13
+        },
+        {
+          "letter": "N",
+          "action": 17,
+          "index": 24
+        },
+        {
+          "letter": "B",
+          "action": 10,
+          "index": 16
+        },
+        {
+          "letter": "U",
+          "action": 5,
+          "index": 8
+        },
+        {
+          "letter": "N",
+          "action": 4,
+          "index": 7
+        },
+        {
+          "letter": "H",
+          "action": 1,
+          "index": 3
+        },
+        {
+          "letter": "H",
+          "action": 11,
+          "index": 22
+        },
+        {
+          "letter": "A",
+          "action": 1,
+          "index": 5
+        },
+        {
+          "letter": "L",
+          "action": 1,
+          "index": 6
+        },
+        {
+          "letter": "E",
+          "action": 2,
+          "index": 11
+        },
+        {
+          "letter": "O",
+          "action": 8,
+          "index": 23
+        },
+        {
+          "letter": "K",
+          "action": 0,
+          "index": 2
+        },
+        {
+          "letter": "P",
+          "action": 4,
+          "index": 18
+        },
+        {
+          "letter": "E",
+          "action": 4,
+          "index": 19
+        },
+        {
+          "letter": "N",
+          "action": 0,
+          "index": 9
+        },
+        {
+          "letter": "F",
+          "action": 1,
+          "index": 14
+        },
+        {
+          "letter": "O",
+          "action": 2,
+          "index": 21
+        },
+        {
+          "letter": "T",
+          "action": 0,
+          "index": 12
+        },
+        {
+          "letter": "K",
+          "action": 0,
+          "index": 17
+        }
+      ],
+      "final_grid": "TBKHFALNUNPETMFEBKPECOHON"
+    },
+    {
+      "agent": "random",
+      "kind": "random",
+      "params": {},
+      "game_seed": 1,
+      "agent_seed": 347967370175580353,
+      "score": 20,
+      "elapsed_seconds": 0.00036779209040105343,
+      "deal": "OELOKHGPRALSWCIRNFPSURQUA",
+      "moves": [
+        {
+          "letter": "O",
+          "action": 8,
+          "index": 8
+        },
+        {
+          "letter": "E",
+          "action": 8,
+          "index": 9
+        },
+        {
+          "letter": "L",
+          "action": 20,
+          "index": 22
+        },
+        {
+          "letter": "O",
+          "action": 9,
+          "index": 11
+        },
+        {
+          "letter": "K",
+          "action": 12,
+          "index": 15
+        },
+        {
+          "letter": "H",
+          "action": 5,
+          "index": 5
+        },
+        {
+          "letter": "G",
+          "action": 14,
+          "index": 19
+        },
+        {
+          "letter": "P",
+          "action": 7,
+          "index": 10
+        },
+        {
+          "letter": "R",
+          "action": 4,
+          "index": 4
+        },
+        {
+          "letter": "A",
+          "action": 6,
+          "index": 12
+        },
+        {
+          "letter": "L",
+          "action": 2,
+          "index": 2
+        },
+        {
+          "letter": "S",
+          "action": 9,
+          "index": 18
+        },
+        {
+          "letter": "W",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "C",
+          "action": 3,
+          "index": 7
+        },
+        {
+          "letter": "I",
+          "action": 1,
+          "index": 3
+        },
+        {
+          "letter": "R",
+          "action": 3,
+          "index": 14
+        },
+        {
+          "letter": "N",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "F",
+          "action": 4,
+          "index": 20
+        },
+        {
+          "letter": "P",
+          "action": 6,
+          "index": 24
+        },
+        {
+          "letter": "S",
+          "action": 1,
+          "index": 13
+        },
+        {
+          "letter": "U",
+          "action": 1,
+          "index": 16
+        },
+        {
+          "letter": "R",
+          "action": 0,
+          "index": 6
+        },
+        {
+          "letter": "Q",
+          "action": 0,
+          "index": 17
+        },
+        {
+          "letter": "U",
+          "action": 0,
+          "index": 21
+        },
+        {
+          "letter": "A",
+          "action": 0,
+          "index": 23
+        }
+      ],
+      "final_grid": "WNLIRHRCOEPOASRKUQSGFULAP"
+    },
+    {
+      "agent": "mcs-10",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 10
+      },
+      "game_seed": 1,
+      "agent_seed": 15541305757358130811,
+      "score": 99,
+      "elapsed_seconds": 0.5947563749505207,
+      "deal": "OELOKHGPRALSWCIRNFPSURQUA",
+      "moves": [
+        {
+          "letter": "O",
+          "action": 17,
+          "index": 17
+        },
+        {
+          "letter": "E",
+          "action": 8,
+          "index": 8
+        },
+        {
+          "letter": "L",
+          "action": 12,
+          "index": 13
+        },
+        {
+          "letter": "O",
+          "action": 6,
+          "index": 6
+        },
+        {
+          "letter": "K",
+          "action": 15,
+          "index": 19
+        },
+        {
+          "letter": "H",
+          "action": 5,
+          "index": 5
+        },
+        {
+          "letter": "G",
+          "action": 3,
+          "index": 3
+        },
+        {
+          "letter": "P",
+          "action": 4,
+          "index": 7
+        },
+        {
+          "letter": "R",
+          "action": 4,
+          "index": 9
+        },
+        {
+          "letter": "A",
+          "action": 2,
+          "index": 2
+        },
+        {
+          "letter": "L",
+          "action": 9,
+          "index": 18
+        },
+        {
+          "letter": "S",
+          "action": 1,
+          "index": 1
+        },
+        {
+          "letter": "W",
+          "action": 6,
+          "index": 15
+        },
+        {
+          "letter": "C",
+          "action": 11,
+          "index": 24
+        },
+        {
+          "letter": "I",
+          "action": 4,
+          "index": 12
+        },
+        {
+          "letter": "R",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "N",
+          "action": 7,
+          "index": 22
+        },
+        {
+          "letter": "F",
+          "action": 4,
+          "index": 16
+        },
+        {
+          "letter": "P",
+          "action": 4,
+          "index": 20
+        },
+        {
+          "letter": "S",
+          "action": 5,
+          "index": 23
+        },
+        {
+          "letter": "U",
+          "action": 4,
+          "index": 21
+        },
+        {
+          "letter": "R",
+          "action": 1,
+          "index": 10
+        },
+        {
+          "letter": "Q",
+          "action": 0,
+          "index": 4
+        },
+        {
+          "letter": "U",
+          "action": 1,
+          "index": 14
+        },
+        {
+          "letter": "A",
+          "action": 0,
+          "index": 11
+        }
+      ],
+      "final_grid": "RSAGQHOPERRAILUWFOLKPUNSC"
+    },
+    {
+      "agent": "mcs-100",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 100
+      },
+      "game_seed": 1,
+      "agent_seed": 9736892588209366750,
+      "score": 103,
+      "elapsed_seconds": 5.96136358298827,
+      "deal": "OELOKHGPRALSWCIRNFPSURQUA",
+      "moves": [
+        {
+          "letter": "O",
+          "action": 12,
+          "index": 12
+        },
+        {
+          "letter": "E",
+          "action": 21,
+          "index": 22
+        },
+        {
+          "letter": "L",
+          "action": 16,
+          "index": 17
+        },
+        {
+          "letter": "O",
+          "action": 6,
+          "index": 6
+        },
+        {
+          "letter": "K",
+          "action": 3,
+          "index": 3
+        },
+        {
+          "letter": "H",
+          "action": 5,
+          "index": 7
+        },
+        {
+          "letter": "G",
+          "action": 8,
+          "index": 11
+        },
+        {
+          "letter": "P",
+          "action": 4,
+          "index": 5
+        },
+        {
+          "letter": "R",
+          "action": 7,
+          "index": 13
+        },
+        {
+          "letter": "A",
+          "action": 6,
+          "index": 10
+        },
+        {
+          "letter": "L",
+          "action": 7,
+          "index": 15
+        },
+        {
+          "letter": "S",
+          "action": 10,
+          "index": 20
+        },
+        {
+          "letter": "W",
+          "action": 2,
+          "index": 2
+        },
+        {
+          "letter": "C",
+          "action": 1,
+          "index": 1
+        },
+        {
+          "letter": "I",
+          "action": 2,
+          "index": 8
+        },
+        {
+          "letter": "R",
+          "action": 8,
+          "index": 23
+        },
+        {
+          "letter": "N",
+          "action": 8,
+          "index": 24
+        },
+        {
+          "letter": "F",
+          "action": 7,
+          "index": 21
+        },
+        {
+          "letter": "P",
+          "action": 3,
+          "index": 14
+        },
+        {
+          "letter": "S",
+          "action": 3,
+          "index": 16
+        },
+        {
+          "letter": "U",
+          "action": 4,
+          "index": 19
+        },
+        {
+          "letter": "R",
+          "action": 1,
+          "index": 4
+        },
+        {
+          "letter": "Q",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "U",
+          "action": 1,
+          "index": 18
+        },
+        {
+          "letter": "A",
+          "action": 0,
+          "index": 9
+        }
+      ],
+      "final_grid": "QCWKRPOHIAAGORPLSLUUSFERN"
+    },
+    {
+      "agent": "random",
+      "kind": "random",
+      "params": {},
+      "game_seed": 2,
+      "agent_seed": 14433127435572425448,
+      "score": 38,
+      "elapsed_seconds": 0.00036504107993096113,
+      "deal": "EAAUINLRSIFNRMZYFITRYOSSH",
+      "moves": [
+        {
+          "letter": "E",
+          "action": 9,
+          "index": 9
+        },
+        {
+          "letter": "A",
+          "action": 7,
+          "index": 7
+        },
+        {
+          "letter": "A",
+          "action": 8,
+          "index": 10
+        },
+        {
+          "letter": "U",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "I",
+          "action": 18,
+          "index": 22
+        },
+        {
+          "letter": "N",
+          "action": 2,
+          "index": 3
+        },
+        {
+          "letter": "L",
+          "action": 10,
+          "index": 15
+        },
+        {
+          "letter": "R",
+          "action": 15,
+          "index": 21
+        },
+        {
+          "letter": "S",
+          "action": 8,
+          "index": 13
+        },
+        {
+          "letter": "I",
+          "action": 7,
+          "index": 12
+        },
+        {
+          "letter": "F",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "N",
+          "action": 0,
+          "index": 2
+        },
+        {
+          "letter": "R",
+          "action": 8,
+          "index": 18
+        },
+        {
+          "letter": "M",
+          "action": 2,
+          "index": 6
+        },
+        {
+          "letter": "Z",
+          "action": 6,
+          "index": 17
+        },
+        {
+          "letter": "Y",
+          "action": 1,
+          "index": 5
+        },
+        {
+          "letter": "F",
+          "action": 3,
+          "index": 14
+        },
+        {
+          "letter": "I",
+          "action": 5,
+          "index": 20
+        },
+        {
+          "letter": "T",
+          "action": 1,
+          "index": 8
+        },
+        {
+          "letter": "R",
+          "action": 4,
+          "index": 23
+        },
+        {
+          "letter": "Y",
+          "action": 2,
+          "index": 16
+        },
+        {
+          "letter": "O",
+          "action": 2,
+          "index": 19
+        },
+        {
+          "letter": "S",
+          "action": 2,
+          "index": 24
+        },
+        {
+          "letter": "S",
+          "action": 0,
+          "index": 4
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 11
+        }
+      ],
+      "final_grid": "UFNNSYMATEAHISFLYZROIRIRS"
+    },
+    {
+      "agent": "mcs-10",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 10
+      },
+      "game_seed": 2,
+      "agent_seed": 14590921937160996492,
+      "score": 81,
+      "elapsed_seconds": 0.5953814579406753,
+      "deal": "EAAUINLRSIFNRMZYFITRYOSSH",
+      "moves": [
+        {
+          "letter": "E",
+          "action": 17,
+          "index": 17
+        },
+        {
+          "letter": "A",
+          "action": 2,
+          "index": 2
+        },
+        {
+          "letter": "A",
+          "action": 3,
+          "index": 4
+        },
+        {
+          "letter": "U",
+          "action": 6,
+          "index": 8
+        },
+        {
+          "letter": "I",
+          "action": 11,
+          "index": 14
+        },
+        {
+          "letter": "N",
+          "action": 2,
+          "index": 3
+        },
+        {
+          "letter": "L",
+          "action": 5,
+          "index": 9
+        },
+        {
+          "letter": "R",
+          "action": 15,
+          "index": 22
+        },
+        {
+          "letter": "S",
+          "action": 8,
+          "index": 13
+        },
+        {
+          "letter": "I",
+          "action": 3,
+          "index": 6
+        },
+        {
+          "letter": "F",
+          "action": 10,
+          "index": 19
+        },
+        {
+          "letter": "N",
+          "action": 1,
+          "index": 1
+        },
+        {
+          "letter": "R",
+          "action": 7,
+          "index": 16
+        },
+        {
+          "letter": "M",
+          "action": 2,
+          "index": 7
+        },
+        {
+          "letter": "Z",
+          "action": 7,
+          "index": 20
+        },
+        {
+          "letter": "Y",
+          "action": 8,
+          "index": 23
+        },
+        {
+          "letter": "F",
+          "action": 8,
+          "index": 24
+        },
+        {
+          "letter": "I",
+          "action": 4,
+          "index": 12
+        },
+        {
+          "letter": "T",
+          "action": 3,
+          "index": 11
+        },
+        {
+          "letter": "R",
+          "action": 1,
+          "index": 5
+        },
+        {
+          "letter": "Y",
+          "action": 4,
+          "index": 21
+        },
+        {
+          "letter": "O",
+          "action": 2,
+          "index": 15
+        },
+        {
+          "letter": "S",
+          "action": 2,
+          "index": 18
+        },
+        {
+          "letter": "S",
+          "action": 1,
+          "index": 10
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 0
+        }
+      ],
+      "final_grid": "HNANARIMULSTISIORESFZYRYF"
+    },
+    {
+      "agent": "mcs-100",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 100
+      },
+      "game_seed": 2,
+      "agent_seed": 17425035844791379244,
+      "score": 100,
+      "elapsed_seconds": 6.034751208033413,
+      "deal": "EAAUINLRSIFNRMZYFITRYOSSH",
+      "moves": [
+        {
+          "letter": "E",
+          "action": 23,
+          "index": 23
+        },
+        {
+          "letter": "A",
+          "action": 17,
+          "index": 17
+        },
+        {
+          "letter": "A",
+          "action": 6,
+          "index": 6
+        },
+        {
+          "letter": "U",
+          "action": 13,
+          "index": 14
+        },
+        {
+          "letter": "I",
+          "action": 18,
+          "index": 21
+        },
+        {
+          "letter": "N",
+          "action": 18,
+          "index": 22
+        },
+        {
+          "letter": "L",
+          "action": 17,
+          "index": 20
+        },
+        {
+          "letter": "R",
+          "action": 17,
+          "index": 24
+        },
+        {
+          "letter": "S",
+          "action": 4,
+          "index": 4
+        },
+        {
+          "letter": "I",
+          "action": 11,
+          "index": 13
+        },
+        {
+          "letter": "F",
+          "action": 10,
+          "index": 12
+        },
+        {
+          "letter": "N",
+          "action": 12,
+          "index": 18
+        },
+        {
+          "letter": "R",
+          "action": 5,
+          "index": 7
+        },
+        {
+          "letter": "M",
+          "action": 5,
+          "index": 8
+        },
+        {
+          "letter": "Z",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "Y",
+          "action": 4,
+          "index": 9
+        },
+        {
+          "letter": "F",
+          "action": 3,
+          "index": 5
+        },
+        {
+          "letter": "I",
+          "action": 2,
+          "index": 3
+        },
+        {
+          "letter": "T",
+          "action": 5,
+          "index": 16
+        },
+        {
+          "letter": "R",
+          "action": 3,
+          "index": 11
+        },
+        {
+          "letter": "Y",
+          "action": 4,
+          "index": 19
+        },
+        {
+          "letter": "O",
+          "action": 2,
+          "index": 10
+        },
+        {
+          "letter": "S",
+          "action": 1,
+          "index": 2
+        },
+        {
+          "letter": "S",
+          "action": 1,
+          "index": 15
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 1
+        }
+      ],
+      "final_grid": "ZHSISFARMYORFIUSTANYLINER"
+    },
+    {
+      "agent": "random",
+      "kind": "random",
+      "params": {},
+      "game_seed": 3,
+      "agent_seed": 7776294093904255166,
+      "score": 37,
+      "elapsed_seconds": 0.0003766249865293503,
+      "deal": "LZOPGESVTLAUQTCTFRNEACHKI",
+      "moves": [
+        {
+          "letter": "L",
+          "action": 22,
+          "index": 22
+        },
+        {
+          "letter": "Z",
+          "action": 11,
+          "index": 11
+        },
+        {
+          "letter": "O",
+          "action": 19,
+          "index": 20
+        },
+        {
+          "letter": "P",
+          "action": 14,
+          "index": 15
+        },
+        {
+          "letter": "G",
+          "action": 12,
+          "index": 13
+        },
+        {
+          "letter": "E",
+          "action": 16,
+          "index": 19
+        },
+        {
+          "letter": "S",
+          "action": 1,
+          "index": 1
+        },
+        {
+          "letter": "V",
+          "action": 9,
+          "index": 10
+        },
+        {
+          "letter": "T",
+          "action": 10,
+          "index": 14
+        },
+        {
+          "letter": "L",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "A",
+          "action": 10,
+          "index": 17
+        },
+        {
+          "letter": "U",
+          "action": 3,
+          "index": 5
+        },
+        {
+          "letter": "Q",
+          "action": 11,
+          "index": 23
+        },
+        {
+          "letter": "T",
+          "action": 11,
+          "index": 24
+        },
+        {
+          "letter": "C",
+          "action": 0,
+          "index": 2
+        },
+        {
+          "letter": "T",
+          "action": 6,
+          "index": 12
+        },
+        {
+          "letter": "F",
+          "action": 2,
+          "index": 6
+        },
+        {
+          "letter": "R",
+          "action": 6,
+          "index": 18
+        },
+        {
+          "letter": "N",
+          "action": 6,
+          "index": 21
+        },
+        {
+          "letter": "E",
+          "action": 5,
+          "index": 16
+        },
+        {
+          "letter": "A",
+          "action": 2,
+          "index": 7
+        },
+        {
+          "letter": "C",
+          "action": 3,
+          "index": 9
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 3
+        },
+        {
+          "letter": "K",
+          "action": 0,
+          "index": 4
+        },
+        {
+          "letter": "I",
+          "action": 0,
+          "index": 8
+        }
+      ],
+      "final_grid": "LSCHKUFAICVZTGTPEAREONLQT"
+    },
+    {
+      "agent": "mcs-10",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 10
+      },
+      "game_seed": 3,
+      "agent_seed": 17161154432940945372,
+      "score": 61,
+      "elapsed_seconds": 0.5860784170217812,
+      "deal": "LZOPGESVTLAUQTCTFRNEACHKI",
+      "moves": [
+        {
+          "letter": "L",
+          "action": 20,
+          "index": 20
+        },
+        {
+          "letter": "Z",
+          "action": 19,
+          "index": 19
+        },
+        {
+          "letter": "O",
+          "action": 17,
+          "index": 17
+        },
+        {
+          "letter": "P",
+          "action": 17,
+          "index": 18
+        },
+        {
+          "letter": "G",
+          "action": 8,
+          "index": 8
+        },
+        {
+          "letter": "E",
+          "action": 9,
+          "index": 10
+        },
+        {
+          "letter": "S",
+          "action": 14,
+          "index": 16
+        },
+        {
+          "letter": "V",
+          "action": 17,
+          "index": 24
+        },
+        {
+          "letter": "T",
+          "action": 3,
+          "index": 3
+        },
+        {
+          "letter": "L",
+          "action": 12,
+          "index": 15
+        },
+        {
+          "letter": "A",
+          "action": 6,
+          "index": 7
+        },
+        {
+          "letter": "U",
+          "action": 2,
+          "index": 2
+        },
+        {
+          "letter": "Q",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "T",
+          "action": 2,
+          "index": 5
+        },
+        {
+          "letter": "C",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "T",
+          "action": 9,
+          "index": 23
+        },
+        {
+          "letter": "F",
+          "action": 2,
+          "index": 9
+        },
+        {
+          "letter": "R",
+          "action": 2,
+          "index": 11
+        },
+        {
+          "letter": "N",
+          "action": 2,
+          "index": 12
+        },
+        {
+          "letter": "E",
+          "action": 2,
+          "index": 13
+        },
+        {
+          "letter": "A",
+          "action": 1,
+          "index": 6
+        },
+        {
+          "letter": "C",
+          "action": 0,
+          "index": 4
+        },
+        {
+          "letter": "H",
+          "action": 1,
+          "index": 21
+        },
+        {
+          "letter": "K",
+          "action": 0,
+          "index": 14
+        },
+        {
+          "letter": "I",
+          "action": 0,
+          "index": 22
+        }
+      ],
+      "final_grid": "QCUTCTAAGFERNEKLSOPZLHITV"
+    },
+    {
+      "agent": "mcs-100",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 100
+      },
+      "game_seed": 3,
+      "agent_seed": 563093849196833973,
+      "score": 95,
+      "elapsed_seconds": 5.873649124987423,
+      "deal": "LZOPGESVTLAUQTCTFRNEACHKI",
+      "moves": [
+        {
+          "letter": "L",
+          "action": 20,
+          "index": 20
+        },
+        {
+          "letter": "Z",
+          "action": 23,
+          "index": 24
+        },
+        {
+          "letter": "O",
+          "action": 12,
+          "index": 12
+        },
+        {
+          "letter": "P",
+          "action": 12,
+          "index": 13
+        },
+        {
+          "letter": "G",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "E",
+          "action": 11,
+          "index": 14
+        },
+        {
+          "letter": "S",
+          "action": 15,
+          "index": 19
+        },
+        {
+          "letter": "V",
+          "action": 17,
+          "index": 23
+        },
+        {
+          "letter": "T",
+          "action": 10,
+          "index": 11
+        },
+        {
+          "letter": "L",
+          "action": 10,
+          "index": 15
+        },
+        {
+          "letter": "A",
+          "action": 9,
+          "index": 10
+        },
+        {
+          "letter": "U",
+          "action": 7,
+          "index": 8
+        },
+        {
+          "letter": "Q",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "T",
+          "action": 3,
+          "index": 5
+        },
+        {
+          "letter": "C",
+          "action": 1,
+          "index": 3
+        },
+        {
+          "letter": "T",
+          "action": 3,
+          "index": 7
+        },
+        {
+          "letter": "F",
+          "action": 0,
+          "index": 2
+        },
+        {
+          "letter": "R",
+          "action": 4,
+          "index": 17
+        },
+        {
+          "letter": "N",
+          "action": 2,
+          "index": 9
+        },
+        {
+          "letter": "E",
+          "action": 3,
+          "index": 18
+        },
+        {
+          "letter": "A",
+          "action": 2,
+          "index": 16
+        },
+        {
+          "letter": "C",
+          "action": 3,
+          "index": 22
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 4
+        },
+        {
+          "letter": "K",
+          "action": 0,
+          "index": 6
+        },
+        {
+          "letter": "I",
+          "action": 0,
+          "index": 21
+        }
+      ],
+      "final_grid": "GQFCHTKTUNATOPELARESLICVZ"
+    },
+    {
+      "agent": "random",
+      "kind": "random",
+      "params": {},
+      "game_seed": 4,
+      "agent_seed": 4883961721888806934,
+      "score": 46,
+      "elapsed_seconds": 0.0003620829666033387,
+      "deal": "LNAMBOAESMTHOKPSATTIOPFEO",
+      "moves": [
+        {
+          "letter": "L",
+          "action": 10,
+          "index": 10
+        },
+        {
+          "letter": "N",
+          "action": 4,
+          "index": 4
+        },
+        {
+          "letter": "A",
+          "action": 7,
+          "index": 8
+        },
+        {
+          "letter": "M",
+          "action": 18,
+          "index": 21
+        },
+        {
+          "letter": "B",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "O",
+          "action": 18,
+          "index": 23
+        },
+        {
+          "letter": "A",
+          "action": 11,
+          "index": 15
+        },
+        {
+          "letter": "E",
+          "action": 8,
+          "index": 12
+        },
+        {
+          "letter": "S",
+          "action": 3,
+          "index": 5
+        },
+        {
+          "letter": "M",
+          "action": 8,
+          "index": 14
+        },
+        {
+          "letter": "T",
+          "action": 2,
+          "index": 3
+        },
+        {
+          "letter": "H",
+          "action": 8,
+          "index": 17
+        },
+        {
+          "letter": "O",
+          "action": 4,
+          "index": 9
+        },
+        {
+          "letter": "K",
+          "action": 1,
+          "index": 2
+        },
+        {
+          "letter": "P",
+          "action": 10,
+          "index": 24
+        },
+        {
+          "letter": "S",
+          "action": 3,
+          "index": 11
+        },
+        {
+          "letter": "A",
+          "action": 1,
+          "index": 6
+        },
+        {
+          "letter": "T",
+          "action": 3,
+          "index": 16
+        },
+        {
+          "letter": "T",
+          "action": 6,
+          "index": 22
+        },
+        {
+          "letter": "I",
+          "action": 4,
+          "index": 19
+        },
+        {
+          "letter": "O",
+          "action": 3,
+          "index": 18
+        },
+        {
+          "letter": "P",
+          "action": 2,
+          "index": 13
+        },
+        {
+          "letter": "F",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "E",
+          "action": 0,
+          "index": 7
+        },
+        {
+          "letter": "O",
+          "action": 0,
+          "index": 20
+        }
+      ],
+      "final_grid": "BFKTNSAEAOLSEPMATHOIOMTOP"
+    },
+    {
+      "agent": "mcs-10",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 10
+      },
+      "game_seed": 4,
+      "agent_seed": 3443515550067699028,
+      "score": 121,
+      "elapsed_seconds": 0.5992318340577185,
+      "deal": "LNAMBOAESMTHOKPSATTIOPFEO",
+      "moves": [
+        {
+          "letter": "L",
+          "action": 5,
+          "index": 5
+        },
+        {
+          "letter": "N",
+          "action": 7,
+          "index": 8
+        },
+        {
+          "letter": "A",
+          "action": 11,
+          "index": 13
+        },
+        {
+          "letter": "M",
+          "action": 15,
+          "index": 18
+        },
+        {
+          "letter": "B",
+          "action": 7,
+          "index": 9
+        },
+        {
+          "letter": "O",
+          "action": 6,
+          "index": 7
+        },
+        {
+          "letter": "A",
+          "action": 7,
+          "index": 11
+        },
+        {
+          "letter": "E",
+          "action": 16,
+          "index": 23
+        },
+        {
+          "letter": "S",
+          "action": 10,
+          "index": 16
+        },
+        {
+          "letter": "M",
+          "action": 7,
+          "index": 12
+        },
+        {
+          "letter": "T",
+          "action": 5,
+          "index": 6
+        },
+        {
+          "letter": "H",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "O",
+          "action": 7,
+          "index": 17
+        },
+        {
+          "letter": "K",
+          "action": 9,
+          "index": 21
+        },
+        {
+          "letter": "P",
+          "action": 1,
+          "index": 2
+        },
+        {
+          "letter": "S",
+          "action": 8,
+          "index": 22
+        },
+        {
+          "letter": "A",
+          "action": 6,
+          "index": 19
+        },
+        {
+          "letter": "T",
+          "action": 7,
+          "index": 24
+        },
+        {
+          "letter": "T",
+          "action": 4,
+          "index": 14
+        },
+        {
+          "letter": "I",
+          "action": 1,
+          "index": 3
+        },
+        {
+          "letter": "O",
+          "action": 3,
+          "index": 15
+        },
+        {
+          "letter": "P",
+          "action": 3,
+          "index": 20
+        },
+        {
+          "letter": "F",
+          "action": 1,
+          "index": 4
+        },
+        {
+          "letter": "E",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "O",
+          "action": 0,
+          "index": 10
+        }
+      ],
+      "final_grid": "HEPIFLTONBOAMATOSOMAPKSET"
+    },
+    {
+      "agent": "mcs-100",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 100
+      },
+      "game_seed": 4,
+      "agent_seed": 1119567403761788617,
+      "score": 155,
+      "elapsed_seconds": 6.041419000015594,
+      "deal": "LNAMBOAESMTHOKPSATTIOPFEO",
+      "moves": [
+        {
+          "letter": "L",
+          "action": 10,
+          "index": 10
+        },
+        {
+          "letter": "N",
+          "action": 22,
+          "index": 23
+        },
+        {
+          "letter": "A",
+          "action": 10,
+          "index": 11
+        },
+        {
+          "letter": "M",
+          "action": 10,
+          "index": 12
+        },
+        {
+          "letter": "B",
+          "action": 10,
+          "index": 13
+        },
+        {
+          "letter": "O",
+          "action": 10,
+          "index": 14
+        },
+        {
+          "letter": "A",
+          "action": 13,
+          "index": 18
+        },
+        {
+          "letter": "E",
+          "action": 17,
+          "index": 24
+        },
+        {
+          "letter": "S",
+          "action": 13,
+          "index": 19
+        },
+        {
+          "letter": "M",
+          "action": 12,
+          "index": 17
+        },
+        {
+          "letter": "T",
+          "action": 13,
+          "index": 21
+        },
+        {
+          "letter": "H",
+          "action": 9,
+          "index": 9
+        },
+        {
+          "letter": "O",
+          "action": 12,
+          "index": 22
+        },
+        {
+          "letter": "K",
+          "action": 6,
+          "index": 6
+        },
+        {
+          "letter": "P",
+          "action": 0,
+          "index": 0
+        },
+        {
+          "letter": "S",
+          "action": 9,
+          "index": 20
+        },
+        {
+          "letter": "A",
+          "action": 8,
+          "index": 16
+        },
+        {
+          "letter": "T",
+          "action": 3,
+          "index": 4
+        },
+        {
+          "letter": "T",
+          "action": 1,
+          "index": 2
+        },
+        {
+          "letter": "I",
+          "action": 0,
+          "index": 1
+        },
+        {
+          "letter": "O",
+          "action": 1,
+          "index": 5
+        },
+        {
+          "letter": "P",
+          "action": 2,
+          "index": 8
+        },
+        {
+          "letter": "F",
+          "action": 0,
+          "index": 3
+        },
+        {
+          "letter": "E",
+          "action": 1,
+          "index": 15
+        },
+        {
+          "letter": "O",
+          "action": 0,
+          "index": 7
+        }
+      ],
+      "final_grid": "PITFTOKOPHLAMBOEAMASSTONE"
+    }
+  ],
+  "summary": [
+    {
+      "agent": "random",
+      "games": 5,
+      "mean_score": 33,
+      "stdev_score": 10.723805294763608,
+      "min_score": 20,
+      "max_score": 46,
+      "mean_seconds": 0.00038644983433187006
+    },
+    {
+      "agent": "mcs-10",
+      "games": 5,
+      "mean_score": 87.2,
+      "stdev_score": 23.34951819631403,
+      "min_score": 61,
+      "max_score": 121,
+      "mean_seconds": 0.5951183418044821
+    },
+    {
+      "agent": "mcs-100",
+      "games": 5,
+      "mean_score": 105.2,
+      "stdev_score": 30.21919919521363,
+      "min_score": 73,
+      "max_score": 155,
+      "mean_seconds": 5.982857524813153
+    }
+  ]
+}

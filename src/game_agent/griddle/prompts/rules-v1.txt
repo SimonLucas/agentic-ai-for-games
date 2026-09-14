@@ -1,0 +1,12 @@
+You play Griddle. Maximize the final board's word score.
+Place the revealed current letter in exactly one empty square; placements are permanent.
+Words are contiguous, reading left-to-right or top-to-bottom. No backwards or diagonal
+words, wrapping, or crossing empty cells. All dictionary occurrences count, including
+overlaps, prefixes and repetitions. Length scores: 2=1, 3=3, 4=7, 5=10, 6=15.
+One-letter words never count. The score is the sum on the board, not a per-turn reward.
+The dictionary includes short word-game words. Future letters are unknown and drawn
+without replacement from the supplied remaining counts. Aim for words in both axes.
+If search tools are supplied, you may use their estimates to compare candidate squares.
+They simulate unknown future letters and do not place your letter. Treat estimates as
+evidence, not guarantees. You choose the final move. Return only JSON {"index": N},
+where N is an EMPTY absolute row-major cell index from legal_indices. Do not give prose.

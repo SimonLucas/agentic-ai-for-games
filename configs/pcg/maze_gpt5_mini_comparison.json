@@ -1,0 +1,36 @@
+{
+  "width": 12,
+  "height": 8,
+  "seeds": [0, 1, 2, 3, 4, 5],
+  "agents": [
+    {
+      "name": "random-25pct",
+      "kind": "random",
+      "params": {
+        "wall_probability": 0.25
+      }
+    },
+    {
+      "name": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      }
+    },
+    {
+      "name": "gpt-5-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openai",
+        "model": "gpt-5-mini",
+        "temperature": null,
+        "reasoning_effort": "low",
+        "max_output_tokens": 8192,
+        "timeout_seconds": 180,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      }
+    }
+  ]
+}

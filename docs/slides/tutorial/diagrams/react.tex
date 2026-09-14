@@ -1,0 +1,12 @@
+\begin{tikzpicture}[node distance=12mm and 16mm]
+\node[box] (state) {Observe\\task + current state};
+\node[box,right=of state] (llm) {LLM\\choose next step};
+\node[box,right=of llm] (host) {Host\\validate + execute};
+\node[box,below=of host] (tool) {Tool / environment\\return observation};
+\node[box,below=of state] (done) {Answer / game move\\stop this decision};
+\draw[arr] (state)--(llm);
+\draw[arr] (llm)--node[above,font=\scriptsize]{tool request}(host);
+\draw[arr] (host)--(tool);
+\draw[arr] (tool.west)-|node[pos=.25,above,font=\scriptsize]{new evidence}(llm.south);
+\draw[arr] (llm.south west)--node[above,sloped,font=\scriptsize]{final output}(done.north east);
+\end{tikzpicture}

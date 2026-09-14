@@ -37,6 +37,19 @@ class TrieDict:
                 return False
         return node.is_word
 
+    def words(self) -> list[str]:
+        """Export this exact dictionary for an isolated search-tool process."""
+        result = []
+
+        def visit(node: TrieNode, prefix: str) -> None:
+            if node.is_word:
+                result.append(prefix)
+            for letter, child in sorted(node.nodes.items()):
+                visit(child, prefix + letter)
+
+        visit(self.root, "")
+        return result
+
 
 def trie_real_words(filename: str | Path | None = None) -> TrieDict:
     return TrieDict(read_words(filename))

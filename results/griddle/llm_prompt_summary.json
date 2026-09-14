@@ -1,0 +1,26 @@
+{
+  "old_mean_score": 25.333333333333332,
+  "revised_mean_score": 27.666666666666668,
+  "old_invalid_moves": 3,
+  "revised_invalid_moves": 9,
+  "per_seed": [
+    {
+      "seed": 0,
+      "old_score": 34,
+      "revised_score": 27,
+      "invalid_moves": 2
+    },
+    {
+      "seed": 1,
+      "old_score": 18,
+      "revised_score": 22,
+      "invalid_moves": 4
+    },
+    {
+      "seed": 2,
+      "old_score": 24,
+      "revised_score": 34,
+      "invalid_moves": 3
+    }
+  ]
+}

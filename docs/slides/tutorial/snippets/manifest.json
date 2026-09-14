@@ -1,0 +1,37 @@
+{
+  "function": {
+    "source": "src/simple_examples/operations.py",
+    "first_line": 9,
+    "last_line": 11
+  },
+  "server": {
+    "source": "src/simple_examples/server.py",
+    "first_line": 18,
+    "last_line": 21
+  },
+  "discovery": {
+    "source": "src/simple_examples/mcp_client.py",
+    "first_line": 20,
+    "last_line": 26
+  },
+  "schema": {
+    "source": "src/simple_examples/model_client.py",
+    "first_line": 21,
+    "last_line": 30
+  },
+  "request": {
+    "source": "src/simple_examples/model_client.py",
+    "first_line": 63,
+    "last_line": 71
+  },
+  "execute": {
+    "source": "src/simple_examples/model_client.py",
+    "first_line": 73,
+    "last_line": 84
+  },
+  "search": {
+    "source": "src/game_agent/griddle/search_server.py",
+    "first_line": 99,
+    "last_line": 106
+  }
+}

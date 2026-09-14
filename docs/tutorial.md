@@ -1,5 +1,8 @@
 # MCP from zero: arithmetic and strings
 
+Presentation: [Agentic AI for Games slides (PDF)](slides/tutorial/tutorial.pdf),
+with [editable Beamer source and build instructions](slides/tutorial/README.md).
+
 This is a deliberately small, standalone tutorial. You will expose three ordinary Python functions
 as MCP tools, call them through the protocol, and finally let an OpenAI, OpenRouter-hosted,
 or local Qwen model decide which tools to call.
@@ -9,6 +12,8 @@ results, see [demo runbook](running_the_demo.md).
 
 All Python files referenced below live in `src/simple_examples/`.
 Run the commands from the repository root.
+
+For decorator syntax and registration choices, see [the decorator guide](decorators.md).
 
 ## The mental model
 

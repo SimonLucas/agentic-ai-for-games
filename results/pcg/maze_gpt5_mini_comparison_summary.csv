@@ -1,0 +1,4 @@
+agent,kind,attempted,failed,mean_fitness,max_fitness,mean_wall_fraction,mean_seconds,valid_maze_count,unique_maze_count,gzip_bytes,uncompressed_bytes,gzip_ratio,mean_pairwise_hamming,total_model_calls,total_prompt_tokens,total_completion_tokens
+random-25pct,random,6,2,18,18,0.19010416666666666,3.889563959091902e-05,4,4,117,418,0.2799043062200957,0.3038194444444444,,,
+evolution-2000,evolution,6,0,39.666666666666664,44,0.3940972222222222,0.08221130550373346,6,6,186,628,0.2961783439490446,0.46319444444444446,,,
+gpt-5-mini-one-shot,llm,6,0,24,36,0.4895833333333333,40.64892108334849,6,6,104,628,0.16560509554140126,0.5055555555555555,6,2314,15477

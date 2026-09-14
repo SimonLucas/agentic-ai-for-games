@@ -1,0 +1,18 @@
+{
+  "size": 5,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "agent_seed": 2026,
+  "agents": [
+    {
+      "name": "mcs-10",
+      "kind": "mcs",
+      "params": {
+        "rollouts_per_square": 200
+      }
+    }
+  ]
+}

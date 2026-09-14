@@ -70,6 +70,16 @@ class ForwardModelGriddle:
         model._deal_rng = copy.deepcopy(self._deal_rng)
         return model
 
+    def sample_future(self, seed: int) -> "ForwardModelGriddle":
+        """Copy the visible state, sampling unknown future deals from a fresh RNG.
+
+        Search agents must use this instead of looking ahead along the live
+        game's hidden seeded deal sequence. The current letter is unchanged.
+        """
+        model = copy.copy(self)
+        model._deal_rng = random.Random(seed)
+        return model
+
     def act(self, action: int) -> None:
         """Place into the action-th empty cell in row-major order (legacy convention)."""
         indices = self.state.grid.get_free_indices()

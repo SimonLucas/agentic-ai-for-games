@@ -126,3 +126,12 @@ game completion. It is opt-in so headless test runs remain usable.
 
 See [the import review](griddle_import_review.md) for the critique and scope of
 the changes.
+
+## Benchmark agents
+
+The [benchmark guide](griddle_benchmarks.md) describes parameterized agent
+configurations, fixed deal seeds, Monte Carlo search, and replayable results.
+
+```bash
+./scripts/compare_griddle_agents.sh
+```
