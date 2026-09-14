@@ -1,0 +1,17 @@
+[project]
+name = "agentic-ai-for-games"
+version = "0.1.0"
+description = "Hands-on Python tutorials exploring agentic AI for games"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.10,<2",
+    "openai>=2,<3",
+    "python-dotenv>=1,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src/simple_examples"]
+testpaths = ["tests"]
