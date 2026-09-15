@@ -3,6 +3,11 @@
 Hands-on Python tutorials exploring tool use, procedural content generation,
 and game-playing agents.
 
+![Animated tour of MCP, Griddle and maze generation](docs/media/tutorial_preview.gif)
+
+Preview from the [tutorial slides](docs/slides/tutorial/tutorial.pdf): MCP tool
+flow, Griddle search, evolving mazes, and one-shot versus agentic generation.
+
 Start with a small MCP example: expose arithmetic and letter-counting functions
 as tools, call them from Python, then let a language model choose the tools.
 

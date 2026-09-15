@@ -17,6 +17,12 @@ access, model credentials or hosted calls are needed to build the deck.
 The script refreshes the code excerpts, compiles twice, and writes `tutorial.pdf`.
 Auxiliary files go into `build/`, ignored by the root `.gitignore`.
 
+The repository README has a small animated preview made from five slide
+frames. After changing those slides, run
+`./docs/slides/tutorial/build_preview.sh` to refresh
+[the GIF](../../media/tutorial_preview.gif). It rebuilds the local PDF first,
+then uses `pdftoppm` and `ffmpeg`; no model calls are involved.
+
 ## Structure
 
 - Slides 1–5: why tools; ordinary functions; ReAct and a concrete interaction.
