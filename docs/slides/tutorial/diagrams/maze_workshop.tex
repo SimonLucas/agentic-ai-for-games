@@ -1,0 +1,18 @@
+\begin{tikzpicture}[node distance=8mm and 8mm]
+\node[box,text width=24mm] (llm) {LLM\\planner};
+\node[box,text width=31mm,right=of llm] (host) {Bounded\\ReAct host};
+\node[box,text width=34mm,right=of host] (mcp) {Persistent MCP\\maze workshop};
+\node[box,text width=31mm,below=of mcp] (library) {Evolved maze\\library};
+\node[box,text width=31mm,above=of mcp] (state) {Current maze\\and fitness};
+
+\draw[arr] (llm) -- node[above,font=\scriptsize]{tool request} (host);
+\draw[arr] (host) -- node[above,font=\scriptsize]{mutation / repair} (mcp);
+\draw[arr] (mcp) -- node[right,font=\scriptsize]{observe} (state);
+\draw[arr] (state.west) -| node[pos=.72,above,font=\scriptsize]{result} (host.north);
+\draw[arr] (library) -- node[right,font=\scriptsize]{blocks} (mcp);
+\draw[arr] (mcp) -- node[below,font=\scriptsize]{update} (library);
+\draw[arr] (host.west) -- ++(-5mm,0) |- node[pos=.25,left,font=\scriptsize]{next turn} (llm.south);
+
+\node[draw=navy,dashed,rounded corners=3pt,fit=(host)(mcp)(library)(state),
+ inner sep=4mm,label={[font=\scriptsize,navy]below:Python host and tested maze operators}] {};
+\end{tikzpicture}

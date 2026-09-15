@@ -19,6 +19,7 @@ from pydantic import BaseModel, ConfigDict, Field, JsonValue, StrictInt, model_v
 from .contact_sheet import ContactSheetEntry, render_contact_sheet
 from .diversity import diversity_metrics
 from .evolution import EvolutionConfig, run_evolution
+from .agentic_generator import AgenticMazeError, AgenticMazeGenerator, AgenticMazeParams
 from .llm_generator import (
     LLMMazeGenerator,
     LLMMazeOutputError,
@@ -33,7 +34,7 @@ class GeneratorSpec(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 
     name: str = Field(min_length=1)
-    kind: Literal["random", "evolution", "llm"]
+    kind: Literal["random", "evolution", "llm", "agentic_llm"]
     params: dict[str, JsonValue] = Field(default_factory=dict)
 
 
@@ -103,6 +104,18 @@ def summarize(records: list[dict], agents: list[GeneratorSpec]) -> list[dict]:
         model_metrics = [metrics for metrics in model_metrics if metrics]
         if model_metrics:
             row["total_model_calls"] = sum(metrics["model_calls"] for metrics in model_metrics)
+            row["total_tool_calls"] = sum(
+                metrics.get("tool_calls", 0) for metrics in model_metrics
+            )
+            row["total_tool_errors"] = sum(
+                metrics.get("tool_errors", 0) for metrics in model_metrics
+            )
+            row["total_mcp_process_starts"] = sum(
+                metrics.get("mcp_process_starts", 0) for metrics in model_metrics
+            )
+            row["total_http_client_starts"] = sum(
+                metrics.get("http_client_starts", 0) for metrics in model_metrics
+            )
             row["total_prompt_tokens"] = sum(
                 metrics["prompt_tokens"] or 0 for metrics in model_metrics
             )
@@ -181,7 +194,14 @@ async def run_benchmark(
         previous_maze_texts: list[str] = []
         llm = LLMMazeGenerator(LLMMazeParams.model_validate(agent.params)) \
             if agent.kind == "llm" else None
-        client_context = llm.client() if llm is not None else _NullAsyncContext()
+        agentic = AgenticMazeGenerator(AgenticMazeParams.model_validate(agent.params)) \
+            if agent.kind == "agentic_llm" else None
+        if llm is not None:
+            client_context = llm.client()
+        elif agentic is not None:
+            client_context = agentic.generation_session()
+        else:
+            client_context = _NullAsyncContext()
         async with client_context as client:
             for seed in config.seeds:
                 if progress:
@@ -206,7 +226,7 @@ async def run_benchmark(
                             seed=seed,
                         ))
                         maze = evolution.final.maze
-                    else:
+                    elif agent.kind == "llm":
                         maze, model_metrics = await llm.generate(
                             client,
                             width=config.width,
@@ -214,7 +234,18 @@ async def run_benchmark(
                             seed=seed,
                             previous_maze_texts=previous_maze_texts,
                         )
+                    else:
+                        maze, model_metrics = await agentic.generate(
+                            width=config.width,
+                            height=config.height,
+                            seed=seed,
+                            previous_maze_texts=previous_maze_texts,
+                        )
                 except LLMMazeOutputError as exception:
+                    error = str(exception)
+                    model_metrics = exception.metrics
+                    candidate_rows = exception.rows
+                except AgenticMazeError as exception:
                     error = str(exception)
                     model_metrics = exception.metrics
                     candidate_rows = exception.rows

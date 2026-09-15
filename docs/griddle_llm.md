@@ -245,13 +245,15 @@ per square. “OpenAI” denotes the API provider, not absence of tools.
 |---|---|---:|---:|---:|---:|---:|---:|---|
 | Sol, no tools | OpenRouter | 1 | 72 | — | — | 72.0 | 1684.87 | Stopped; completed games retained |
 | Sol + MCP MCS-10 | OpenRouter | 1 | 58 | — | — | 58.0 | 185.42 | Stopped; completed games retained |
-| Sol, no tools | OpenAI | 0 | — | — | — | — | — | In progress |
-| Sol + MCP MCS-10 | OpenAI | 0 | — | — | — | — | — | Pending |
+| Sol, no tools | OpenAI | 1 | 72 | — | — | 72.0 | 1559.39 | Completed seed 0 only |
+| Sol + MCP MCS-10 | OpenAI | 0 | — | — | — | — | — | Failed before first move |
 
 A dash means no completed game; it is not a zero score. The OpenRouter run was
-stopped when switching providers. The direct OpenAI run is still on its first
-without-tools game (latest observed progress: 15/25 moves); no final score has
-been saved yet. Single-game Sol scores should not be ranked against three-game
+stopped when switching providers. The direct OpenAI run completed its first
+without-tools game, then its tool arm failed before the first move: function
+tools with medium reasoning were not supported for this model through Chat
+Completions. It requires the Responses API or a different reasoning
+configuration. Single-game Sol scores should not be ranked against three-game
 means. This table is a snapshot, not a live display.
 
 Persistent MCP and HTTP reuse reduced observed tool-agent time by **22.9%**,
@@ -270,7 +272,7 @@ metrics. They are saved locally in the repository:
 - [MCS-200 run](../results/griddle/mcs200_comparison.json)
 - [GPT-4.1 run](../results/griddle/llm_gpt41_comparison.json)
 - [Sol via OpenRouter, interrupted](../results/griddle/llm_sol_comparison.json)
-- [Sol via OpenAI, ongoing](../results/griddle/llm_sol_openai_comparison.json)
+- [Sol via OpenAI, incomplete after tool/API incompatibility](../results/griddle/llm_sol_openai_comparison.json)
 
 The earlier five-deal random/MCS-10/MCS-100 experiment is retained separately in
 [its full report](../results/griddle/comparison.json); its five-game means use a

@@ -19,7 +19,8 @@ credentials belong only in the ignored root `.env`.
 See [the comparison tables and report links](../docs/griddle_llm.md).
 
 The procedural maze reports and contact sheets are documented in
-[the one-shot LLM maze comparison](../docs/pcg_maze_llm.md).
+[the one-shot LLM maze comparison](../docs/pcg_maze_llm.md) and
+[the agentic MCP comparison](../docs/pcg_maze_agentic.md).
 
 The GPT-4.1 experiment uses
 [`llm_gpt41_comparison.json`](../configs/griddle/llm_gpt41_comparison.json).

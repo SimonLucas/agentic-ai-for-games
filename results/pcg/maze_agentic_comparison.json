@@ -1,0 +1,4139 @@
+{
+  "schema_version": 1,
+  "complete": true,
+  "created_at": "2026-09-14T21:24:25.531347+00:00",
+  "config": {
+    "width": 12,
+    "height": 8,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "agents": [
+      {
+        "name": "evolution-2000",
+        "kind": "evolution",
+        "params": {
+          "iterations": 2000,
+          "expected_mutations": 5.0
+        }
+      },
+      {
+        "name": "gpt-4o-mini-one-shot",
+        "kind": "llm",
+        "params": {
+          "backend": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.8,
+          "max_output_tokens": 512,
+          "timeout_seconds": 90,
+          "prompt_version": "diverse-v1",
+          "structured_output": true
+        }
+      },
+      {
+        "name": "gpt-4o-mini-agentic",
+        "kind": "agentic_llm",
+        "params": {
+          "backend": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0,
+          "max_output_tokens": 512,
+          "timeout_seconds": 90,
+          "prompt_version": "workshop-v1",
+          "tools": [
+            "status",
+            "mutate_batch",
+            "macro_mutation_batch",
+            "repair",
+            "adopt"
+          ],
+          "max_tool_calls": 8,
+          "max_model_calls": 10,
+          "max_batch_size": 24,
+          "library_size": 6,
+          "library_iterations": 400,
+          "library_expected_mutations": 5.0,
+          "initial_source": "library",
+          "initial_wall_probability": 0.0
+        }
+      }
+    ]
+  },
+  "results": [
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      },
+      "seed": 0,
+      "elapsed_seconds": 0.11820458294823766,
+      "maze_text": "...#...#.##.\n...#.#.#...#\n#.#..#.#.#.#\n#...#..#.#.#\n.#.#..#..#..\n####.#..###.\n.###...#.##.\n##.#.#....#.",
+      "rows": [
+        "...#...#.##.",
+        "...#.#.#...#",
+        "#.#..#.#.#.#",
+        "#...#..#.#.#",
+        ".#.#..#..#..",
+        "####.#..###.",
+        ".###...#.##.",
+        "##.#.#....#."
+      ],
+      "fitness": 38,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.4375,
+      "status": "ok"
+    },
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      },
+      "seed": 1,
+      "elapsed_seconds": 0.08686095802113414,
+      "maze_text": ".#.###......\n..#.#.##.#..\n.....##..##.\n...###...#..\n#.#....##..#\n..####.#..#.\n.####..##..#\n......##....",
+      "rows": [
+        ".#.###......",
+        "..#.#.##.#..",
+        ".....##..##.",
+        "...###...#..",
+        "#.#....##..#",
+        "..####.#..#.",
+        ".####..##..#",
+        "......##...."
+      ],
+      "fitness": 38,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.3854166666666667,
+      "status": "ok"
+    },
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      },
+      "seed": 2,
+      "elapsed_seconds": 0.08001075009815395,
+      "maze_text": "......#.##.#\n###..##.##..\n##..#.#.....\n#..#....###.\n..##.#.###..\n...#.#.#....\n.####...#.##\n.......#....",
+      "rows": [
+        "......#.##.#",
+        "###..##.##..",
+        "##..#.#.....",
+        "#..#....###.",
+        "..##.#.###..",
+        "...#.#.#....",
+        ".####...#.##",
+        ".......#...."
+      ],
+      "fitness": 38,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.3854166666666667,
+      "status": "ok"
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.8,
+        "max_output_tokens": 512,
+        "timeout_seconds": 90,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      },
+      "seed": 0,
+      "elapsed_seconds": 1.3021877079736441,
+      "status": "failed",
+      "error": "both corner endpoints must be marked P; finish_reason=stop",
+      "rows": [
+        "PPPPPP####P#",
+        "##P....#P#P#",
+        "##P###.#P#P#",
+        "##P...#P#P#P",
+        "##PPPP#P####",
+        "##P....P....",
+        "##PPPPPP####",
+        "############"
+      ],
+      "maze_text": "PPPPPP####P#\n##P....#P#P#\n##P###.#P#P#\n##P...#P#P#P\n##PPPP#P####\n##P....P....\n##PPPPPP####\n############",
+      "model_metrics": {
+        "model_calls": 1,
+        "prompt_version": "diverse-v1",
+        "system_prompt": "You are a procedural level designer. Generate one playable binary maze.\n\nThe start is the top-left cell and the goal is the bottom-right cell. A valid\nmaze has a four-directional route between them. Its quality is the length of a\nshortest route: longer is better. Create deliberate corridors, branches and\nbarriers rather than random noise. Seek a different topology from every maze\nlisted in the request.\n\nFirst draw one continuous solution route using P cells, then place walls around\nit. Check that adjacent P cells connect the top-left corner to the bottom-right\ncorner before answering. Return only a JSON object such as\n{\"rows\":[\"PPP\", \"##P\", \"..P\"]}. Use exactly the requested dimensions. Each\ncharacter must be P for the demonstrated route, \".\" for another passage, or\n\"#\" for a wall. Both corner endpoints must be P. Do not include markdown,\ncommentary, S, G, spaces, or any other characters. P is only a route annotation;\nthe harness converts it to an ordinary passage after validation.",
+        "elapsed_seconds": 1.302066250005737,
+        "response_id": "chatcmpl-EO8S2vndod88OaZKRHBGjZOq44Nsa",
+        "response_model": "gpt-4o-mini-2024-07-18",
+        "finish_reason": "stop",
+        "prompt_tokens": 326,
+        "completion_tokens": 60,
+        "raw_response": "{\"rows\":[\"PPPPPP####P#\",\"##P....#P#P#\",\"##P###.#P#P#\",\"##P...#P#P#P\",\"##PPPP#P####\",\"##P....P....\",\"##PPPPPP####\",\"############\"]}",
+        "prompt": "Generate maze 1 in this set.\nDimensions: 12 columns by 8 rows.\nDiversity seed: 0. Use it as inspiration for a distinct design.\nMaximise shortest-path fitness while keeping the result visibly and structurally different from the earlier mazes.\n\nNo earlier mazes have been generated in this set."
+      }
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.8,
+        "max_output_tokens": 512,
+        "timeout_seconds": 90,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      },
+      "seed": 1,
+      "elapsed_seconds": 0.8727240001317114,
+      "maze_text": "......##....\n##.....##...\n##.####.###.\n##........##\n##.######.##\n............\n##.######.##\n............",
+      "rows": [
+        "......##....",
+        "##.....##...",
+        "##.####.###.",
+        "##........##",
+        "##.######.##",
+        "............",
+        "##.######.##",
+        "............"
+      ],
+      "fitness": 18,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.40625,
+      "status": "ok",
+      "model_metrics": {
+        "model_calls": 1,
+        "prompt_version": "diverse-v1",
+        "system_prompt": "You are a procedural level designer. Generate one playable binary maze.\n\nThe start is the top-left cell and the goal is the bottom-right cell. A valid\nmaze has a four-directional route between them. Its quality is the length of a\nshortest route: longer is better. Create deliberate corridors, branches and\nbarriers rather than random noise. Seek a different topology from every maze\nlisted in the request.\n\nFirst draw one continuous solution route using P cells, then place walls around\nit. Check that adjacent P cells connect the top-left corner to the bottom-right\ncorner before answering. Return only a JSON object such as\n{\"rows\":[\"PPP\", \"##P\", \"..P\"]}. Use exactly the requested dimensions. Each\ncharacter must be P for the demonstrated route, \".\" for another passage, or\n\"#\" for a wall. Both corner endpoints must be P. Do not include markdown,\ncommentary, S, G, spaces, or any other characters. P is only a route annotation;\nthe harness converts it to an ordinary passage after validation.",
+        "elapsed_seconds": 0.8722372089978307,
+        "response_id": "chatcmpl-EO8S3b3gKT9rXlGbIzY4Zo7mM3hFE",
+        "response_model": "gpt-4o-mini-2024-07-18",
+        "finish_reason": "stop",
+        "prompt_tokens": 326,
+        "completion_tokens": 58,
+        "raw_response": "{\"rows\":[\"PPPPPP##PPPP\",\"##P....##..P\",\"##P####P###P\",\"##P......P##\",\"##P######P##\",\"..PPPPPPP..P\",\"##P######P##\",\"PPPPPPPPPPPP\"]}",
+        "prompt": "Generate maze 1 in this set.\nDimensions: 12 columns by 8 rows.\nDiversity seed: 1. Use it as inspiration for a distinct design.\nMaximise shortest-path fitness while keeping the result visibly and structurally different from the earlier mazes.\n\nNo earlier mazes have been generated in this set."
+      }
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.8,
+        "max_output_tokens": 512,
+        "timeout_seconds": 90,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      },
+      "seed": 2,
+      "elapsed_seconds": 0.8365348330698907,
+      "status": "failed",
+      "error": "P cells do not connect start to goal; finish_reason=stop",
+      "rows": [
+        "PPPPPPPPPPPP",
+        "##P#########",
+        "#.P........#",
+        "#.#######.#P",
+        "#........#.#",
+        "#.#####.###P",
+        "#.......#..#",
+        "###########P"
+      ],
+      "maze_text": "PPPPPPPPPPPP\n##P#########\n#.P........#\n#.#######.#P\n#........#.#\n#.#####.###P\n#.......#..#\n###########P",
+      "model_metrics": {
+        "model_calls": 1,
+        "prompt_version": "diverse-v1",
+        "system_prompt": "You are a procedural level designer. Generate one playable binary maze.\n\nThe start is the top-left cell and the goal is the bottom-right cell. A valid\nmaze has a four-directional route between them. Its quality is the length of a\nshortest route: longer is better. Create deliberate corridors, branches and\nbarriers rather than random noise. Seek a different topology from every maze\nlisted in the request.\n\nFirst draw one continuous solution route using P cells, then place walls around\nit. Check that adjacent P cells connect the top-left corner to the bottom-right\ncorner before answering. Return only a JSON object such as\n{\"rows\":[\"PPP\", \"##P\", \"..P\"]}. Use exactly the requested dimensions. Each\ncharacter must be P for the demonstrated route, \".\" for another passage, or\n\"#\" for a wall. Both corner endpoints must be P. Do not include markdown,\ncommentary, S, G, spaces, or any other characters. P is only a route annotation;\nthe harness converts it to an ordinary passage after validation.",
+        "elapsed_seconds": 0.8362467088736594,
+        "response_id": "chatcmpl-EO8S4mdczUFcoToD4d5RGEthTz6nX",
+        "response_model": "gpt-4o-mini-2024-07-18",
+        "finish_reason": "stop",
+        "prompt_tokens": 349,
+        "completion_tokens": 46,
+        "raw_response": "{\"rows\":[\"PPPPPPPPPPPP\",\"##P#########\",\"#.P........#\",\"#.#######.#P\",\"#........#.#\",\"#.#####.###P\",\"#.......#..#\",\"###########P\"]}",
+        "prompt": "Generate maze 2 in this set.\nDimensions: 12 columns by 8 rows.\nDiversity seed: 2. Use it as inspiration for a distinct design.\nMaximise shortest-path fitness while keeping the result visibly and structurally different from the earlier mazes.\n\nPrevious maze 1:\n......##....\n##.....##...\n##.####.###.\n##........##\n##.######.##\n............\n##.######.##\n............"
+      }
+    },
+    {
+      "agent": "gpt-4o-mini-agentic",
+      "kind": "agentic_llm",
+      "params": {
+        "backend": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0,
+        "max_output_tokens": 512,
+        "timeout_seconds": 90,
+        "prompt_version": "workshop-v1",
+        "tools": [
+          "status",
+          "mutate_batch",
+          "macro_mutation_batch",
+          "repair",
+          "adopt"
+        ],
+        "max_tool_calls": 8,
+        "max_model_calls": 10,
+        "max_batch_size": 24,
+        "library_size": 6,
+        "library_iterations": 400,
+        "library_expected_mutations": 5.0,
+        "initial_source": "library",
+        "initial_wall_probability": 0.0
+      },
+      "seed": 0,
+      "elapsed_seconds": 9.20562804187648,
+      "maze_text": ".##..####.#.\n...#..#...##\n#.#..##.#...\n....#....#..\n..###.#.##.#\n.#..##..##..\n..#.#.#.#...\n.........#..",
+      "rows": [
+        ".##..####.#.",
+        "...#..#...##",
+        "#.#..##.#...",
+        "....#....#..",
+        "..###.#.##.#",
+        ".#..##..##..",
+        "..#.#.#.#...",
+        ".........#.."
+      ],
+      "fitness": 32,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.3645833333333333,
+      "status": "ok",
+      "model_metrics": {
+        "prompt_version": "workshop-v1",
+        "system_prompt": "You are controlling a procedural maze workshop through tools.\nYour goal is to finish with a playable, high-fitness maze that differs from the\nearlier mazes in the requested set. Fitness is the shortest four-directional\nroute from the top-left start to the bottom-right goal; larger is better.\n\nUse status to inspect the incumbent. mutate_batch makes small changes.\nmacro_mutation_batch copies rectangular structure from evolved library mazes.\nBoth return scored candidate IDs but change nothing. repair creates a connected\ncandidate by carving a minimum-wall route. adopt is the only way to replace the\nincumbent. Compare fitness and grids before adopting. Retain connectivity, try\nmore than one operator when budget permits, and do not adopt a lower-fitness\ncandidate unless repairing an invalid incumbent.\n\nRepair only disconnected candidates; it cannot improve a connected candidate.\nIf a batch has a connected fitness improvement, adopt the best one. If it has\nonly equal-fitness connected candidates, adopt a structurally different one as\na neutral stepping stone, then generate another batch. Fitness often improves\nonly after several neutral changes.\n\nCall exactly one tool per response. These operations share workshop state and\nmust be performed sequentially. Wait for each tool result before choosing the\nnext operation.\n\nWhen satisfied, return only {\"finish\":true}. The host exports the incumbent.\nDo not print a maze yourself.",
+        "connection_lifetime": "maze set",
+        "mcp_process_starts": 1,
+        "http_client_starts": 1,
+        "model_calls": 9,
+        "tool_calls": 8,
+        "tool_errors": 0,
+        "prompt_tokens": 22813,
+        "completion_tokens": 147,
+        "setup_seconds": 0.10893995920196176,
+        "initial_fitness": 30,
+        "api_seconds": 9.047438873676583,
+        "tool_seconds": 0.04391429340466857,
+        "events": [
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8S6Kmpy5ybdOs6rgIammx37hJye",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 1.2481838332023472,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_b9HDDHTnUAezdnky5ugfL2OY",
+                  "function": {
+                    "arguments": "{\"batch_size\":12,\"min_block_size\":2,\"max_block_size\":5}",
+                    "name": "macro_mutation_batch"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "macro_mutation_batch",
+            "arguments": {
+              "batch_size": 12,
+              "min_block_size": 2,
+              "max_block_size": 5
+            },
+            "result": {
+              "operator": "library_block_copy",
+              "generated": 12,
+              "current_fitness": 30,
+              "candidates": [
+                {
+                  "fitness": 30,
+                  "connected": true,
+                  "wall_fraction": 0.3333,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "...#..#...##",
+                    ".##..##.#...",
+                    "....##...#..",
+                    "..##.#...#.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c3",
+                  "block": {
+                    "size": [
+                      2,
+                      3
+                    ],
+                    "source": [
+                      4,
+                      2
+                    ],
+                    "target": [
+                      2,
+                      1
+                    ]
+                  }
+                },
+                {
+                  "fitness": 30,
+                  "connected": true,
+                  "wall_fraction": 0.3438,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "..##..#...##",
+                    ".#.#..#.#...",
+                    "..###....#..",
+                    "..##..#..#.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c4",
+                  "block": {
+                    "size": [
+                      3,
+                      3
+                    ],
+                    "source": [
+                      1,
+                      0
+                    ],
+                    "target": [
+                      4,
+                      2
+                    ]
+                  }
+                },
+                {
+                  "fitness": 30,
+                  "connected": true,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".#..###.#.#.",
+                    "..#.#.#...##",
+                    ".#...##.#...",
+                    "..####...#..",
+                    "..##.#...#.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c9",
+                  "block": {
+                    "size": [
+                      3,
+                      3
+                    ],
+                    "source": [
+                      6,
+                      5
+                    ],
+                    "target": [
+                      2,
+                      0
+                    ]
+                  }
+                },
+                {
+                  "fitness": 28,
+                  "connected": true,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "..##......##",
+                    ".#.#.#.#....",
+                    "..#####..#..",
+                    "..##.#..##.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c1",
+                  "block": {
+                    "size": [
+                      3,
+                      5
+                    ],
+                    "source": [
+                      5,
+                      0
+                    ],
+                    "target": [
+                      6,
+                      1
+                    ]
+                  }
+                },
+                {
+                  "fitness": 22,
+                  "connected": true,
+                  "wall_fraction": 0.375,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "..##..#...##",
+                    ".#.#.##.#...",
+                    "..####...#..",
+                    "..##.#...#.#",
+                    ".#..###...#.",
+                    "..#.#...#.#.",
+                    "......##...."
+                  ],
+                  "candidate_id": "c2",
+                  "block": {
+                    "size": [
+                      5,
+                      3
+                    ],
+                    "source": [
+                      6,
+                      4
+                    ],
+                    "target": [
+                      6,
+                      5
+                    ]
+                  }
+                },
+                {
+                  "fitness": 22,
+                  "connected": true,
+                  "wall_fraction": 0.3229,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "..##..#...##",
+                    ".#.##.#.#...",
+                    ".........#..",
+                    "..##.#...#.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c8",
+                  "block": {
+                    "size": [
+                      4,
+                      2
+                    ],
+                    "source": [
+                      1,
+                      6
+                    ],
+                    "target": [
+                      2,
+                      2
+                    ]
+                  }
+                },
+                {
+                  "fitness": 20,
+                  "connected": true,
+                  "wall_fraction": 0.3854,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "..##..#...##",
+                    ".#.#.###....",
+                    "..########..",
+                    "..##.#...#.#",
+                    ".#..#..#.#..",
+                    "..#.#.##....",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c7",
+                  "block": {
+                    "size": [
+                      4,
+                      5
+                    ],
+                    "source": [
+                      8,
+                      3
+                    ],
+                    "target": [
+                      5,
+                      2
+                    ]
+                  }
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "..##..#.#..#",
+                    ".#.#.##..#..",
+                    "..####...#..",
+                    "..##.#...#.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c5",
+                  "block": {
+                    "size": [
+                      4,
+                      2
+                    ],
+                    "source": [
+                      5,
+                      5
+                    ],
+                    "target": [
+                      8,
+                      1
+                    ]
+                  }
+                }
+              ]
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8S78U1tWgXg6FFP2USa8LoWtOq5",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 1.1141651668585837,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_o22GhnqYphA7UhzJCCRotnzN",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c3\"}",
+                    "name": "adopt"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "adopt",
+            "arguments": {
+              "candidate_id": "c3"
+            },
+            "result": {
+              "adopted": "c3",
+              "previous_fitness": 30,
+              "current": {
+                "fitness": 30,
+                "connected": true,
+                "wall_fraction": 0.3333,
+                "rows": [
+                  ".#...##.#.#.",
+                  "...#..#...##",
+                  ".##..##.#...",
+                  "....##...#..",
+                  "..##.#...#.#",
+                  ".#..##..##..",
+                  "..#.#.#.#...",
+                  ".........#.."
+                ]
+              }
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8S8bnMGMynoIac8uBVSXjYhVnNB",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.7861606248188764,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_qlEn7sB6Giar59li3FK7dIhq",
+                  "function": {
+                    "arguments": "{\"batch_size\":12}",
+                    "name": "mutate_batch"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "mutate_batch",
+            "arguments": {
+              "batch_size": 12
+            },
+            "result": {
+              "operator": "local_mutation",
+              "generated": 12,
+              "current_fitness": 30,
+              "candidates": [
+                {
+                  "fitness": 30,
+                  "connected": true,
+                  "wall_fraction": 0.3333,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "...#..#...##",
+                    "..#..##.#...",
+                    "....##...#..",
+                    "..###...##.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c13"
+                },
+                {
+                  "fitness": 30,
+                  "connected": true,
+                  "wall_fraction": 0.3125,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "...#..#...##",
+                    ".##...#.#...",
+                    "...###...#..",
+                    "..##.#...#..",
+                    ".#...#..##.#",
+                    "....#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c14"
+                },
+                {
+                  "fitness": 30,
+                  "connected": true,
+                  "wall_fraction": 0.3229,
+                  "rows": [
+                    ".#..#.#.#.#.",
+                    "...#..#...##",
+                    ".##...#.#...",
+                    "....##...#..",
+                    "..##.#...#.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c15"
+                },
+                {
+                  "fitness": 18,
+                  "connected": true,
+                  "wall_fraction": 0.3229,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "...#..#....#",
+                    ".##..##.#...",
+                    "..#.##...#..",
+                    ".##..#...#.#",
+                    ".#..##..##..",
+                    "..#.#...#...",
+                    "#..........."
+                  ],
+                  "candidate_id": "c16"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".#...####.#.",
+                    "..##..#...##",
+                    ".##..##.#...",
+                    "....##...#..",
+                    "..##.#...#..",
+                    ".#..##.###..",
+                    "#.#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c17"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".....##.#...",
+                    "...#..#...#.",
+                    ".##..##.#...",
+                    "..#.##...#.#",
+                    "..##.#...###",
+                    ".#..##..##..",
+                    "..#.#.#.##..",
+                    "...##....#.."
+                  ],
+                  "candidate_id": "c18"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".#...####.#.",
+                    "...#..#...##",
+                    ".##..##.#...",
+                    "....##...#..",
+                    "..##.#...#.#",
+                    "##..##..###.",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c19"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3854,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "...#......##",
+                    ".###.##.#...",
+                    "....##...##.",
+                    "..##.##..#.#",
+                    ".##.##.###..",
+                    "..#.#.#.#..#",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c20"
+                }
+              ]
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8S9hmSUJQIjE66cZWVvkzuFbcPb",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.9469002080149949,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_oHdscvU7pAcc6gcS6B7VqJwW",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c13\"}",
+                    "name": "adopt"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "adopt",
+            "arguments": {
+              "candidate_id": "c13"
+            },
+            "result": {
+              "adopted": "c13",
+              "previous_fitness": 30,
+              "current": {
+                "fitness": 30,
+                "connected": true,
+                "wall_fraction": 0.3333,
+                "rows": [
+                  ".#...##.#.#.",
+                  "...#..#...##",
+                  "..#..##.#...",
+                  "....##...#..",
+                  "..###...##.#",
+                  ".#..##..##..",
+                  "..#.#.#.#...",
+                  ".........#.."
+                ]
+              }
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SANHX3wA4wus6gqaCSG1Q4R9Lq",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.8429773750249296,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_mdlnAlWKG056OXsfXw5Z3C34",
+                  "function": {
+                    "arguments": "{\"batch_size\":12}",
+                    "name": "mutate_batch"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "mutate_batch",
+            "arguments": {
+              "batch_size": 12
+            },
+            "result": {
+              "operator": "local_mutation",
+              "generated": 12,
+              "current_fitness": 30,
+              "candidates": [
+                {
+                  "fitness": 32,
+                  "connected": true,
+                  "wall_fraction": 0.3438,
+                  "rows": [
+                    ".#...####.#.",
+                    "...#..#...##",
+                    "#.#..##.#...",
+                    "....#....#..",
+                    "..###...##.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c27"
+                },
+                {
+                  "fitness": 30,
+                  "connected": true,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "...#..#...##",
+                    ".##..##.#...",
+                    "....##...#..",
+                    ".####...##.#",
+                    ".#..##..##..",
+                    "..#.#.#.#.#.",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c25"
+                },
+                {
+                  "fitness": 30,
+                  "connected": true,
+                  "wall_fraction": 0.3438,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "...##.#...##",
+                    "..#..##.#...",
+                    "....##...#..",
+                    "..###...##.#",
+                    "....##..##..",
+                    "..#.#.#.#.#.",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c35"
+                },
+                {
+                  "fitness": 28,
+                  "connected": true,
+                  "wall_fraction": 0.3229,
+                  "rows": [
+                    ".#...##.###.",
+                    "......#...#.",
+                    "..#..##.#...",
+                    "#...##...#..",
+                    "...###..##.#",
+                    ".#..##..##..",
+                    "..#.....#.#.",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c34"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.375,
+                  "rows": [
+                    ".#...##.#.#.",
+                    ".#.#..#...##",
+                    "..#...#.#...",
+                    "#...##...#..",
+                    "#.#.#...##.#",
+                    ".#.###..##.#",
+                    "..#...#.#...",
+                    ".......#.##."
+                  ],
+                  "candidate_id": "c26"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".#...##.###.",
+                    "...#..#...##",
+                    "..#..##.#...",
+                    "....##...#..",
+                    "#.##....##..",
+                    ".#..###.##..",
+                    ".##.#.#.#...",
+                    "......#..#.."
+                  ],
+                  "candidate_id": "c28"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3438,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "...#..#..###",
+                    "..#..##.#...",
+                    "....#....#..",
+                    "..###...##.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    "........##.."
+                  ],
+                  "candidate_id": "c29"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4062,
+                  "rows": [
+                    ".#...##.#.#.",
+                    "#..#..#...##",
+                    "..#..##.#..#",
+                    "....##...#.#",
+                    "..###...##.#",
+                    ".#..##..###.",
+                    ".##.#.#.#.#.",
+                    ".......#.#.."
+                  ],
+                  "candidate_id": "c30"
+                }
+              ]
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SBXfvrXnPwwxyM6esfssOaWbBS",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 1.090197084005922,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_vIWS6Gn99F6aUZYRIaeSdwWz",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c27\"}",
+                    "name": "adopt"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "adopt",
+            "arguments": {
+              "candidate_id": "c27"
+            },
+            "result": {
+              "adopted": "c27",
+              "previous_fitness": 30,
+              "current": {
+                "fitness": 32,
+                "connected": true,
+                "wall_fraction": 0.3438,
+                "rows": [
+                  ".#...####.#.",
+                  "...#..#...##",
+                  "#.#..##.#...",
+                  "....#....#..",
+                  "..###...##.#",
+                  ".#..##..##..",
+                  "..#.#.#.#...",
+                  ".........#.."
+                ]
+              }
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SCFQSWBk8sYtHgpCTLITXu8bKy",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.7072574158664793,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_elADYxnP8UZl4rwxLFKoz5P7",
+                  "function": {
+                    "arguments": "{\"batch_size\":12}",
+                    "name": "mutate_batch"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "mutate_batch",
+            "arguments": {
+              "batch_size": 12
+            },
+            "result": {
+              "operator": "local_mutation",
+              "generated": 12,
+              "current_fitness": 32,
+              "candidates": [
+                {
+                  "fitness": 32,
+                  "connected": true,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".##..####.#.",
+                    "...#..#...##",
+                    "#.#..##.#...",
+                    "....#....#..",
+                    "..###.#.##.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c42"
+                },
+                {
+                  "fitness": 32,
+                  "connected": true,
+                  "wall_fraction": 0.3333,
+                  "rows": [
+                    ".#...###..#.",
+                    "...#..#...##",
+                    "#.#..##.#...",
+                    "....#....#..",
+                    "..###...##.#",
+                    ".#..##..##.#",
+                    "....#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c43"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3542,
+                  "rows": [
+                    ".#..#####.#.",
+                    "...#..#...#.",
+                    "#.#..####...",
+                    "....#....#..",
+                    ".####...#..#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".#.........."
+                  ],
+                  "candidate_id": "c37"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3542,
+                  "rows": [
+                    ".#...####.#.",
+                    "...#..#...##",
+                    "#.#..##.#...",
+                    "....#....#..",
+                    "..###...#..#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    ".##......#.."
+                  ],
+                  "candidate_id": "c38"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4062,
+                  "rows": [
+                    ".#...####.#.",
+                    "...#..#...##",
+                    "#.#..##.#...",
+                    "..#.#...##..",
+                    "#.###..###.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    "...#....##.."
+                  ],
+                  "candidate_id": "c39"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".#...####.#.",
+                    "..##..#...##",
+                    "#.#..##.#...",
+                    "....#....#..",
+                    "..###...##.#",
+                    ".#..##..##..",
+                    "..#.#.#.#...",
+                    "...#.....#.."
+                  ],
+                  "candidate_id": "c40"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.375,
+                  "rows": [
+                    ".#...####...",
+                    "...#..#...##",
+                    "#.#..##.#..#",
+                    "....#....#.#",
+                    "..###...##.#",
+                    ".#..##..##.#",
+                    "#.#.#.#.#...",
+                    ".........#.."
+                  ],
+                  "candidate_id": "c41"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.3646,
+                  "rows": [
+                    ".#...####.#.",
+                    "...#..#...##",
+                    "#.#..##.#...",
+                    "#.#.#....#..",
+                    "..###...####",
+                    ".#...#..##..",
+                    "..#.#.#.#...",
+                    "......#....."
+                  ],
+                  "candidate_id": "c44"
+                }
+              ]
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SDUt6bprm8XVk7dJI0RPgCLQP3",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 1.6366111659444869,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_gOttJsnYtrtIBNSpTeHv2ywr",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c42\"}",
+                    "name": "adopt"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "adopt",
+            "arguments": {
+              "candidate_id": "c42"
+            },
+            "result": {
+              "adopted": "c42",
+              "previous_fitness": 32,
+              "current": {
+                "fitness": 32,
+                "connected": true,
+                "wall_fraction": 0.3646,
+                "rows": [
+                  ".##..####.#.",
+                  "...#..#...##",
+                  "#.#..##.#...",
+                  "....#....#..",
+                  "..###.#.##.#",
+                  ".#..##..##..",
+                  "..#.#.#.#...",
+                  ".........#.."
+                ]
+              }
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SE20T5nkXDT8NVKB94hARhT3qh",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "stop",
+            "elapsed_seconds": 0.6749859999399632,
+            "message": {
+              "content": "{\"finish\":true}",
+              "role": "assistant"
+            }
+          }
+        ],
+        "adoptions": [
+          {
+            "candidate_id": "c3",
+            "previous_fitness": 30,
+            "fitness": 30
+          },
+          {
+            "candidate_id": "c13",
+            "previous_fitness": 30,
+            "fitness": 30
+          },
+          {
+            "candidate_id": "c27",
+            "previous_fitness": 30,
+            "fitness": 32
+          },
+          {
+            "candidate_id": "c42",
+            "previous_fitness": 32,
+            "fitness": 32
+          }
+        ],
+        "final_fitness": 32
+      }
+    },
+    {
+      "agent": "gpt-4o-mini-agentic",
+      "kind": "agentic_llm",
+      "params": {
+        "backend": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0,
+        "max_output_tokens": 512,
+        "timeout_seconds": 90,
+        "prompt_version": "workshop-v1",
+        "tools": [
+          "status",
+          "mutate_batch",
+          "macro_mutation_batch",
+          "repair",
+          "adopt"
+        ],
+        "max_tool_calls": 8,
+        "max_model_calls": 10,
+        "max_batch_size": 24,
+        "library_size": 6,
+        "library_iterations": 400,
+        "library_expected_mutations": 5.0,
+        "initial_source": "library",
+        "initial_wall_probability": 0.0
+      },
+      "seed": 1,
+      "elapsed_seconds": 9.142641333164647,
+      "maze_text": "..###.##..##\n....#....##.\n.#.#..##..##\n##.#...##..#\n.#.#..##.#..\n##...##.##..\n.##.#.##....\n#.#.#..#....",
+      "rows": [
+        "..###.##..##",
+        "....#....##.",
+        ".#.#..##..##",
+        "##.#...##..#",
+        ".#.#..##.#..",
+        "##...##.##..",
+        ".##.#.##....",
+        "#.#.#..#...."
+      ],
+      "fitness": 26,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.4375,
+      "status": "ok",
+      "model_metrics": {
+        "prompt_version": "workshop-v1",
+        "system_prompt": "You are controlling a procedural maze workshop through tools.\nYour goal is to finish with a playable, high-fitness maze that differs from the\nearlier mazes in the requested set. Fitness is the shortest four-directional\nroute from the top-left start to the bottom-right goal; larger is better.\n\nUse status to inspect the incumbent. mutate_batch makes small changes.\nmacro_mutation_batch copies rectangular structure from evolved library mazes.\nBoth return scored candidate IDs but change nothing. repair creates a connected\ncandidate by carving a minimum-wall route. adopt is the only way to replace the\nincumbent. Compare fitness and grids before adopting. Retain connectivity, try\nmore than one operator when budget permits, and do not adopt a lower-fitness\ncandidate unless repairing an invalid incumbent.\n\nRepair only disconnected candidates; it cannot improve a connected candidate.\nIf a batch has a connected fitness improvement, adopt the best one. If it has\nonly equal-fitness connected candidates, adopt a structurally different one as\na neutral stepping stone, then generate another batch. Fitness often improves\nonly after several neutral changes.\n\nCall exactly one tool per response. These operations share workshop state and\nmust be performed sequentially. Wait for each tool result before choosing the\nnext operation.\n\nWhen satisfied, return only {\"finish\":true}. The host exports the incumbent.\nDo not print a maze yourself.",
+        "connection_lifetime": "maze set",
+        "mcp_process_starts": 0,
+        "http_client_starts": 0,
+        "model_calls": 10,
+        "tool_calls": 8,
+        "tool_errors": 0,
+        "prompt_tokens": 21144,
+        "completion_tokens": 183,
+        "setup_seconds": 0.13473112508654594,
+        "initial_fitness": 26,
+        "api_seconds": 8.969318292336538,
+        "tool_seconds": 0.030158332083374262,
+        "events": [
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SFFOdkDwDIsWjzbNJMMXI8Vr7d",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.9121515001170337,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_KxhjNI0P70JKMzQasNCwbjVo",
+                  "function": {
+                    "arguments": "{\"batch_size\":12,\"min_block_size\":2,\"max_block_size\":5}",
+                    "name": "macro_mutation_batch"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "macro_mutation_batch",
+            "arguments": {
+              "batch_size": 12,
+              "min_block_size": 2,
+              "max_block_size": 5
+            },
+            "result": {
+              "operator": "library_block_copy",
+              "generated": 12,
+              "current_fitness": 26,
+              "candidates": [
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4375,
+                  "rows": [
+                    "..###.##..##",
+                    "....#....##.",
+                    ".#.#..##..##",
+                    "##.#...##..#",
+                    ".#.#..##.#..",
+                    "##...##.##..",
+                    ".##.#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c1",
+                  "block": {
+                    "size": [
+                      4,
+                      3
+                    ],
+                    "source": [
+                      2,
+                      5
+                    ],
+                    "target": [
+                      1,
+                      1
+                    ]
+                  }
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4375,
+                  "rows": [
+                    "..###.##..##",
+                    ".##.#....##.",
+                    "..#...##..##",
+                    "#..##.###..#",
+                    ".#.#...#.#..",
+                    "##...#..##..",
+                    ".##.##.#....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c3",
+                  "block": {
+                    "size": [
+                      2,
+                      5
+                    ],
+                    "source": [
+                      9,
+                      2
+                    ],
+                    "target": [
+                      5,
+                      3
+                    ]
+                  }
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4479,
+                  "rows": [
+                    "..###.##..##",
+                    ".##.#....##.",
+                    "..#...##..##",
+                    "#..##..##..#",
+                    ".#.#..##.#..",
+                    "##...#...#..",
+                    ".##.#.##.#..",
+                    "#.#.#..#.#.."
+                  ],
+                  "candidate_id": "c6",
+                  "block": {
+                    "size": [
+                      4,
+                      3
+                    ],
+                    "source": [
+                      0,
+                      2
+                    ],
+                    "target": [
+                      6,
+                      5
+                    ]
+                  }
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4479,
+                  "rows": [
+                    "..###.##..##",
+                    ".##.#....##.",
+                    "..#...##..##",
+                    "#..##..##..#",
+                    ".#.#..#.##..",
+                    "##...#..###.",
+                    ".##.#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c8",
+                  "block": {
+                    "size": [
+                      5,
+                      2
+                    ],
+                    "source": [
+                      6,
+                      0
+                    ],
+                    "target": [
+                      6,
+                      4
+                    ]
+                  }
+                },
+                {
+                  "fitness": 24,
+                  "connected": true,
+                  "wall_fraction": 0.4167,
+                  "rows": [
+                    "..###.#...##",
+                    ".##.#....##.",
+                    "..#...#...##",
+                    "#..##...#..#",
+                    ".#.#..##.#..",
+                    "##...##.##..",
+                    ".##.#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c7",
+                  "block": {
+                    "size": [
+                      2,
+                      4
+                    ],
+                    "source": [
+                      3,
+                      4
+                    ],
+                    "target": [
+                      6,
+                      0
+                    ]
+                  }
+                },
+                {
+                  "fitness": 20,
+                  "connected": true,
+                  "wall_fraction": 0.4479,
+                  "rows": [
+                    "..###.##..##",
+                    ".##.#....##.",
+                    "......##..##",
+                    "###.#..##..#",
+                    ".#.#..##.#..",
+                    "##...##.##..",
+                    ".##.#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c5",
+                  "block": {
+                    "size": [
+                      3,
+                      2
+                    ],
+                    "source": [
+                      3,
+                      2
+                    ],
+                    "target": [
+                      1,
+                      2
+                    ]
+                  }
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4375,
+                  "rows": [
+                    "..###.##..##",
+                    "..#.#....##.",
+                    ".##...##..##",
+                    "#..##..##..#",
+                    ".#.#..##.#..",
+                    "#....##.##..",
+                    ".##.#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c2",
+                  "block": {
+                    "size": [
+                      2,
+                      5
+                    ],
+                    "source": [
+                      5,
+                      3
+                    ],
+                    "target": [
+                      1,
+                      1
+                    ]
+                  }
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4479,
+                  "rows": [
+                    "..###.##..##",
+                    ".##.#....##.",
+                    "..#...##..##",
+                    "#.#.#..##..#",
+                    ".##...##.#..",
+                    "##.#.##.##..",
+                    ".#..#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c4",
+                  "block": {
+                    "size": [
+                      2,
+                      4
+                    ],
+                    "source": [
+                      9,
+                      0
+                    ],
+                    "target": [
+                      2,
+                      3
+                    ]
+                  }
+                }
+              ]
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SGbB45JYGkHWKDfyh61gE9QXam",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.8721606668550521,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_uFISbhivR3dCKQDUYSii2sXo",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c1\"}",
+                    "name": "repair"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "repair",
+            "arguments": {
+              "candidate_id": "c1"
+            },
+            "result": {
+              "fitness": 26,
+              "connected": true,
+              "wall_fraction": 0.4375,
+              "rows": [
+                "..###.##..##",
+                "....#....##.",
+                ".#.#..##..##",
+                "##.#...##..#",
+                ".#.#..##.#..",
+                "##...##.##..",
+                ".##.#.##....",
+                "#.#.#..#...."
+              ],
+              "candidate_id": "c13",
+              "operator": "repair",
+              "carved_walls": 0
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SHV6RI5kPXfJSYKNxgmDTtjrfc",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.8430702921468765,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_I9mcm0AtZjZUB8EPQWwfovc1",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c3\"}",
+                    "name": "repair"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "repair",
+            "arguments": {
+              "candidate_id": "c3"
+            },
+            "result": {
+              "fitness": 26,
+              "connected": true,
+              "wall_fraction": 0.4375,
+              "rows": [
+                "..###.##..##",
+                ".##.#....##.",
+                "..#...##..##",
+                "#..##.###..#",
+                ".#.#...#.#..",
+                "##...#..##..",
+                ".##.##.#....",
+                "#.#.#..#...."
+              ],
+              "candidate_id": "c14",
+              "operator": "repair",
+              "carved_walls": 0
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SHAfGXBE1X5stPfuzh40mKl2uq",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.9362039999105036,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_i5ZMAehvLRKRSbtVZ4LK6Iwm",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c6\"}",
+                    "name": "repair"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "repair",
+            "arguments": {
+              "candidate_id": "c6"
+            },
+            "result": {
+              "fitness": 26,
+              "connected": true,
+              "wall_fraction": 0.4479,
+              "rows": [
+                "..###.##..##",
+                ".##.#....##.",
+                "..#...##..##",
+                "#..##..##..#",
+                ".#.#..##.#..",
+                "##...#...#..",
+                ".##.#.##.#..",
+                "#.#.#..#.#.."
+              ],
+              "candidate_id": "c15",
+              "operator": "repair",
+              "carved_walls": 0
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SIH8v9iAeZMlaVGJ4BIsnPflLO",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.8165989590343088,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_5B2Y4dg4CfnLJajKjTtfVMg3",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c8\"}",
+                    "name": "repair"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "repair",
+            "arguments": {
+              "candidate_id": "c8"
+            },
+            "result": {
+              "fitness": 26,
+              "connected": true,
+              "wall_fraction": 0.4479,
+              "rows": [
+                "..###.##..##",
+                ".##.#....##.",
+                "..#...##..##",
+                "#..##..##..#",
+                ".#.#..#.##..",
+                "##...#..###.",
+                ".##.#.##....",
+                "#.#.#..#...."
+              ],
+              "candidate_id": "c16",
+              "operator": "repair",
+              "carved_walls": 0
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SJgGT7PgmITnLQVSLvFmmeYRQQ",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.7054857080802321,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_zLioIvHKg9P7pGjO3tLXQB31",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c1\"}",
+                    "name": "adopt"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "adopt",
+            "arguments": {
+              "candidate_id": "c1"
+            },
+            "result": {
+              "adopted": "c1",
+              "previous_fitness": 26,
+              "current": {
+                "fitness": 26,
+                "connected": true,
+                "wall_fraction": 0.4375,
+                "rows": [
+                  "..###.##..##",
+                  "....#....##.",
+                  ".#.#..##..##",
+                  "##.#...##..#",
+                  ".#.#..##.#..",
+                  "##...##.##..",
+                  ".##.#.##....",
+                  "#.#.#..#...."
+                ]
+              }
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SKD2yHT6UJqHvuYJ1P0wzsHulp",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.8549431669525802,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_CDGpZGbbMzgLgak8QaS4tA4f",
+                  "function": {
+                    "arguments": "{\"batch_size\":12}",
+                    "name": "mutate_batch"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "mutate_batch",
+            "arguments": {
+              "batch_size": 12
+            },
+            "result": {
+              "operator": "local_mutation",
+              "generated": 12,
+              "current_fitness": 26,
+              "candidates": [
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4271,
+                  "rows": [
+                    "..###.##..##",
+                    "....#....##.",
+                    ".#.#..##..##",
+                    "##.#...##...",
+                    ".#.#..##.#..",
+                    "##...##.##..",
+                    ".##.#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c18"
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4271,
+                  "rows": [
+                    "..###.##..##",
+                    "....#....##.",
+                    ".#.#..##..##",
+                    "##.#....#..#",
+                    ".#.#..##.#..",
+                    "##...##.##..",
+                    ".##.#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c22"
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4271,
+                  "rows": [
+                    "..###.##..##",
+                    "....#....##.",
+                    ".#.#..##..##",
+                    "##.#....#..#",
+                    ".#.#..##.#..",
+                    "##...#..###.",
+                    ".##.#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c28"
+                },
+                {
+                  "fitness": 24,
+                  "connected": true,
+                  "wall_fraction": 0.4062,
+                  "rows": [
+                    "...##.##..##",
+                    "...##....##.",
+                    ".#.#..#...##",
+                    "##.#...##..#",
+                    ".#.....#.#..",
+                    "##...##.##..",
+                    ".##.#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c25"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4375,
+                  "rows": [
+                    "..###.##..##",
+                    "....##...##.",
+                    ".#.#..##..##",
+                    "##.#...##..#",
+                    ".#.#.....#..",
+                    "##...##.##..",
+                    ".##.#.##....",
+                    "#.#.#..#.#.."
+                  ],
+                  "candidate_id": "c17"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4479,
+                  "rows": [
+                    ".####..#..##",
+                    "....#....##.",
+                    ".#.#..#...##",
+                    "##.###.##..#",
+                    ".#.#..##.#..",
+                    "##...##.##..",
+                    ".##.#..##...",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c19"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4375,
+                  "rows": [
+                    "..###.##..##",
+                    "....#....##.",
+                    ".#.#..##..#.",
+                    "##.#...##..#",
+                    ".#.#..##.##.",
+                    "##..###.#...",
+                    ".##.#.##....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c20"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4479,
+                  "rows": [
+                    "..###.##..##",
+                    ".#..#....##.",
+                    ".#.#..##..##",
+                    "##.#...##..#",
+                    ".#.#..##.#..",
+                    "##...##.##..",
+                    ".##.###.....",
+                    "#.#.#..#...."
+                  ],
+                  "candidate_id": "c21"
+                }
+              ]
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SLp2CqcAhqnbytIBbhGxW7em0S",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.8828290831297636,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_jX0bM2KtwmwFKcfR3DQpDW9b",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c18\"}",
+                    "name": "repair"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "repair",
+            "arguments": {
+              "candidate_id": "c18"
+            },
+            "result": {
+              "fitness": 26,
+              "connected": true,
+              "wall_fraction": 0.4271,
+              "rows": [
+                "..###.##..##",
+                "....#....##.",
+                ".#.#..##..##",
+                "##.#...##...",
+                ".#.#..##.#..",
+                "##...##.##..",
+                ".##.#.##....",
+                "#.#.#..#...."
+              ],
+              "candidate_id": "c29",
+              "operator": "repair",
+              "carved_walls": 0
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SM7DczudE3ZAh0uskhokrfEIbk",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "stop",
+            "elapsed_seconds": 1.0142352911643684,
+            "message": {
+              "content": "The current maze has a fitness of 26 and is connected. I will now adopt the candidate with a different structure. \n\nNext, I will adopt candidate \"c18\". ",
+              "role": "assistant"
+            }
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SNhTPF1S5gxcasah8VCTx7uvtf",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "stop",
+            "elapsed_seconds": 1.1316396249458194,
+            "message": {
+              "content": "{\"finish\":true}",
+              "role": "assistant"
+            }
+          }
+        ],
+        "adoptions": [
+          {
+            "candidate_id": "c1",
+            "previous_fitness": 26,
+            "fitness": 26
+          }
+        ],
+        "final_fitness": 26
+      }
+    },
+    {
+      "agent": "gpt-4o-mini-agentic",
+      "kind": "agentic_llm",
+      "params": {
+        "backend": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0,
+        "max_output_tokens": 512,
+        "timeout_seconds": 90,
+        "prompt_version": "workshop-v1",
+        "tools": [
+          "status",
+          "mutate_batch",
+          "macro_mutation_batch",
+          "repair",
+          "adopt"
+        ],
+        "max_tool_calls": 8,
+        "max_model_calls": 10,
+        "max_batch_size": 24,
+        "library_size": 6,
+        "library_iterations": 400,
+        "library_expected_mutations": 5.0,
+        "initial_source": "library",
+        "initial_wall_probability": 0.0
+      },
+      "seed": 2,
+      "elapsed_seconds": 8.55168520892039,
+      "maze_text": ".##.###.###.\n..###......#\n.#.#...#..##\n..#....#.#..\n#....##.....\n.##.###..###\n#..####.###.\n####.##.....",
+      "rows": [
+        ".##.###.###.",
+        "..###......#",
+        ".#.#...#..##",
+        "..#....#.#..",
+        "#....##.....",
+        ".##.###..###",
+        "#..####.###.",
+        "####.##....."
+      ],
+      "fitness": 26,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "wall_fraction": 0.46875,
+      "status": "ok",
+      "model_metrics": {
+        "prompt_version": "workshop-v1",
+        "system_prompt": "You are controlling a procedural maze workshop through tools.\nYour goal is to finish with a playable, high-fitness maze that differs from the\nearlier mazes in the requested set. Fitness is the shortest four-directional\nroute from the top-left start to the bottom-right goal; larger is better.\n\nUse status to inspect the incumbent. mutate_batch makes small changes.\nmacro_mutation_batch copies rectangular structure from evolved library mazes.\nBoth return scored candidate IDs but change nothing. repair creates a connected\ncandidate by carving a minimum-wall route. adopt is the only way to replace the\nincumbent. Compare fitness and grids before adopting. Retain connectivity, try\nmore than one operator when budget permits, and do not adopt a lower-fitness\ncandidate unless repairing an invalid incumbent.\n\nRepair only disconnected candidates; it cannot improve a connected candidate.\nIf a batch has a connected fitness improvement, adopt the best one. If it has\nonly equal-fitness connected candidates, adopt a structurally different one as\na neutral stepping stone, then generate another batch. Fitness often improves\nonly after several neutral changes.\n\nCall exactly one tool per response. These operations share workshop state and\nmust be performed sequentially. Wait for each tool result before choosing the\nnext operation.\n\nWhen satisfied, return only {\"finish\":true}. The host exports the incumbent.\nDo not print a maze yourself.",
+        "connection_lifetime": "maze set",
+        "mcp_process_starts": 0,
+        "http_client_starts": 0,
+        "model_calls": 9,
+        "tool_calls": 8,
+        "tool_errors": 0,
+        "prompt_tokens": 22898,
+        "completion_tokens": 147,
+        "setup_seconds": 0.12107341596856713,
+        "initial_fitness": 26,
+        "api_seconds": 8.380329665262252,
+        "tool_seconds": 0.04516258300282061,
+        "events": [
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SOS8YQfhrHN3yZOLGlfOT5jfqH",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.9512590419035405,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_9jmWwuhColijUvwAueY4GAHo",
+                  "function": {
+                    "arguments": "{\"batch_size\":12,\"min_block_size\":2,\"max_block_size\":5}",
+                    "name": "macro_mutation_batch"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "macro_mutation_batch",
+            "arguments": {
+              "batch_size": 12,
+              "min_block_size": 2,
+              "max_block_size": 5
+            },
+            "result": {
+              "operator": "library_block_copy",
+              "generated": 12,
+              "current_fitness": 26,
+              "candidates": [
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4062,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##.......#",
+                    ".#.....#..#.",
+                    "..#....#.#..",
+                    "#.....#..#..",
+                    ".##.###...##",
+                    "...####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c1",
+                  "block": {
+                    "size": [
+                      3,
+                      2
+                    ],
+                    "source": [
+                      3,
+                      0
+                    ],
+                    "target": [
+                      4,
+                      6
+                    ]
+                  }
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.3854,
+                  "rows": [
+                    ".#....#.###.",
+                    "..####.....#",
+                    ".#.....#..#.",
+                    "..#....#.#..",
+                    "#.....#..#..",
+                    ".##.###...##",
+                    "...#..#.###.",
+                    "######......"
+                  ],
+                  "candidate_id": "c3",
+                  "block": {
+                    "size": [
+                      2,
+                      3
+                    ],
+                    "source": [
+                      1,
+                      4
+                    ],
+                    "target": [
+                      4,
+                      0
+                    ]
+                  }
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.3854,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##.......#",
+                    ".#.....#..#.",
+                    "..#...#..#..",
+                    "#.....#..#..",
+                    ".##.###...##",
+                    "...#..#.###.",
+                    "######......"
+                  ],
+                  "candidate_id": "c5",
+                  "block": {
+                    "size": [
+                      2,
+                      2
+                    ],
+                    "source": [
+                      1,
+                      5
+                    ],
+                    "target": [
+                      6,
+                      2
+                    ]
+                  }
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.3854,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##.......#",
+                    ".#.....#..#.",
+                    "..#....#.#..",
+                    "#......#.#..",
+                    ".##.###...##",
+                    "...#..#.###.",
+                    "######......"
+                  ],
+                  "candidate_id": "c6",
+                  "block": {
+                    "size": [
+                      4,
+                      2
+                    ],
+                    "source": [
+                      4,
+                      5
+                    ],
+                    "target": [
+                      5,
+                      3
+                    ]
+                  }
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.3958,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##......##",
+                    ".#.....#....",
+                    "..#....#.##.",
+                    "#.....#.....",
+                    ".##.###..###",
+                    "...#..#.###.",
+                    "######......"
+                  ],
+                  "candidate_id": "c8",
+                  "block": {
+                    "size": [
+                      2,
+                      5
+                    ],
+                    "source": [
+                      1,
+                      3
+                    ],
+                    "target": [
+                      9,
+                      1
+                    ]
+                  }
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.3958,
+                  "rows": [
+                    ".#..###..#..",
+                    "..##......##",
+                    ".#.....#.##.",
+                    "..#....#.#.#",
+                    "#.....#....#",
+                    ".##.###...##",
+                    "...#..#.###.",
+                    "######......"
+                  ],
+                  "candidate_id": "c10",
+                  "block": {
+                    "size": [
+                      4,
+                      5
+                    ],
+                    "source": [
+                      3,
+                      2
+                    ],
+                    "target": [
+                      8,
+                      0
+                    ]
+                  }
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.375,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##.......#",
+                    ".#.....#..#.",
+                    "..#....#.#..",
+                    "#.....#..#..",
+                    ".######...##",
+                    "..#...#.###.",
+                    "#.#.##......"
+                  ],
+                  "candidate_id": "c12",
+                  "block": {
+                    "size": [
+                      3,
+                      4
+                    ],
+                    "source": [
+                      3,
+                      4
+                    ],
+                    "target": [
+                      1,
+                      4
+                    ]
+                  }
+                },
+                {
+                  "fitness": 24,
+                  "connected": true,
+                  "wall_fraction": 0.3854,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##.......#",
+                    ".#.....#..#.",
+                    ".......#.#..",
+                    "#.#...#..#..",
+                    ".######...##",
+                    "...#..#.###.",
+                    "##.###......"
+                  ],
+                  "candidate_id": "c9",
+                  "block": {
+                    "size": [
+                      2,
+                      5
+                    ],
+                    "source": [
+                      5,
+                      0
+                    ],
+                    "target": [
+                      2,
+                      3
+                    ]
+                  }
+                }
+              ]
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SPPHOdYWpELNtpR6uvWXfmPf3u",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 1.0912572080269456,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_HKS82TttPL07pwo0IPgXB9yo",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c1\"}",
+                    "name": "adopt"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "adopt",
+            "arguments": {
+              "candidate_id": "c1"
+            },
+            "result": {
+              "adopted": "c1",
+              "previous_fitness": 26,
+              "current": {
+                "fitness": 26,
+                "connected": true,
+                "wall_fraction": 0.4062,
+                "rows": [
+                  ".#..###.###.",
+                  "..##.......#",
+                  ".#.....#..#.",
+                  "..#....#.#..",
+                  "#.....#..#..",
+                  ".##.###...##",
+                  "...####.###.",
+                  "####.##....."
+                ]
+              }
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SQeLSc3uPoBlhIlldxobC0DQMH",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.740056541049853,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_5RYSNuFdUQipmP7cYwWZGJp9",
+                  "function": {
+                    "arguments": "{\"batch_size\":12}",
+                    "name": "mutate_batch"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "mutate_batch",
+            "arguments": {
+              "batch_size": 12
+            },
+            "result": {
+              "operator": "local_mutation",
+              "generated": 12,
+              "current_fitness": 26,
+              "candidates": [
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4375,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##.......#",
+                    ".#.#...#..#.",
+                    "..#....#.#..",
+                    "#....##..#..",
+                    ".##.###...##",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c19"
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.3854,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##......##",
+                    ".#.....#....",
+                    "..#....#.#..",
+                    "#.....#..#..",
+                    ".##.###...##",
+                    "...####.###.",
+                    ".###..#....."
+                  ],
+                  "candidate_id": "c23"
+                },
+                {
+                  "fitness": 24,
+                  "connected": true,
+                  "wall_fraction": 0.4062,
+                  "rows": [
+                    ".#..###.###.",
+                    "...#........",
+                    ".#.#.#...##.",
+                    "..#....#.#.#",
+                    "#.....#..#..",
+                    ".##.###...#.",
+                    "...####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c15"
+                },
+                {
+                  "fitness": 24,
+                  "connected": true,
+                  "wall_fraction": 0.3958,
+                  "rows": [
+                    "....###.###.",
+                    "..##.......#",
+                    ".#.......##.",
+                    "..#....#.#..",
+                    "#.....#..#..",
+                    ".##.###...##",
+                    "...####.##.#",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c16"
+                },
+                {
+                  "fitness": 18,
+                  "connected": true,
+                  "wall_fraction": 0.3854,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##.......#",
+                    ".#.....#..#.",
+                    "..#....#.#..",
+                    "#........#..",
+                    ".##.###...##",
+                    "...####.##..",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c22"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4375,
+                  "rows": [
+                    ".#..###.#.##",
+                    "..##......##",
+                    ".#.....#..#.",
+                    "..#....#.#..",
+                    "#..#..#..#..",
+                    ".##.###.#.##",
+                    "...####.###.",
+                    "####..#...#."
+                  ],
+                  "candidate_id": "c13"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4167,
+                  "rows": [
+                    ".#..###.#.#.",
+                    "..##.......#",
+                    ".#........#.",
+                    "..#....###..",
+                    "#.....#..##.",
+                    ".##.###...##",
+                    "...####.###.",
+                    "####.##...#."
+                  ],
+                  "candidate_id": "c14"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4062,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##.......#",
+                    ".#.....#..#.",
+                    "..#....#.#..",
+                    "#.....#..#..",
+                    ".##.####...#",
+                    "...####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c17"
+                }
+              ]
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SRwSHcgpqmrIncX2IBYeSrwXpH",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.913367458153516,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_xcz4dyT6QbZfencEtvwuEBMI",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c19\"}",
+                    "name": "adopt"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "adopt",
+            "arguments": {
+              "candidate_id": "c19"
+            },
+            "result": {
+              "adopted": "c19",
+              "previous_fitness": 26,
+              "current": {
+                "fitness": 26,
+                "connected": true,
+                "wall_fraction": 0.4375,
+                "rows": [
+                  ".#..###.###.",
+                  "..##.......#",
+                  ".#.#...#..#.",
+                  "..#....#.#..",
+                  "#....##..#..",
+                  ".##.###...##",
+                  "#..####.###.",
+                  "####.##....."
+                ]
+              }
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SSDqgDYdwjWSkQm3OhaUVEOYCO",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.917476125061512,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_dSsygM96ji5KnbCOfGQioe9K",
+                  "function": {
+                    "arguments": "{\"batch_size\":12}",
+                    "name": "mutate_batch"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "mutate_batch",
+            "arguments": {
+              "batch_size": 12
+            },
+            "result": {
+              "operator": "local_mutation",
+              "generated": 12,
+              "current_fitness": 26,
+              "candidates": [
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4167,
+                  "rows": [
+                    ".#...##..##.",
+                    "..##.#.....#",
+                    ".#.....#..#.",
+                    "..#....#.#..",
+                    "#....##..#..",
+                    ".##.###...##",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c25"
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4479,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##.......#",
+                    ".#.#...#..##",
+                    "..#....#.#..",
+                    "#....##..#..",
+                    ".##.###...##",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c35"
+                },
+                {
+                  "fitness": 24,
+                  "connected": true,
+                  "wall_fraction": 0.3854,
+                  "rows": [
+                    "....###.##..",
+                    "..###.......",
+                    ".#.#...#..#.",
+                    ".......#.#..",
+                    ".....##..#..",
+                    ".##.###...##",
+                    "#...###.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c31"
+                },
+                {
+                  "fitness": 24,
+                  "connected": true,
+                  "wall_fraction": 0.4479,
+                  "rows": [
+                    ".#..###.####",
+                    "..##.......#",
+                    ".#.#...#.##.",
+                    "..#....#.#..",
+                    "#....##..#..",
+                    ".#..###...##",
+                    "#..####..###",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c36"
+                },
+                {
+                  "fitness": 20,
+                  "connected": true,
+                  "wall_fraction": 0.4062,
+                  "rows": [
+                    ".#..###...#.",
+                    "..##.......#",
+                    "#..#...#..#.",
+                    "..#......#..",
+                    "#....##..#..",
+                    ".##.###...##",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c29"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4375,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##.......#",
+                    ".#.#.#....#.",
+                    "..#....#.#..",
+                    "##...##..#..",
+                    ".##.###....#",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c26"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4688,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##......##",
+                    ".#.##..#..#.",
+                    ".##....#.#..",
+                    "#.#..##.....",
+                    ".##.###...##",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c27"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4688,
+                  "rows": [
+                    ".#..###.###.",
+                    "..###...#..#",
+                    ".#.#...#..#.",
+                    "..#....###..",
+                    "##...##..#..",
+                    ".##.##....##",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c28"
+                }
+              ]
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8STfyOBSTJmYPV6u1iWJnjMNgY4",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.9224480409175158,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_vBMobDgvTiIezqARpQTmObod",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c35\"}",
+                    "name": "adopt"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "adopt",
+            "arguments": {
+              "candidate_id": "c35"
+            },
+            "result": {
+              "adopted": "c35",
+              "previous_fitness": 26,
+              "current": {
+                "fitness": 26,
+                "connected": true,
+                "wall_fraction": 0.4479,
+                "rows": [
+                  ".#..###.###.",
+                  "..##.......#",
+                  ".#.#...#..##",
+                  "..#....#.#..",
+                  "#....##..#..",
+                  ".##.###...##",
+                  "#..####.###.",
+                  "####.##....."
+                ]
+              }
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SULTaLaJNhj2KksDfeZC8ebTbl",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 1.1139980000443757,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_P158BAS0mLAWXIHQdF3xkd7c",
+                  "function": {
+                    "arguments": "{\"batch_size\":12}",
+                    "name": "mutate_batch"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "mutate_batch",
+            "arguments": {
+              "batch_size": 12
+            },
+            "result": {
+              "operator": "local_mutation",
+              "generated": 12,
+              "current_fitness": 26,
+              "candidates": [
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4688,
+                  "rows": [
+                    ".##.###.###.",
+                    "..###......#",
+                    ".#.#...#..##",
+                    "..#....#.#..",
+                    "#....##.....",
+                    ".##.###..###",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c37"
+                },
+                {
+                  "fitness": 26,
+                  "connected": true,
+                  "wall_fraction": 0.4479,
+                  "rows": [
+                    ".#..##..####",
+                    "..##.#.....#",
+                    ".#.#...#..##",
+                    "..#....#.#..",
+                    "#....##.....",
+                    ".##.###...##",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c46"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4792,
+                  "rows": [
+                    ".#..#.#.###.",
+                    "..##........",
+                    ".#.#...##.##",
+                    "..#......#.#",
+                    "#....##.##..",
+                    ".##.###..###",
+                    "#..####.####",
+                    "####.##...#."
+                  ],
+                  "candidate_id": "c38"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4583,
+                  "rows": [
+                    ".#..###.##..",
+                    "#.##....#..#",
+                    "##.#...#..##",
+                    "..#....#.#..",
+                    "#....##..#..",
+                    ".##.##....##",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c39"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.5104,
+                  "rows": [
+                    ".#..###.###.",
+                    "#.##..#.#..#",
+                    ".#.#..##..##",
+                    "..#....#.#..",
+                    "#....##..#..",
+                    ".##.###.#.##",
+                    "#..####.###.",
+                    "#######....."
+                  ],
+                  "candidate_id": "c40"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4375,
+                  "rows": [
+                    ".#..###.###.",
+                    ".###.......#",
+                    "##.#...##.##",
+                    "..#....#.#..",
+                    "#.....#..#..",
+                    ".#..###...##",
+                    "#..####.###.",
+                    ".###.#......"
+                  ],
+                  "candidate_id": "c41"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4896,
+                  "rows": [
+                    ".#..###.###.",
+                    "#.###......#",
+                    ".#.#...#..##",
+                    "..#....#.#..",
+                    "#....##..#.#",
+                    ".##.###.#.##",
+                    "#..####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c42"
+                },
+                {
+                  "fitness": -1,
+                  "connected": false,
+                  "wall_fraction": 0.4479,
+                  "rows": [
+                    ".#..###.###.",
+                    "..##....#..#",
+                    ".#.#...#..##",
+                    "..#....#.#..",
+                    "#....##..#..",
+                    ".##.###...##",
+                    "...####.###.",
+                    "####.##....."
+                  ],
+                  "candidate_id": "c43"
+                }
+              ]
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SVsy8Vq4cv514RnRmen6vSmP7j",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "tool_calls",
+            "elapsed_seconds": 0.9214064171537757,
+            "message": {
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "id": "call_CiHjENiofTcVDk8wGvJuKAUD",
+                  "function": {
+                    "arguments": "{\"candidate_id\":\"c37\"}",
+                    "name": "adopt"
+                  },
+                  "type": "function"
+                }
+              ]
+            }
+          },
+          {
+            "type": "tool",
+            "name": "adopt",
+            "arguments": {
+              "candidate_id": "c37"
+            },
+            "result": {
+              "adopted": "c37",
+              "previous_fitness": 26,
+              "current": {
+                "fitness": 26,
+                "connected": true,
+                "wall_fraction": 0.4688,
+                "rows": [
+                  ".##.###.###.",
+                  "..###......#",
+                  ".#.#...#..##",
+                  "..#....#.#..",
+                  "#....##.....",
+                  ".##.###..###",
+                  "#..####.###.",
+                  "####.##....."
+                ]
+              }
+            },
+            "error": false
+          },
+          {
+            "type": "model",
+            "response_id": "chatcmpl-EO8SWUsHJ9UtQByrwkHVWBVaXGUmU",
+            "model": "gpt-4o-mini-2024-07-18",
+            "finish_reason": "stop",
+            "elapsed_seconds": 0.8090608329512179,
+            "message": {
+              "content": "{\"finish\":true}",
+              "role": "assistant"
+            }
+          }
+        ],
+        "adoptions": [
+          {
+            "candidate_id": "c1",
+            "previous_fitness": 26,
+            "fitness": 26
+          },
+          {
+            "candidate_id": "c19",
+            "previous_fitness": 26,
+            "fitness": 26
+          },
+          {
+            "candidate_id": "c35",
+            "previous_fitness": 26,
+            "fitness": 26
+          },
+          {
+            "candidate_id": "c37",
+            "previous_fitness": 26,
+            "fitness": 26
+          }
+        ],
+        "final_fitness": 26
+      }
+    }
+  ],
+  "summary": [
+    {
+      "agent": "evolution-2000",
+      "kind": "evolution",
+      "attempted": 3,
+      "failed": 0,
+      "mean_fitness": 38,
+      "max_fitness": 38,
+      "mean_wall_fraction": 0.4027777777777778,
+      "mean_seconds": 0.09502543035584192,
+      "valid_maze_count": 3,
+      "unique_maze_count": 3,
+      "gzip_bytes": 114,
+      "uncompressed_bytes": 313,
+      "gzip_ratio": 0.36421725239616615,
+      "mean_pairwise_hamming": 0.4861111111111111
+    },
+    {
+      "agent": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "attempted": 3,
+      "failed": 2,
+      "mean_fitness": 18,
+      "max_fitness": 18,
+      "mean_wall_fraction": 0.40625,
+      "mean_seconds": 1.0038155137250822,
+      "valid_maze_count": 1,
+      "unique_maze_count": 1,
+      "gzip_bytes": 50,
+      "uncompressed_bytes": 103,
+      "gzip_ratio": 0.4854368932038835,
+      "mean_pairwise_hamming": 0.0,
+      "total_model_calls": 3,
+      "total_tool_calls": 0,
+      "total_tool_errors": 0,
+      "total_mcp_process_starts": 0,
+      "total_http_client_starts": 0,
+      "total_prompt_tokens": 1001,
+      "total_completion_tokens": 164
+    },
+    {
+      "agent": "gpt-4o-mini-agentic",
+      "kind": "agentic_llm",
+      "attempted": 3,
+      "failed": 0,
+      "mean_fitness": 28,
+      "max_fitness": 32,
+      "mean_wall_fraction": 0.4236111111111111,
+      "mean_seconds": 8.966651527987173,
+      "valid_maze_count": 3,
+      "unique_maze_count": 3,
+      "gzip_bytes": 115,
+      "uncompressed_bytes": 313,
+      "gzip_ratio": 0.36741214057507987,
+      "mean_pairwise_hamming": 0.4791666666666667,
+      "total_model_calls": 28,
+      "total_tool_calls": 24,
+      "total_tool_errors": 0,
+      "total_mcp_process_starts": 1,
+      "total_http_client_starts": 1,
+      "total_prompt_tokens": 66855,
+      "total_completion_tokens": 477
+    }
+  ],
+  "diversity_note": "gzip measures the valid mazes in fixed seed order; compare bytes only between sets with equal dimensions, encoding and valid counts"
+}

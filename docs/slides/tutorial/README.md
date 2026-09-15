@@ -1,6 +1,6 @@
 # Agentic AI for Games tutorial slides
 
-Open [tutorial.pdf](tutorial.pdf): 25 widescreen Beamer slides, designed for a
+Open [tutorial.pdf](tutorial.pdf): 30 widescreen Beamer slides, designed for a
 concise introduction with optional live demos. Edit [tutorial.tex](tutorial.tex).
 
 ## Build
@@ -22,11 +22,13 @@ Auxiliary files go into `build/`, ignored by the root `.gitignore`.
 - Slides 1–5: why tools; ordinary functions; ReAct and a concrete interaction.
 - Slides 6–16: MCP, decorators, host/client/server, discovery and the execution loop.
 - Slides 17–21: Griddle, Monte Carlo Search, persistent resources and evaluation.
-- Slides 22–25: measured results, latency, demo commands and references.
+- Slides 22–23: measured Griddle results and latency.
+- Slides 24–28: maze PCG, scaling, one-shot and agentic generation.
+- Slides 29–30: demo commands and references.
 
 ## Diagrams and code
 
-The four editable [TikZ diagrams](diagrams/) use component/data-flow notation
+The five editable [TikZ diagrams](diagrams/) use component/data-flow notation
 and a sequence diagram. Boxes denote responsibilities; arrows show requests or
 data flow; the dashed outline encloses the host. They are vector graphics in
 the PDF, so remain sharp when projected or enlarged.
@@ -59,6 +61,9 @@ The deck does not show or depend on `.env` contents.
   additional prompt variants. Rebuild alone does not refresh the result table.
 - Do not interpret three deals as a robust ranking. Different search seed
   streams also prevent attributing small score differences to LLM judgement.
+- Maze execution times are local measurements and hosted model latency varies.
+  The agentic maze result includes evolutionary work used to initialise its
+  macro-mutation library, so it is not an equal-compute algorithm ranking.
 
 Primary references are linked on the slides: [ReAct](https://arxiv.org/abs/2210.03629)
 and the [MCP architecture specification](https://modelcontextprotocol.io/specification/2025-06-18/architecture).

@@ -37,6 +37,7 @@ For OpenRouter, set `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` in `.env`, then 
 - [Simple examples](src/simple_examples/): plain Python, MCP, and model-driven tool use
 - [Evolutionary maze PCG](docs/pcg_maze.md): seeded search with static and live visualisations
 - [One-shot LLM maze generation](docs/pcg_maze_llm.md): compare quality and set diversity
+- [Agentic maze generation](docs/pcg_maze_agentic.md): control mutation, library blocks, and repair over MCP
 - [Griddle](docs/griddle.md): a word game with terminal/Tkinter play and local baselines
 - [Griddle agent benchmarks](docs/griddle_benchmarks.md): compare random and parameterized MCS agents on fixed deals
 - [Griddle LLM experiments](docs/griddle_llm.md): compare an LLM with and without MCP search tools

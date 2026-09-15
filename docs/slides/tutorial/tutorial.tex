@@ -1,7 +1,7 @@
 \documentclass[aspectratio=169,11pt]{beamer}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage{listings,booktabs,tikz}
+\usepackage{listings,booktabs,tikz,graphicx}
 \usetikzlibrary{arrows.meta,positioning,fit}
 \definecolor{navy}{HTML}{18344B}
 \definecolor{teal}{HTML}{087F8C}
@@ -316,6 +316,94 @@ the timings do not isolate their separate contributions.
 \src{results/griddle/llm_persistence_summary.json}
 \end{frame}
 
+\begin{frame}{PCG objective: lengthen the shortest route}
+\begin{itemize}
+\item A binary grid has open passages and walls; start is top-left, goal bottom-right.
+\item Breadth-first search supplies exact fitness: the shortest valid route's length.
+\item Mutation flips cells; a $(1+1)$ evolutionary loop retains non-worsening candidates.
+\end{itemize}
+\centering
+\includegraphics[width=.92\textwidth]{images/maze_evolution.png}
+\par\vspace{1mm}\raggedright\scriptsize
+One 20$\times$10 run, sampled across 5,000 mutation attempts; blue marks a shortest route.
+\src{results/pcg/maze_evolution.svg}
+\end{frame}
+
+\begin{frame}{Maze fitness has a scale}
+\centering
+\begin{tabular}{lrrrr}
+\toprule Grid & Iterations & Scores (seeds 0--2) & Mean & Seconds/maze\\\midrule
+12$\times$8 & 2,000 & 38, 38, 38 & 38.0 & 0.09\\
+12$\times$8 & 5,000 & 42, 48, 48 & 46.0 & 0.20\\
+20$\times$10 & 2,000 & 70, 70, 66 & 68.7 & 0.17\\
+20$\times$10 & 5,000 & 82, 88, 86 & 85.3 & 0.41\\\bottomrule
+\end{tabular}
+\takeaway{Compare raw path-length fitness only at the same grid dimensions.}
+\small The interactive configuration was 20$\times$10 with 5,000 iterations;
+the compact LLM benchmark uses 12$\times$8 with 2,000. This accounts for
+scores near 80 versus 38. Times are local three-run means.
+\src{Reproduced seeds 0--2; method and commands: docs/pcg_maze.md.}
+\end{frame}
+
+\begin{frame}{One-shot generation: fast evolution, diverse LLM output}
+\begin{columns}[T]
+\column{.46\textwidth}
+\centering
+\includegraphics[height=.67\textheight]{images/maze_gpt5_mini.png}
+\column{.51\textwidth}
+\small
+\begin{tabular}{lrrr}
+\toprule Approach & Valid & Fitness & s/maze\\\midrule
+Random & 4/6 & 18.0 & $<0.01$\\
+Evolution-2000 & 6/6 & 39.7 & 0.08\\
+GPT-5-mini & 6/6 & 24.0 & 40.65\\\bottomrule
+\end{tabular}
+\par\vspace{3mm}
+\textbf{Set-level diversity}
+\begin{itemize}
+\item Mean pairwise Hamming distance: random .304, evolution .463, LLM .506.
+\item Gzip size: 117, 186 and 104 bytes. Compression also reflects repeated text structure, so report both measures.
+\end{itemize}
+\end{columns}
+\src{Six 12x8 mazes per approach: results/pcg/maze_gpt5_mini_comparison.json.}
+\end{frame}
+
+\begin{frame}{Agentic PCG: give the model a maze workshop}
+\centering\resizebox{.62\textwidth}{!}{\input{diagrams/maze_workshop.tex}}
+\par\raggedright\small
+\begin{itemize}\setlength\itemsep{1mm}
+\item Inspect fitness and validity; request batches of local mutations.
+\item Copy rectangular macro-patterns from an evolved maze library.
+\item Repair disconnected candidates, then select or restore earlier states.
+\end{itemize}
+\par\vspace{1mm}\textbf{Tools turn generation into an observable edit--evaluate--repair loop.}
+\end{frame}
+
+\begin{frame}{Agentic maze result: validity recovered}
+\begin{columns}[T]
+\column{.43\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/maze_agentic.png}
+\column{.50\textwidth}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrr}
+\toprule Approach & Valid & Fitness & s/maze\\\midrule
+Evolution-2000 & 3/3 & 38 & 0.10\\
+GPT-4o-mini one-shot & 1/3 & 18 & 1.00\\
+GPT-4o-mini agentic & 3/3 & 28 & 8.97\\\bottomrule
+\end{tabular}}
+\par\vspace{3mm}
+The agentic run made 28 model calls and 24 successful tool calls through one
+persistent MCP process. Its mean pairwise Hamming distance was .479.
+\par\vspace{3mm}
+\textbf{Compute caveat:} each agentic maze first builds a six-member library
+with 400 evolutionary iterations each. It is not an equal-compute comparison
+with the 2,000-iteration baseline.
+\end{columns}
+\src{Three 12x8 mazes: results/pcg/maze_agentic_comparison.*}
+\end{frame}
+
 \begin{frame}[fragile]{Try it, then change one thing}
 \begin{lstlisting}[language=bash,basicstyle=\ttfamily\footnotesize]
 # From the repository root: no model credentials needed
@@ -341,6 +429,8 @@ uv run python src/simple_examples/mcp_client.py
 \item \texttt{src/simple\_examples/}: functions, server, MCP client, model loop.
 \item \texttt{src/game\_agent/griddle/}: game, search server, LLM agent, benchmark.
 \item \texttt{docs/griddle\_llm.md}: prompts, experiments and full report links.
+\item \texttt{src/pcg/maze/}: evolution, LLM and agentic generation; visualisation.
+\item \texttt{docs/pcg\_maze*.md}: PCG commands, metrics and experiment reports.
 \end{itemize}
 \takeaway{Build a useful tool. Connect a bounded loop. Measure the resulting behaviour.}
 \end{frame}

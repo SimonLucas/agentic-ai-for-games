@@ -18,6 +18,23 @@ The example is a clean Python reimplementation of the idea in XKG's
 Equal-fitness moves are accepted because neutral changes can create a route to
 later improvements. A seed owns every random choice, so a run is reproducible.
 
+Fitness is an absolute path length and therefore depends strongly on grid size.
+Raw scores should only be compared between runs with the same dimensions. For
+example, seeds 0–2 give:
+
+| Grid | Iterations | Scores | Mean | Seconds/maze |
+|---|---:|---|---:|---:|
+| 12×8 | 2,000 | 38, 38, 38 | 38.0 | 0.09 |
+| 12×8 | 5,000 | 42, 48, 48 | 46.0 | 0.20 |
+| 20×10 | 2,000 | 70, 70, 66 | 68.7 | 0.17 |
+| 20×10 | 5,000 | 82, 88, 86 | 85.3 | 0.41 |
+
+The interactive reference uses the last configuration. The LLM benchmark uses
+12×8 grids to keep prompts, traces and contact sheets compact, which explains
+why its conventional 2,000-iteration baseline is around 38 rather than 80.
+Times are means of three local runs on the development machine and will vary by
+hardware and system load.
+
 ## Static history
 
 Generate an SVG showing selected fitness improvements:

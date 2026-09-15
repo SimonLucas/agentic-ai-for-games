@@ -1,0 +1,55 @@
+{
+  "width": 12,
+  "height": 8,
+  "seeds": [0, 1, 2],
+  "agents": [
+    {
+      "name": "evolution-2000",
+      "kind": "evolution",
+      "params": {
+        "iterations": 2000,
+        "expected_mutations": 5.0
+      }
+    },
+    {
+      "name": "gpt-4o-mini-one-shot",
+      "kind": "llm",
+      "params": {
+        "backend": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.8,
+        "max_output_tokens": 512,
+        "timeout_seconds": 90,
+        "prompt_version": "diverse-v1",
+        "structured_output": true
+      }
+    },
+    {
+      "name": "gpt-4o-mini-agentic",
+      "kind": "agentic_llm",
+      "params": {
+        "backend": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0,
+        "max_output_tokens": 512,
+        "timeout_seconds": 90,
+        "prompt_version": "workshop-v1",
+        "tools": [
+          "status",
+          "mutate_batch",
+          "macro_mutation_batch",
+          "repair",
+          "adopt"
+        ],
+        "max_tool_calls": 8,
+        "max_model_calls": 10,
+        "max_batch_size": 24,
+        "library_size": 6,
+        "library_iterations": 400,
+        "library_expected_mutations": 5.0,
+        "initial_source": "library",
+        "initial_wall_probability": 0.0
+      }
+    }
+  ]
+}
