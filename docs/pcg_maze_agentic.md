@@ -5,6 +5,13 @@ model does not need to reproduce a spatial grid perfectly in its response. It
 chooses editing and evaluation operations, compares candidates, explicitly
 adopts one, and ends by returning `{"finish":true}`.
 
+Related reading: Jiang, Earle, Khalifa and Togelius,
+[*Agentic PCG: Procedural Content Generation via Tool-using LLMs*](https://zehua-jiang.github.io/AgenticPCG/)
+(2026; [local PDF](papers/Agentic_PCG_Paper.pdf)). Their framework also
+iterates over edits and environment feedback, and includes classic PCG
+algorithms among its tools. This tutorial's MCP workshop and benchmark are a
+separate implementation.
+
 ```mermaid
 flowchart LR
     L[LLM controller] -->|tool call| M[MCP maze workshop]

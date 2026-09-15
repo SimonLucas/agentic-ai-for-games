@@ -30,7 +30,7 @@
 \newcommand{\takeaway}[1]{\vspace{3mm}\begin{block}{}#1\end{block}}
 \title{Agentic AI for Games}
 \subtitle{From language models to tools, ReAct and MCP}
-\author{Simon Lucas}
+\author{Simon Lucas // (aided by Codex, ChatGPT Sol and Astra)}
 \date{Tutorial snapshot: 14 September 2026}
 \begin{document}
 \begin{frame}
@@ -289,6 +289,9 @@ GPT-4.1 + persistent MCP MCS-10 & 67.7 & 54.60\\\bottomrule
 Three deals (0--2), OpenRouter, original rules prompt. Standalone and tool search
 use different simulation seeds. GPT-4o-mini followed all 72 search recommendations:
 this shows useful delegation, not an advantage over standalone search.
+\par\vspace{2mm}\scriptsize
+Separate, incomplete Sol medium-reasoning trials took 26--28 minutes for
+one no-tool game; they are excluded from this three-deal table.
 \src{Completed three-deal runs; full reports and caveats: docs/griddle_llm.md.}
 \end{frame}
 
@@ -370,7 +373,7 @@ GPT-5-mini & 6/6 & 24.0 & 40.65\\\bottomrule
 \end{frame}
 
 \begin{frame}{Agentic PCG: give the model a maze workshop}
-\centering\resizebox{.62\textwidth}{!}{\input{diagrams/maze_workshop.tex}}
+\centering\resizebox{.58\textwidth}{!}{\input{diagrams/maze_workshop.tex}}
 \par\raggedright\small
 \begin{itemize}\setlength\itemsep{1mm}
 \item Inspect fitness and validity; request batches of local mutations.
@@ -378,6 +381,9 @@ GPT-5-mini & 6/6 & 24.0 & 40.65\\\bottomrule
 \item Repair disconnected candidates, then select or restore earlier states.
 \end{itemize}
 \par\vspace{1mm}\textbf{Tools turn generation into an observable edit--evaluate--repair loop.}
+\par\vspace{1mm}\scriptsize
+Related work: \href{https://zehua-jiang.github.io/AgenticPCG/}{Jiang et al., Agentic PCG (2026)}:
+iterative level editing with environment feedback.
 \end{frame}
 
 \begin{frame}{Agentic maze result: validity recovered}
@@ -422,16 +428,28 @@ uv run python src/simple_examples/mcp_client.py
 \small Hosted evaluations incur API charges. See \texttt{docs/griddle\_llm.md} for providers and configuration.
 \end{frame}
 
-\begin{frame}{Reading and code map}
+\begin{frame}{References}
 \small
 \begin{itemize}
-\item Yao et al. (ICLR 2023), \href{https://arxiv.org/abs/2210.03629}{\textbf{ReAct: Synergizing Reasoning and Acting in Language Models}}.
-\item \href{https://modelcontextprotocol.io/specification/2025-06-18/architecture}{\textbf{MCP architecture}, specification 2025-06-18}. This deck describes the repository's stdio implementation.
+\item Yao et al. (ICLR 2023), \href{https://arxiv.org/abs/2210.03629}{\textbf{ReAct: Synergizing Reasoning and Acting in Language Models}}. Reasoning and action with observations.
+\item \href{https://modelcontextprotocol.io/specification/2025-06-18/architecture}{\textbf{MCP architecture}, specification 2025-06-18}. Host, client and server responsibilities.
+\item Jiang, Earle, Khalifa and Togelius (2026),
+\href{https://zehua-jiang.github.io/AgenticPCG/}{\textbf{Agentic PCG: Procedural Content Generation via Tool-using LLMs}}.
+Project page; \href{../../papers/Agentic_PCG_Paper.pdf}{local PDF}.
+Iterative level editing with tool and environment feedback.
+\end{itemize}
+\src{Local reading copy and notes: docs/papers/README.md.}
+\end{frame}
+
+\begin{frame}{Code map}
+\small
+\begin{itemize}
 \item \texttt{src/simple\_examples/}: functions, server, MCP client, model loop.
 \item \texttt{src/game\_agent/griddle/}: game, search server, LLM agent, benchmark.
 \item \texttt{docs/griddle\_llm.md}: prompts, experiments and full report links.
 \item \texttt{src/pcg/maze/}: evolution, LLM and agentic generation; visualisation.
 \item \texttt{docs/pcg\_maze*.md}: PCG commands, metrics and experiment reports.
+\item \texttt{docs/papers/}: local reading copies and connections to examples.
 \end{itemize}
 \takeaway{Build a useful tool. Connect a bounded loop. Measure the resulting behaviour.}
 \end{frame}

@@ -256,6 +256,26 @@ Completions. It requires the Responses API or a different reasoning
 configuration. Single-game Sol scores should not be ranked against three-game
 means. This table is a snapshot, not a live display.
 
+The long Sol timings are real elapsed times for **one 25-move game**, not
+three-game means. The saved per-request events explain most of the difference:
+
+| Sol condition | Game seconds | API seconds | Model calls | Completion tokens | Reasoning tokens | Slowest request |
+|---|---:|---:|---:|---:|---:|---:|
+| OpenRouter, no tools | 1684.87 | 1684.77 | 24 | 46,055 | 45,791 | 208.2 s |
+| OpenAI, no tools | 1559.39 | 1559.32 | 24 | 40,632 | 39,897 | 164.0 s |
+| OpenRouter, MCP MCS-10 | 185.42 | 179.21 | 48 | 1,753 | 783 | 25.1 s |
+
+The medium-reasoning no-tool games spent over 98% of completion tokens on
+reasoning and almost all elapsed time waiting for model requests. The tool
+run used much fewer reasoning tokens; its search calculation took only 1.24 s.
+This suggests search advice simplified the model's decisions, but these are
+single-game observations, not a controlled serving-speed comparison. The
+completed traces record no model or rate-limit errors. The OpenRouter no-tool
+trace contains one 208-second request despite a configured 180-second
+timeout; it ended normally, and the saved trace does not explain the extra
+time. The OpenRouter tool game logged six tool-budget rejections when the
+model attempted a second search call within a move; these did not stop it.
+
 Persistent MCP and HTTP reuse reduced observed tool-agent time by **22.9%**,
 with identical moves and scores. Provider latency may vary. The revised-prompt
 row also changes HTTP lifetime and is a separate exploratory trial; its nine
@@ -434,12 +454,13 @@ Run the direct route with an `OPENAI_API_KEY`:
 ```
 
 The [direct OpenAI report](../results/griddle/llm_sol_openai_comparison.json)
-is checkpointed after each game; check `complete` before interpreting it as
-a finished experiment. Direct API usage does not report dollar costs through
-this adapter; missing costs must not be treated as zero. Changing provider
-does not guarantee lower latency. A single opening-position probe took 12.71
-seconds directly versus 17.75 seconds through OpenRouter, but generated 126
-versus 203 reasoning tokens, so this does not isolate serving speed.
+is incomplete: its no-tool seed-0 game finished, while the tool-enabled arm
+failed before move one with an HTTP 400. Chat Completions did not support
+function tools together with medium reasoning for this Sol model; the API
+message advised using Responses or setting reasoning effort to none. Direct
+API usage does not report dollar costs through this adapter; missing costs
+must not be treated as zero. Changing provider did not guarantee lower
+latency for the completed game.
 
 ## References
 

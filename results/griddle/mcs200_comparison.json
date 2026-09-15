@@ -10,7 +10,7 @@
     ],
     "agents": [
       {
-        "name": "mcs-200",
+        "name": "mcs-10",
         "kind": "mcs",
         "params": {
           "rollouts_per_square": 200
@@ -24,7 +24,7 @@
   "dictionary_sha256": "de9bfc930046b51b8c20d8dc931b18787ac50fd79857fe5768a14ca7493beb66",
   "results": [
     {
-      "agent": "mcs-200",
+      "agent": "mcs-10",
       "kind": "mcs",
       "params": {
         "rollouts_per_square": 200
@@ -164,7 +164,7 @@
       "final_grid": "PECHNHFFTOTELKMUBANEBOPKN"
     },
     {
-      "agent": "mcs-200",
+      "agent": "mcs-10",
       "kind": "mcs",
       "params": {
         "rollouts_per_square": 200
@@ -304,7 +304,7 @@
       "final_grid": "KARRGHOLEOIWQFRPNUSCPALSU"
     },
     {
-      "agent": "mcs-200",
+      "agent": "mcs-10",
       "kind": "mcs",
       "params": {
         "rollouts_per_square": 200
@@ -446,7 +446,7 @@
   ],
   "summary": [
     {
-      "agent": "mcs-200",
+      "agent": "mcs-10",
       "games": 3,
       "mean_score": 93.66666666666667,
       "stdev_score": 18.502252115170556,

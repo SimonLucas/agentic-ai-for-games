@@ -7,6 +7,12 @@ seeds:
 - the `(1+1)` evolutionary baseline; and
 - an LLM that generates a complete maze in one request, without tools.
 
+The one-shot condition is a useful contrast with the iterative edit-and-evaluate
+approach in Jiang et al.'s
+[*Agentic PCG*](https://zehua-jiang.github.io/AgenticPCG/)
+([local PDF](papers/Agentic_PCG_Paper.pdf)). Our agentic maze version is
+described in [its own guide](pcg_maze_agentic.md).
+
 Run the reference configuration from the repository root:
 
 ```bash

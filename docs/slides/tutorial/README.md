@@ -1,6 +1,6 @@
 # Agentic AI for Games tutorial slides
 
-Open [tutorial.pdf](tutorial.pdf): 30 widescreen Beamer slides, designed for a
+Open [tutorial.pdf](tutorial.pdf): 31 widescreen Beamer slides, designed for a
 concise introduction with optional live demos. Edit [tutorial.tex](tutorial.tex).
 
 ## Build
@@ -24,7 +24,7 @@ Auxiliary files go into `build/`, ignored by the root `.gitignore`.
 - Slides 17–21: Griddle, Monte Carlo Search, persistent resources and evaluation.
 - Slides 22–23: measured Griddle results and latency.
 - Slides 24–28: maze PCG, scaling, one-shot and agentic generation.
-- Slides 29–30: demo commands and references.
+- Slides 29–31: demo commands, references and code map.
 
 ## Diagrams and code
 
@@ -65,8 +65,10 @@ The deck does not show or depend on `.env` contents.
   The agentic maze result includes evolutionary work used to initialise its
   macro-mutation library, so it is not an equal-compute algorithm ranking.
 
-Primary references are linked on the slides: [ReAct](https://arxiv.org/abs/2210.03629)
-and the [MCP architecture specification](https://modelcontextprotocol.io/specification/2025-06-18/architecture).
+Primary references are linked on the slides: [ReAct](https://arxiv.org/abs/2210.03629),
+the [MCP architecture specification](https://modelcontextprotocol.io/specification/2025-06-18/architecture)
+and Jiang et al.'s [Agentic PCG](https://zehua-jiang.github.io/AgenticPCG/)
+([local paper](../../papers/Agentic_PCG_Paper.pdf)).
 
 See [the decorator guide](../../decorators.md) for the naming distinction,
 server factory context, MCP primitives and Python/Pydantic decorators.
