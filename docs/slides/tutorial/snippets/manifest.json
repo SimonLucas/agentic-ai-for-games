@@ -11,7 +11,7 @@
   },
   "discovery": {
     "source": "src/simple_examples/mcp_client.py",
-    "first_line": 20,
+    "first_line": 22,
     "last_line": 26
   },
   "schema": {

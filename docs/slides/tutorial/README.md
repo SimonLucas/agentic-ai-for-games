@@ -1,6 +1,6 @@
 # Agentic AI for Games tutorial slides
 
-Open [tutorial.pdf](tutorial.pdf): 31 widescreen Beamer slides, designed for a
+Open [tutorial.pdf](tutorial.pdf): 35 widescreen Beamer slides, designed for a
 concise introduction with optional live demos. Edit [tutorial.tex](tutorial.tex).
 
 ## Build
@@ -16,6 +16,9 @@ Latin Modern (available in common TeX distributions). No shell escape, network
 access, model credentials or hosted calls are needed to build the deck.
 The script refreshes the code excerpts, compiles twice, and writes `tutorial.pdf`.
 Auxiliary files go into `build/`, ignored by the root `.gitignore`.
+The title-slide QR code uses
+[`docs/media/repository_qr.png`](../../media/repository_qr.png) and links to
+the public GitHub repository.
 
 The repository README has a small animated preview made from five slide
 frames. After changing those slides, run
@@ -26,15 +29,17 @@ then uses `pdftoppm` and `ffmpeg`; no model calls are involved.
 ## Structure
 
 - Slides 1–5: why tools; ordinary functions; ReAct and a concrete interaction.
-- Slides 6–16: MCP, decorators, host/client/server, discovery and the execution loop.
-- Slides 17–21: Griddle, Monte Carlo Search, persistent resources and evaluation.
-- Slides 22–23: measured Griddle results and latency.
-- Slides 24–28: maze PCG, scaling, one-shot and agentic generation.
-- Slides 29–31: demo commands, references and code map.
+- Slides 6–19: MCP, the N × M integration problem, schemas, decorators and the execution loop.
+- Slides 20–24: Griddle, Monte Carlo Search, persistent resources and evaluation.
+- Slides 25–26: measured Griddle results and latency.
+- Slides 27–31: maze PCG, scaling, one-shot and agentic generation.
+- Slide 32: a guided, controlled experiment participants can run themselves.
+- Slide 33: open challenges in agent-generated tools and evaluation.
+- Slides 34–35: references and code map.
 
 ## Diagrams and code
 
-The five editable [TikZ diagrams](diagrams/) use component/data-flow notation
+The seven editable [TikZ diagrams](diagrams/) use component/data-flow notation
 and a sequence diagram. Boxes denote responsibilities; arrows show requests or
 data flow; the dashed outline encloses the host. They are vector graphics in
 the PDF, so remain sharp when projected or enlarged.
@@ -53,6 +58,9 @@ The deck does not show or depend on `.env` contents.
 - MCP is the tool connection protocol. The model API is a separate interface;
   the host translates schemas and executes requests. A direct function call
   can be sufficient when interoperability is unnecessary.
+- “Host” means the coordinating application, not a physical computer. In the
+  simple example, the shell script launches `model_client.py`, which is the
+  host; the MCP server is a separate local subprocess.
 - The arithmetic example is intentionally small. Griddle adds selected-tool
   enforcement, search budgets, move validation and persistent resource handling.
 - A rollout is a sampled completion of the game. This is flat Monte Carlo
@@ -70,11 +78,17 @@ The deck does not show or depend on `.env` contents.
 - Maze execution times are local measurements and hosted model latency varies.
   The agentic maze result includes evolutionary work used to initialise its
   macro-mutation library, so it is not an equal-compute algorithm ranking.
+- When an agent repeatedly observes evaluation results, those cases provide an
+  effective training signal even if model weights never change. Keep a sealed
+  final audit set and test transfer across seeds, sizes and rule variants.
 
 Primary references are linked on the slides: [ReAct](https://arxiv.org/abs/2210.03629),
 the [MCP architecture specification](https://modelcontextprotocol.io/specification/2025-06-18/architecture)
 and Jiang et al.'s [Agentic PCG](https://zehua-jiang.github.io/AgenticPCG/)
-([local paper](../../papers/Agentic_PCG_Paper.pdf)).
+([local paper](../../papers/Agentic_PCG_Paper.pdf)). The open-challenges slide
+also links to [LLaMEA](https://arxiv.org/abs/2405.20132),
+[LLM4AD](https://arxiv.org/abs/2412.17287), and
+[AlphaEvolve](https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/AlphaEvolve.pdf).
 
 See [the decorator guide](../../decorators.md) for the naming distinction,
 server factory context, MCP primitives and Python/Pydantic decorators.

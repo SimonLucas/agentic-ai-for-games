@@ -3,6 +3,14 @@
 Hands-on Python tutorials exploring tool use, procedural content generation,
 and game-playing agents.
 
+<p align="center">
+  <a href="https://github.com/SimonLucas/agentic-ai-for-games">
+    <img src="docs/media/repository_qr.png" width="144"
+         alt="QR code for the Agentic AI for Games GitHub repository">
+  </a><br>
+  <strong>Scan to open this repository</strong>
+</p>
+
 ![Animated tour of MCP, Griddle and maze generation](docs/media/tutorial_preview.gif)
 
 Preview from the [tutorial slides](docs/slides/tutorial/tutorial.pdf): MCP tool

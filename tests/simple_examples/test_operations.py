@@ -11,6 +11,7 @@ def test_arithmetic() -> None:
 def test_count_letters_is_case_insensitive() -> None:
     assert count_letters("Banana", "a") == 3
     assert count_letters("Mississippi", "S") == 4
+    assert count_letters("strawberry", "r") == 3
 
 
 def test_count_letters_rejects_more_than_one_character() -> None:

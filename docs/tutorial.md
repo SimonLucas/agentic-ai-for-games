@@ -34,6 +34,31 @@ With a model:     model_client.py ---> model API
 `stdio` means the client starts the server as a subprocess and exchanges MCP
 messages through its standard input/output streams. Nothing listens on a port.
 
+In MCP terminology, the **host is the coordinating application**, not the
+computer on which it runs. In this tutorial, `model_client.py` is the host: it
+owns the model conversation and agent loop, creates the MCP client session,
+decides which tools to offer, and routes tool requests. The shell scripts are
+launchers: they load backend configuration and invoke the Python host.
+
+The components may share one physical machine. With local Ollama, the host,
+model service and stdio MCP server can all run locally as separate processes.
+With OpenAI or OpenRouter, the host and MCP server remain local while the model
+API is remote.
+
+### Why a shared protocol matters: N × M becomes N + M
+
+Suppose there are **N tool providers** and **M agent hosts**. With a bespoke
+connector for every pairing, integration effort can grow toward **N × M**.
+With MCP, each provider exposes one MCP server interface and each host
+implements one MCP client interface, so the protocol-facing work grows toward
+**N + M**.
+
+This is an architectural approximation rather than a guarantee that every
+combination works without thought. Authentication, transport, deployment,
+permissions, schema quality and application semantics still need engineering.
+The language-model API is also a separate interface: the host translates
+discovered MCP schemas into the model provider's tool format.
+
 ## Prerequisites and setup
 
 - Python 3.11 or newer
@@ -66,6 +91,30 @@ the functions.
 Read `server.py`. `FastMCP` creates a server and `@mcp.tool()` publishes each
 decorated function. Python type hints and docstrings become the JSON input
 schema and description seen by clients.
+
+Inspect the actual metadata returned for `multiply`:
+
+```bash
+uv run python src/simple_examples/mcp_client.py --schema multiply
+```
+
+The generated `inputSchema` is:
+
+```json
+{
+  "properties": {
+    "a": {"title": "A", "type": "number"},
+    "b": {"title": "B", "type": "number"}
+  },
+  "required": ["a", "b"],
+  "title": "multiplyArguments",
+  "type": "object"
+}
+```
+
+The client does not infer this schema from prose. It obtains it through MCP's
+`list_tools` operation, then wraps it in the function-tool format expected by
+the selected model API.
 
 You normally do not run a stdio server by itself because it waits for protocol
 messages on stdin. The next client starts it for you.
@@ -214,6 +263,44 @@ MODEL=gpt-5-mini uv run python src/simple_examples/model_client.py --no-tools \
 Look for `MCP call ->` lines. They can only appear in the tool-enabled arm.
 Compare answer correctness, latency, token usage, and consistency over repeated
 runs. One run is a demonstration, not a reliable benchmark.
+
+### The strawberry counting example
+
+Counting the letter **r** in “strawberry” is a well-known illustration of a
+token-level language model being asked for a character-level result. A modern
+model may answer correctly on its own, but correctness is not guaranteed by
+the generation mechanism. The deterministic tool returns `3` and leaves an
+inspectable call trace.
+
+Run the identical prompt once without tools and once with MCP:
+
+[Open `compare_strawberry.sh`](../src/simple_examples/scripts/compare_strawberry.sh)
+to inspect the short dispatcher, then run:
+
+```bash
+./src/simple_examples/scripts/compare_strawberry.sh openrouter
+```
+
+Select `openai` or `qwen` instead to use those existing backends:
+
+```bash
+./src/simple_examples/scripts/compare_strawberry.sh openai
+./src/simple_examples/scripts/compare_strawberry.sh qwen
+```
+
+The script delegates to the normal comparison runners, so backend settings
+still come from the ignored root `.env` or, for Qwen, the local Ollama
+configuration. In the tool-enabled arm, look for a call equivalent to:
+
+```text
+MCP call -> count_letters({'text': 'strawberry', 'letter': 'r'})
+```
+
+The purpose is not to prove that a particular model always fails. It is to
+contrast an unverified language response with an exact, testable operation.
+In the verified OpenRouter run on 17 September 2026, the no-tool arm answered
+`2`; the tool-enabled arm made the displayed MCP call and answered `3`.
+Hosted output can change between runs and models.
 
 ## Experiments to deepen the lesson
 

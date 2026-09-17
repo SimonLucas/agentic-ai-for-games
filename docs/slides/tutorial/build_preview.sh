@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 
 # README preview: selected pages from the rebuilt tutorial PDF.
 # Update these page numbers if slides are inserted before the examples.
-pages=(7 19 24 26 28)
+pages=(8 22 27 29 31)
 titles=(
   "LLM + Tools through MCP"
   "Griddle search as a tool"

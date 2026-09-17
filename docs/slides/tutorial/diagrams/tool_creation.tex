@@ -1,0 +1,11 @@
+\begin{tikzpicture}[node distance=5mm and 7mm]
+\node[box,text width=20mm,minimum height=9mm] (task) {Task};
+\node[box,text width=28mm,minimum height=9mm,right=of task] (agent) {LLM search or\\coding agent};
+\node[box,text width=24mm,minimum height=9mm,right=of agent] (code) {Candidate\\tool code};
+\node[box,text width=27mm,minimum height=9mm,right=of code] (eval) {Sandboxed\\evaluator};
+\draw[arr] (task) -- (agent);
+\draw[arr] (agent) -- node[above,font=\scriptsize]{write / mutate} (code);
+\draw[arr] (code) -- node[above,font=\scriptsize]{run} (eval);
+\draw[arr] (eval.south) to[bend left=22]
+  node[below,font=\scriptsize]{scores, failures and traces} (agent.south);
+\end{tikzpicture}

@@ -1,0 +1,31 @@
+\begin{tikzpicture}[
+  mini/.style={draw=teal,fill=paper,rounded corners=2pt,
+    minimum height=7mm,text width=17mm,align=center,font=\scriptsize},
+  link/.style={draw=navy!55,line width=.45pt}
+]
+\node[font=\small\bfseries,navy] at (2.8,2.9) {Bespoke connectors};
+\node[mini] (t1) at (.8,2) {Tool 1};
+\node[mini] (t2) at (.8,1) {Tool 2};
+\node[mini] (t3) at (.8,0) {Tool N};
+\node[mini] (h1) at (4.8,2) {Host 1};
+\node[mini] (h2) at (4.8,1) {Host 2};
+\node[mini] (h3) at (4.8,0) {Host M};
+\foreach \a in {t1,t2,t3}
+  \foreach \b in {h1,h2,h3}
+    \draw[link] (\a.east) -- (\b.west);
+\node[font=\small\bfseries,navy] at (2.8,-.75) {$N\!\times\!M$ pairings};
+
+\draw[navy!30,dashed] (6.3,-1) -- (6.3,2.9);
+
+\node[font=\small\bfseries,navy] at (10.1,2.9) {Shared MCP boundary};
+\node[mini] (u1) at (7.5,2) {Tool 1};
+\node[mini] (u2) at (7.5,1) {Tool 2};
+\node[mini] (u3) at (7.5,0) {Tool N};
+\node[box,text width=18mm,minimum height=13mm] (mcp) at (10.1,1) {MCP};
+\node[mini] (v1) at (12.9,2) {Host 1};
+\node[mini] (v2) at (12.9,1) {Host 2};
+\node[mini] (v3) at (12.9,0) {Host M};
+\foreach \a in {u1,u2,u3} \draw[arr] (\a.east) -- (mcp.west);
+\foreach \b in {v1,v2,v3} \draw[arr] (mcp.east) -- (\b.west);
+\node[font=\small\bfseries,navy] at (10.1,-.75) {$N+M$ interfaces};
+\end{tikzpicture}

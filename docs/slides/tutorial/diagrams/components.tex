@@ -4,7 +4,7 @@
 \node[box,right=of loop] (client) {MCP client\\ClientSession};
 \node[box,below=13mm of client] (server) {MCP server\\Python tool functions};
 \node[draw=teal,dashed,rounded corners,fit=(loop)(client),inner sep=5mm,
- label={[font=\small,text=teal]above:Host: Python application}] {};
+ label={[font=\small,text=teal]above:Host application: model\_client.py}] {};
 \draw[<->,thick,draw=navy] (llm)--node[above,font=\scriptsize]{model API}(loop);
 \draw[<->,thick,draw=navy] (loop)--(client);
 \draw[<->,thick,draw=navy] (client)--node[right,font=\scriptsize]{MCP over stdio}(server);

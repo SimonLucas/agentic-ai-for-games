@@ -36,6 +36,13 @@
 \begin{frame}
 \titlepage
 \centering\small Python examples: exact counting $\rightarrow$ search $\rightarrow$ gameplay, PCG
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south west,xshift=8mm,yshift=11mm] at (current page.south west) {%
+  \href{https://github.com/SimonLucas/agentic-ai-for-games}{%
+    \includegraphics[width=23mm]{../../media/repository_qr.png}}};
+\node[anchor=south,font=\tiny\color{navy},xshift=19.5mm,yshift=8.5mm]
+  at (current page.south west) {Code and examples};
+\end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Why give an LLM tools?}
@@ -103,12 +110,32 @@ Our function-calling loop follows this pattern; it does not require a printed
 reusable process/service boundary. It does not make a tool or model correct.
 \end{frame}
 
+\begin{frame}{MCP changes the integration shape}
+\centering\resizebox{.74\textwidth}{!}{\input{diagrams/nxm.tex}}
+\par\vspace{2mm}\raggedright\small
+\begin{itemize}\setlength\itemsep{0mm}
+\item Bespoke connectors: $N$ tool providers and $M$ agent host applications
+can require up to $N\!\times\!M$ integrations.
+\item MCP boundary: implement each provider once and each host once---roughly
+$N+M$ interfaces.
+\item The host--model API remains separate; the host controls which tools the
+model sees.
+\end{itemize}
+\par\vspace{1mm}\textbf{Standardize the boundary so tools and hosts can vary independently.}
+\par\scriptsize Authentication, deployment, permissions and useful schemas still require engineering.
+\end{frame}
+
 \begin{frame}{The architecture in this repository}
-\centering\input{diagrams/components.tex}
-\par\vspace{4mm}\raggedright\small
-Component notation: boxes are responsibilities; the dashed boundary is the host.
-The model API and the MCP connection are separate interfaces.
-\src{MCP architecture, specification 2025-06-18; implemented here with the Python SDK.}
+\centering\resizebox{.72\textwidth}{!}{\input{diagrams/components.tex}}
+\par\vspace{2mm}\raggedright\footnotesize
+\begin{itemize}\setlength\itemsep{0mm}
+\item A \textbf{host is the coordinating application}, not a physical machine.
+\item Here, \texttt{model\_client.py} owns the agent loop and MCP client.
+The \texttt{.sh} script loads configuration and launches that host.
+\item The host starts the MCP server over stdio. With Ollama, all three can run
+locally; with OpenAI/OpenRouter, only the model service is remote.
+\end{itemize}
+\scriptsize MCP architecture, specification 2025-06-18; Python SDK implementation.
 \end{frame}
 
 \begin{frame}{Expose the function as an MCP tool}
@@ -120,6 +147,68 @@ The model API and the MCP connection are separate interfaces.
 \item The server starts with \texttt{mcp.run(transport="stdio")}.
 \end{itemize}
 \small With stdio, keep diagnostic output off stdout: it carries protocol messages.
+\end{frame}
+
+\begin{frame}[fragile]{Type hints become a JSON input schema}
+\begin{columns}[T]
+\column{.39\textwidth}
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
+@mcp.tool()
+def multiply(
+    a: float,
+    b: float
+) -> float:
+    """Multiply two numbers
+    and return the result."""
+    return multiply_numbers(a, b)
+\end{lstlisting}
+\small FastMCP derives the name, description and schema when the tool is registered.
+\column{.57\textwidth}
+\textbf{Actual \texttt{inputSchema} from \texttt{list\_tools}}
+\begin{lstlisting}[language={},basicstyle=\ttfamily\scriptsize]
+{
+  "properties": {
+    "a": {"title": "A", "type": "number"},
+    "b": {"title": "B", "type": "number"}
+  },
+  "required": ["a", "b"],
+  "title": "multiplyArguments",
+  "type": "object"
+}
+\end{lstlisting}
+\end{columns}
+\takeaway{The model receives a machine-readable contract, not the Python body.}
+\src{Run: uv run python src/simple_examples/mcp_client.py --schema multiply}
+\end{frame}
+
+\begin{frame}[fragile]{Exact counting: how many r's in strawberry?}
+\begin{columns}[T]
+\column{.46\textwidth}
+\small
+\textbf{LLM alone}
+\begin{itemize}
+\item Generates an answer from tokens and context.
+\item Observed OpenRouter answer: \emph{The letter r occurs \textbf{2} times.}
+\item Output can vary; there is no independent computation to inspect.
+\end{itemize}
+\column{.50\textwidth}
+\small
+\textbf{LLM + MCP tool}
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
+count_letters(
+  text="strawberry",
+  letter="r"
+)
+-> 3
+\end{lstlisting}
+The trace records the operation and arguments; tested Python performs the count.
+\end{columns}
+\par\vspace{2mm}\textbf{Tools turn a brittle language task into an exact, repeatable operation.}
+\begin{lstlisting}[language=bash,basicstyle=\ttfamily\scriptsize]
+./src/simple_examples/scripts/compare_strawberry.sh openrouter
+# Also accepts: openai or qwen
+\end{lstlisting}
+\scriptsize One observed run, 17 September 2026; raw model responses can vary.
 \end{frame}
 
 \begin{frame}[fragile]{Same decorator, different variable names}
@@ -411,21 +500,74 @@ with the 2,000-iteration baseline.
 \src{Three 12x8 mazes: results/pcg/maze_agentic_comparison.*}
 \end{frame}
 
-\begin{frame}[fragile]{Try it, then change one thing}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily\footnotesize]
-# From the repository root: no model credentials needed
-uv run python src/simple_examples/direct_python.py
-uv run python src/simple_examples/mcp_client.py
-
-# Paired LLM evaluation; uses the ignored root .env
-./scripts/compare_griddle_llm.sh
+\begin{frame}[fragile]{Try it: make one controlled comparison}
+\begin{columns}[T]
+\column{.56\textwidth}
+\textbf{Start locally---no credentials}
+\begin{lstlisting}[language=bash,basicstyle=\ttfamily\scriptsize]
+./src/simple_examples/scripts/run_basics.sh
+./scripts/compare_griddle_agents.sh
+uv run evo-maze render --seed 7 --iterations 2000
 \end{lstlisting}
-\begin{enumerate}
-\item Inspect one tool request and its returned observation.
-\item Change the model, prompt or rollout budget in a copied config.
-\item Compare saved scores, time and tool decisions on the same deals.
+\textbf{Then copy a hosted experiment}
+\begin{lstlisting}[language=bash,basicstyle=\ttfamily\scriptsize]
+cp configs/griddle/llm_comparison.json \
+   /tmp/my_griddle.json
+# Edit one value in /tmp/my_griddle.json
+./scripts/compare_griddle_llm.sh \
+   /tmp/my_griddle.json \
+   results/griddle/my_griddle.json
+\end{lstlisting}
+\column{.40\textwidth}
+\textbf{A useful experiment}
+\begin{enumerate}\small\setlength\itemsep{1mm}
+\item Choose Griddle or maze generation.
+\item Keep seeds, rules and evaluator fixed.
+\item Change one variable: model, prompt, tool or budget.
+\item Compare score, validity/diversity, time and tool traces.
+\item Repeat before drawing a conclusion.
 \end{enumerate}
-\small Hosted evaluations incur API charges. See \texttt{docs/griddle\_llm.md} for providers and configuration.
+\end{columns}
+\begin{block}{Credentials stay local}
+\scriptsize Copy \texttt{.env.example} to \texttt{.env}. The root
+\texttt{.gitignore} explicitly excludes \texttt{.env} and \texttt{.env.*},
+while retaining the safe \texttt{.env.example} template.
+\end{block}
+\scriptsize Hosted runs can incur API charges. Runbooks:
+\texttt{docs/griddle\_llm.md} and \texttt{docs/pcg\_maze\_llm.md}.
+\end{frame}
+
+\begin{frame}{Open challenge: agents that invent their own tools}
+\centering\resizebox{.84\textwidth}{!}{\input{diagrams/tool_creation.tex}}
+\par\vspace{2mm}
+\begin{columns}[T]
+\column{.46\textwidth}
+\raggedright\footnotesize
+\textbf{How tools emerge}
+\begin{itemize}\setlength\itemsep{0mm}
+\item LLaMEA and AlphaEvolve generate, mutate, evaluate and select code.
+\item LLM4AD modularizes tasks, search methods and evaluators.
+\item Claude Code and Codex can edit, run and debug whole repositories.
+\end{itemize}
+\column{.50\textwidth}
+\raggedright\footnotesize
+\textbf{The harness must resist overfitting}
+\begin{itemize}\setlength\itemsep{0mm}
+\item Visible development examples.
+\item Refreshed selection cases: seeds, maps, sizes and rules.
+\item Sealed final audit after the search is frozen.
+\item Quality, validity, runtime, robustness and diversity; sandbox all code.
+\end{itemize}
+\end{columns}
+\par\vspace{1mm}\small\textbf{Repeated feedback becomes an effective training
+signal. A credible result must transfer to untouched tasks.}
+\par\vspace{1mm}
+\scriptsize
+\href{https://arxiv.org/abs/2405.20132}{LLaMEA} $\cdot$
+\href{https://arxiv.org/abs/2412.17287}{LLM4AD} $\cdot$
+\href{https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/AlphaEvolve.pdf}{AlphaEvolve} $\cdot$
+\href{https://openai.com/codex/}{Codex} $\cdot$
+\href{https://support.claude.com/en/articles/11845131-use-claude-code-with-your-team-or-enterprise-plan}{Claude Code}
 \end{frame}
 
 \begin{frame}{References}

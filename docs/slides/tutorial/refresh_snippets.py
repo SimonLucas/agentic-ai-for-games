@@ -7,7 +7,7 @@ ROOT = HERE.parents[2]
 EXCERPTS = {
     'function': ('src/simple_examples/operations.py', 'def multiply(', '\n\ndef count_letters'),
     'server': ('src/simple_examples/server.py', '@mcp.tool()\ndef multiply', '\n\n@mcp.tool()\ndef count_letters'),
-    'discovery': ('src/simple_examples/mcp_client.py', '    async with stdio_client(server)', '\n            letters ='),
+    'discovery': ('src/simple_examples/mcp_client.py', '    async with stdio_client(server)', '\n\n            if schema_name is not None:'),
     'schema': ('src/simple_examples/model_client.py', '    return [', '\n\n\ndef tool_result_text'),
     'request': ('src/simple_examples/model_client.py', '            for _ in range(8):', '\n                for call in message.tool_calls:'),
     'execute': ('src/simple_examples/model_client.py', '                for call in message.tool_calls:', '\n\n    raise RuntimeError'),
