@@ -10,8 +10,10 @@ or local Qwen model decide which tools to call.
 For a command-focused guide containing the actual verified OpenAI and Qwen run
 results, see [demo runbook](running_the_demo.md).
 
-All Python files referenced below live in `src/simple_examples/`.
-Run the commands from the repository root.
+All Python files referenced below live in `src/simple_examples/`. Every
+runnable shell block first resolves the Git repository root, so the block works
+whether your terminal starts in the repository root or in `docs/` beside this
+file.
 
 For decorator syntax and registration choices, see [the decorator guide](decorators.md).
 
@@ -66,9 +68,10 @@ discovered MCP schemas into the model provider's tool format.
 - For OpenAI: an API key
 - For local Qwen: [Ollama](https://ollama.com/) and a Qwen model
 
-From the repository root:
+Install the repository environment:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 uv sync --extra dev
 ```
 
@@ -79,6 +82,7 @@ uv sync --extra dev
 Read `operations.py`, then run:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 uv run python src/simple_examples/direct_python.py
 ```
 
@@ -95,6 +99,7 @@ schema and description seen by clients.
 Inspect the actual metadata returned for `multiply`:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 uv run python src/simple_examples/mcp_client.py --schema multiply
 ```
 
@@ -122,6 +127,7 @@ messages on stdin. The next client starts it for you.
 ## Lesson 3: call MCP without a language model
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 uv run python src/simple_examples/mcp_client.py
 ```
 
@@ -136,6 +142,7 @@ Follow `mcp_client.py` in this order:
 Or run lessons 1 and 3 together:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 ./src/simple_examples/scripts/run_basics.sh
 ```
 
@@ -151,7 +158,8 @@ the model backend.
 ### OpenAI (`gpt-5-mini`)
 
 ```bash
-cp .env.example .env
+cd "$(git rev-parse --show-toplevel)"
+[[ -f .env ]] || cp .env.example .env
 # Edit .env and set OPENAI_API_KEY.
 ./src/simple_examples/scripts/run_openai.sh
 ```
@@ -159,12 +167,14 @@ cp .env.example .env
 Supply a different question as one quoted argument:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 ./src/simple_examples/scripts/run_openai.sh "Add 17 and 26, then count the letter a in abracada."
 ```
 
 Override the model if desired:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 OPENAI_MODEL=gpt-5-mini ./src/simple_examples/scripts/run_openai.sh "Multiply 9 by 11."
 ```
 
@@ -181,9 +191,10 @@ OPENROUTER_MODEL=openai/gpt-4o-mini
 ```
 
 Replace the key placeholder with your OpenRouter key. The OpenAI key is not
-used by these scripts. Run from the repository root:
+used by these scripts:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 ./src/simple_examples/scripts/run_openrouter.sh "Add 17 and 25."
 ./src/simple_examples/scripts/compare_openrouter.sh \
   "What is 23 multiplied by 19, and how many times does e occur in Tennessee?"
@@ -200,6 +211,7 @@ The model name is **Qwen** (not Gwen). Install/start Ollama, then pull the small
 default model once:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 ollama pull qwen2.5:3b
 ./src/simple_examples/scripts/run_qwen.sh
 ```
@@ -207,6 +219,7 @@ ollama pull qwen2.5:3b
 You can select any installed tool-capable Qwen model:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 QWEN_MODEL=qwen3:8b ./src/simple_examples/scripts/run_qwen.sh "Count the letter s in Mississippi."
 ```
 
@@ -232,6 +245,7 @@ forcing tool use.
 ## Tests
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 uv run --extra dev pytest
 ```
 
@@ -246,6 +260,7 @@ does not start the MCP server and sends no tool schemas. In arm B, the model can
 discover and call the MCP tools:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 ./src/simple_examples/scripts/compare_openai.sh \
   "What is 23 multiplied by 19, and how many times does e occur in Tennessee?"
 
@@ -256,6 +271,7 @@ discover and call the MCP tools:
 For just the LLM-only arm, invoke the client directly:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 MODEL=gpt-5-mini uv run python src/simple_examples/model_client.py --no-tools \
   "Count the letter s in Mississippi."
 ```
@@ -278,12 +294,14 @@ Run the identical prompt once without tools and once with MCP:
 to inspect the short dispatcher, then run:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 ./src/simple_examples/scripts/compare_strawberry.sh openrouter
 ```
 
 Select `openai` or `qwen` instead to use those existing backends:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
 ./src/simple_examples/scripts/compare_strawberry.sh openai
 ./src/simple_examples/scripts/compare_strawberry.sh qwen
 ```
@@ -320,7 +338,8 @@ Hosted output can change between runs and models.
   the configured Qwen model.
 - The local model never calls a tool: use a tool-capable Qwen release, make the
   request explicit, or try a larger model.
-- Dependency confusion: run commands from the repository root.
+- Path confusion: use the complete runnable block, including its first `cd`
+  line; this makes execution independent of the terminal's starting directory.
 
 ## Further reading
 
