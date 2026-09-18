@@ -286,8 +286,10 @@ to understand what each one does.
 \begin{frame}{The loop: ask the model for its next step}
 \lstinputlisting[basicstyle=\ttfamily\footnotesize]{snippets/request.py}
 \src{src/simple_examples/model_client.py : answer (excerpt)}
-\small \texttt{tool\_choice="auto"} allows either a tool request or an answer.
-The eight-round bound prevents an unending loop.
+\small This is the decision step in the ReAct loop: given the conversation and
+latest observations, the model either requests an action (a tool call) or
+returns its final answer. \texttt{tool\_choice="auto"} permits both outcomes;
+the eight-round bound prevents an unending loop.
 \end{frame}
 
 \begin{frame}{The loop: execute and return the observation}

@@ -216,12 +216,17 @@ ollama pull qwen2.5:3b
 ./src/simple_examples/scripts/run_qwen.sh
 ```
 
-You can select any installed tool-capable Qwen model:
+You can select any installed tool-capable Qwen model. Setting `QWEN_MODEL`
+selects a model that is already present; it does not download it. For the
+model installed above:
 
 ```bash
 cd "$(git rev-parse --show-toplevel)"
-QWEN_MODEL=qwen3:8b ./src/simple_examples/scripts/run_qwen.sh "Count the letter s in Mississippi."
+QWEN_MODEL=qwen2.5:3b ./src/simple_examples/scripts/run_qwen.sh "Count the letter s in Mississippi."
 ```
+
+To use another model, install it first with `ollama pull MODEL`, then pass the
+same name through `QWEN_MODEL`.
 
 The script points the same OpenAI Python client at Ollama's local
 `http://localhost:11434/v1` endpoint. The placeholder API key is required by
